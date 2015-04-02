@@ -1,0 +1,16 @@
+#main
+  %h3 Student Listings
+
+  %table.students_table
+    %tr.students_header
+      %th= link_to "First", students_path(sort: 'first')
+      %th= link_to "Last", students_path(sort: 'last')
+      %th ID
+      %th= link_to "Major", students_path(sort: 'major')
+
+    -@students.each do |s|
+      %tr
+        %td= s.first
+        %td= s.last
+        %td= s.id
+        %td= s.major
