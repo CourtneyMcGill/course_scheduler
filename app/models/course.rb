@@ -4,7 +4,7 @@ class Course < ActiveRecord::Base
 	if self.column_names.include?(field)
        	  self.order(field)
         else
-          self.order("name")
+          self.order("course_name")
         end
   end
 

@@ -14,8 +14,22 @@
 ActiveRecord::Schema.define(version: 20150401204517) do
 
   create_table "courses", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "crn"
+    t.string   "course_name"
+    t.text     "title"
+    t.string   "instructor"
+    t.string   "days"
+    t.integer  "starts"
+    t.integer  "ends"
+    t.string   "building_room"
+    t.decimal  "credits",       precision: 2, scale: 2
+    t.string   "coreq"
+    t.string   "crosslist"
+    t.text     "restrictions"
+    t.string   "prereq"
+    t.text     "notes"
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
   end
 
 end
