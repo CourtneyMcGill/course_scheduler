@@ -1,0 +1,14 @@
+#main
+
+  %h3 All requirements
+
+  %table.requirement_table
+    %tr.requirements_header
+      %th Name
+      %th Course
+  -@requirements.each do |r|
+    %tr
+      %br
+      %td= link_to "#{r.name}", requirement_path(r)
+      %td= r.course
+%p= link_to "Create a new requirement", new_requirement_path
