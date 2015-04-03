@@ -11,10 +11,10 @@
 
     -@students.each do |s|
       %tr
-        %td= s.first
+        %td= link_to #{s.first}, edit_student_path
         %td= s.last
         %td= s.id
-        %td= s.class
+        %td= s.year
         %td= s.major
 
   %p= link_to("Create new student", new_student_path)

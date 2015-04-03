@@ -1,7 +1,7 @@
 #main
   %h3= "Create a new course"
 
-  =form.for Course.new do |f|
+  =form_for Course.new do |f|
     %p=f.label :crn
     %p=f.number_field :crn, :in => 10000..19999
 

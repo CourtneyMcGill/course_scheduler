@@ -19,23 +19,6 @@
       %th Notes
     -@courses.each do |c|
       %tr
-<<<<<<< HEAD
-        %td= p.crn
-	%td= link_to "#{p.course_name}", course_path(p)
-	%td= p.title
-	%td= p.instructor
-	%td= p.days
-	%td= p.starts
-	%td= p.ends
-	%td= p.building_room
-	%td= p.credits
-	%td= p.coreq
-	%td= p.crosslist
-	%td= p.restrictions
-	%td= p.prereq
-	%td= p.notes
-  %td= link_to "Create a new course", new_course_path
-=======
         %td= c.crn
         %td= link_to "#{c.course_name}", course_path(c)
         %td= c.title
@@ -50,4 +33,4 @@
         %td= c.restrictions
         %td= c.prereq
         %td= c.notes
->>>>>>> 46b55470cf5cded2fad01271b6fa0ac285223ad7
+  %td= link_to "Create a new course", new_course_path
