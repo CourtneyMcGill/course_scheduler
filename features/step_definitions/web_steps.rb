@@ -59,7 +59,7 @@ When /^(?:|I )go to (.+)$/ do |page_name|
 end
 
 When /^(?:|I )press "([^"]*)"$/ do |button|
-  click_button(button)
+  click_on(button)
 end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
