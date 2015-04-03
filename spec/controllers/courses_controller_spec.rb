@@ -47,12 +47,6 @@ RSpec.describe CoursesController, type: :controller do
     end
   end
 
-  describe "update course" do
-    it "should redirect to the show page"
-      expect(Course).to receive(:find).with("1"){ p }
-      expect(response).to redirect_to(course_path)
-    end
-  end
 
   describe "create new course" do
     it "should show failure flash message and redirect to new on failure" do
@@ -68,6 +62,17 @@ RSpec.describe CoursesController, type: :controller do
       Course.should_receive(:new).and_return(c)
       c.should_receive(:save).and_return(true)
       post :create, {:course=>{"crn"=>"10111","course_name"=>"COSC_480","title"=>"Cloud Computing","instructor"=>"Sommers","days"=>"MWF","starts"=>"120","ends"=>235,"building_room"=>"Lawrence 105","credits"=>"1.0","coreq"=>"COSC_480_Lab","crosslist"=>"none","restrictions"=>"none","prereq"=>"COSC_301","notes"=>"kinda difficult"}}
+      response.should redirect_to(courses_path)
+    end
+  end
+
+  describe "update course" do
+    it "should show success flash message and show on success" do
+      c=Course.new
+      expect(Course).to receive(:find).with("1"){c}
+      expect(c).to receive(:update){c}
+      expect(c).to receive(:safe_params){}
+      put :update, id: 1
       response.should redirect_to(courses_path)
     end
   end

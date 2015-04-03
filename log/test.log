@@ -641,3 +641,763 @@ Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
   [1m[35m (0.0ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (16.2ms)[0m  [1mCREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "crn" integer, "course_name" varchar, "title" text, "instructor" varchar, "days" varchar, "starts" integer, "ends" integer, "building_room" varchar, "credits" decimal(2,2), "coreq" varchar, "crosslist" varchar, "restrictions" text, "prereq" varchar, "notes" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (3.2ms)[0m  CREATE TABLE "requirements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "course" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "sid" varchar, "year" integer, "major" varchar, "courses_taken" integer, "courses_progress" integer) [0m
+  [1m[35m (3.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (3.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150403015138')
+  [1m[36m (4.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150401204517')[0m
+  [1m[35m (2.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150403000659')
+  [1m[36m (3.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150403014647')[0m
+  [1m[35m (2.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150402172713')
+  [1m[36m (2.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150403015100')[0m
+  [1m[35m (3.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150403014909')
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (0.2ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.3ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-03 02:04:37.683005"], ["updated_at", "2015-04-03 02:04:37.683005"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-04-03 02:04:37.688611"], ["updated_at", "2015-04-03 02:04:37.688611"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.2ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.3ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.5ms)[0m  begin transaction
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (0.2ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.2ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-03 02:09:21.254732"], ["updated_at", "2015-04-03 02:09:21.254732"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-04-03 02:09:21.259609"], ["updated_at", "2015-04-03 02:09:21.259609"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.5ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.3ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.0ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (0.3ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.2ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-03 02:09:48.841561"], ["updated_at", "2015-04-03 02:09:48.841561"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-04-03 02:09:48.845201"], ["updated_at", "2015-04-03 02:09:48.845201"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.3ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (0.6ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.2ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-03 02:10:38.842580"], ["updated_at", "2015-04-03 02:10:38.842580"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-04-03 02:10:38.846804"], ["updated_at", "2015-04-03 02:10:38.846804"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.3ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.3ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses/new
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (0.2ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.2ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-03 02:12:00.063943"], ["updated_at", "2015-04-03 02:12:00.063943"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-04-03 02:12:00.071290"], ["updated_at", "2015-04-03 02:12:00.071290"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.4ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (0.3ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.3ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-03 02:14:13.604355"], ["updated_at", "2015-04-03 02:14:13.604355"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-04-03 02:14:13.609011"], ["updated_at", "2015-04-03 02:14:13.609011"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (2.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.5ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 400 Bad Request in 1ms
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (0.4ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.2ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-03 02:15:40.094441"], ["updated_at", "2015-04-03 02:15:40.094441"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-04-03 02:15:40.098152"], ["updated_at", "2015-04-03 02:15:40.098152"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (2.1ms)
+Completed 200 OK in 3ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (1.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#update as HTML
+  Parameters: {"course"=>{"crn"=>"10222"}, "id"=>"1"}
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (0.2ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.2ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-03 02:16:04.104460"], ["updated_at", "2015-04-03 02:16:04.104460"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-04-03 02:16:04.108157"], ["updated_at", "2015-04-03 02:16:04.108157"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.3ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.4ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.5ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#update as HTML
+  Parameters: {"course"=>{"crn"=>"10222"}, "id"=>"1"}
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (0.2ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.2ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-03 02:17:20.616554"], ["updated_at", "2015-04-03 02:17:20.616554"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-04-03 02:17:20.620114"], ["updated_at", "2015-04-03 02:17:20.620114"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.2ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.4ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#update as HTML
+  Parameters: {"course"=>{"crn"=>"10222"}, "id"=>"1"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (0.4ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.2ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-03 02:18:29.423116"], ["updated_at", "2015-04-03 02:18:29.423116"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-04-03 02:18:29.427024"], ["updated_at", "2015-04-03 02:18:29.427024"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.3ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.2ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 400 Bad Request in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (0.2ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.2ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-03 02:19:36.447849"], ["updated_at", "2015-04-03 02:19:36.447849"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-04-03 02:19:36.452652"], ["updated_at", "2015-04-03 02:19:36.452652"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (0.4ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (0.2ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/show.html.haml (1.2ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.7ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered courses/edit.html.haml (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by CoursesController#create as HTML
+  Parameters: {"course"=>{"crn"=>"10111", "course_name"=>"COSC_480", "title"=>"Cloud Computing", "instructor"=>"Sommers", "days"=>"MWF", "starts"=>"120", "ends"=>"235", "building_room"=>"Lawrence 105", "credits"=>"1.0", "coreq"=>"COSC_480_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"kinda difficult"}}
+Redirected to http://test.host/courses
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
