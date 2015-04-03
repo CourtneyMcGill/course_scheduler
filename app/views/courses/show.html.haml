@@ -7,12 +7,16 @@
     %th Course
     %th Title
     %th Instructor
-    %th Description
+    %th Days
+    %th Starts
+    %th Ends
     %tr
       %td= @course.course_name
       %td= @course.title
       %td= @course.instructor
-      %td= @course.description
+      %td= @course.days
+      %td= @course.starts
+      %td= @course.ends
   %tr
   %td= link_to "Back to course catalog", courses_path
-  %td= link_to "Edit the existing product", edit_product_path
+  %td= link_to "Edit the existing product", edit_course_path
