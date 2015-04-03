@@ -10,6 +10,7 @@
     %th Days
     %th Starts
     %th Ends
+    %th Current Students
     %tr
       %td= @course.course_name
       %td= @course.title
@@ -17,6 +18,7 @@
       %td= @course.days
       %td= @course.starts
       %td= @course.ends
+      %td= @course.students.last
   %tr
   %td= link_to "Edit the existing course", edit_course_path
   %br

@@ -1,5 +1,6 @@
 class Requirement < ActiveRecord::Base
-  def self.sorted_by(field)
+ has_many :courses
+ def self.sorted_by(field)
      Requirement.order("name")
   end
   def self.search(searching)
