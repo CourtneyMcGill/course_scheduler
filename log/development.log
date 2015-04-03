@@ -2247,3 +2247,39 @@ Migrating to AddCourseIdToRequirements (20150403015138)
   [1m[36m (24.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150403015100')[0m
   [1m[35m (8.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150403014909')
 >>>>>>> e2dda918177cd68a07d5afc72da59311b067a553
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCourseIdToStudents (20150403014647)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "students" ADD "course_id" integer[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150403014647"]]
+  [1m[36m (39.9ms)[0m  [1mcommit transaction[0m
+Migrating to AddStudentIdToCourses (20150403014909)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "courses" ADD "student_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150403014909"]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddRequirementIdToStudents (20150403015100)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "students" ADD "requirement_id" integer[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150403015100"]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddCourseIdToRequirements (20150403015138)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "requirements" ADD "course_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150403015138"]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (7.5ms)[0m  [1mCREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "crn" integer, "course_name" varchar, "title" text, "instructor" varchar, "days" varchar, "starts" integer, "ends" integer, "building_room" varchar, "credits" decimal(2,2), "coreq" varchar, "crosslist" varchar, "restrictions" text, "prereq" varchar, "notes" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "student_id" integer) [0m
+  [1m[35m (3.8ms)[0m  CREATE TABLE "requirements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "course" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "course_id" integer) 
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "sid" varchar, "year" integer, "major" varchar, "courses_taken" integer, "courses_progress" integer, "course_id" integer, "requirement_id" integer) [0m
+  [1m[35m (5.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (6.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (5.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150403015138')
+  [1m[36m (4.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150401204517')[0m
+  [1m[35m (4.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150403000659')
+  [1m[36m (4.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150403014647')[0m
+  [1m[35m (5.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150402172713')
+  [1m[36m (4.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150403015100')[0m
+  [1m[35m (4.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150403014909')
