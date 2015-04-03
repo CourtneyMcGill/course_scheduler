@@ -1,0 +1,23 @@
+#main
+  %h3= @student.first @student.last
+
+  %table.students_table
+    %thead
+      %tr.students_header
+        %th First
+        %th Last
+        %th Student ID
+        %th Major
+		  %th Courses Taken
+        %th Courses Progress
+    %tbody
+      %tr
+        %td= @students.first
+        %td= @students.last
+        %td= @students.sid
+        %td= @students.major
+        %td= @students.courses_taken
+        %td= @students.courses_progress
+
+  %p= link_to("Edit Student details", edit_student_path)
+
