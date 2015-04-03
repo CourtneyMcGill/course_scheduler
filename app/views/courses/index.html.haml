@@ -7,18 +7,19 @@
       %th= link_to "Course Name", courses_path(sort: 'course_name')
       %th= link_to "Title", courses_path(sort: 'title')
       %th= link_to "Instructor", courses_path(sort: 'instructor')
-      %th= Days
+      %th Days
       %th= link_to "Starts", courses_path(sort: 'starts')
-      %th= Ends
-      %th= Building/Room
-      %th= Credits
-      %th= Co-Reqs
-      %th= CrossList
-      %th= Restrictions
-      %th= Pre-Reqs
-      %th= Notes
-    -@courses.each do |p|
+      %th Ends
+      %th Building/Room
+      %th Credits
+      %th Co-Reqs
+      %th CrossList
+      %th Restrictions
+      %th Pre-Reqs
+      %th Notes
+    -@courses.each do |c|
       %tr
+<<<<<<< HEAD
         %td= p.crn
 	%td= link_to "#{p.course_name}", course_path(p)
 	%td= p.title
@@ -34,3 +35,19 @@
 	%td= p.prereq
 	%td= p.notes
   %td= link_to "Create a new course", new_course_path
+=======
+        %td= c.crn
+        %td= link_to "#{c.course_name}", course_path(c)
+        %td= c.title
+        %td= c.instructor
+        %td= c.days
+        %td= c.starts
+        %td= c.ends
+        %td= c.building_room
+        %td= c.credits
+        %td= c.coreq
+        %td= c.crosslist
+        %td= c.restrictions
+        %td= c.prereq
+        %td= c.notes
+>>>>>>> 46b55470cf5cded2fad01271b6fa0ac285223ad7
