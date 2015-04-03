@@ -2,7 +2,7 @@
   %h3= "Edit the existing course"
 
   =form_for @course, :method => :patch do |f|
-%p=f.label :crn
+    %p=f.label :crn
     %p=f.number_field :crn, :in => 10000..19999
 
     %p=f.label :course_name
