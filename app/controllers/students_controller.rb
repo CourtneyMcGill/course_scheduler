@@ -1,8 +1,8 @@
 class StudentsController < ApplicationController
 
   def index
-		if params[:query]
-			query = params[:query]
+		if params[:sort]
+			query = params[:sort]
 		else
 			query = 'last'
 		end
@@ -10,7 +10,7 @@ class StudentsController < ApplicationController
 	end
 
 	def show
-		@product = Student.find(params[:id])
+		@student = Student.find(params[:id])
 	end
 
 	def new
@@ -52,7 +52,7 @@ class StudentsController < ApplicationController
 		def safe_params
 			# we require a product to be in params
 			# allow name, description, and price to be mass-assigned		
-			params.require(:product).permit(:first, :last, :sid, :major)
+			params.require(:student).permit(:first, :last, :sid, :major)
 		end
 
 end

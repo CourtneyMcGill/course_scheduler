@@ -1391,3 +1391,404 @@ ActionView::Template::Error (Inconsistent indentation: 2 tabs used for indentati
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (45.5ms)
 >>>>>>> 7aea831b77f504a39f7ae4f699e09e74b77d663a
 >>>>>>> 6fedc6d408e215aaba455879027da884eaacb865
+
+
+Started GET "/students?sort=last" for 127.0.0.1 at 2015-04-02 21:06:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"last"}
+  [1m[35mStudent Load (0.4ms)[0m  SELECT "students".* FROM "students"  ORDER BY last
+  Rendered students/index.html.haml (46.9ms)
+Completed 200 OK in 107ms (Views: 97.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/students?sort=first" for 127.0.0.1 at 2015-04-02 21:06:38 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"first"}
+  [1m[36mStudent Load (14.0ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY last[0m
+  Rendered students/index.html.haml (17.7ms)
+Completed 200 OK in 51ms (Views: 36.3ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/students?sort=first" for 127.0.0.1 at 2015-04-02 21:06:42 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"first"}
+  [1m[35mStudent Load (1.4ms)[0m  SELECT "students".* FROM "students"  ORDER BY last
+  Rendered students/index.html.haml (60.5ms)
+Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-02 21:07:06 -0400
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (10.6ms)
+Completed 200 OK in 60ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-04-02 21:07:09 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.7ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY last[0m
+  Rendered students/index.html.haml (6.2ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-04-02 21:07:24 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.7ms)[0m  SELECT "students".* FROM "students"  ORDER BY last
+  Rendered students/index.html.haml (8.9ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students?sort=first" for 127.0.0.1 at 2015-04-02 21:07:26 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"first"}
+  [1m[36mStudent Load (0.6ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY last[0m
+  Rendered students/index.html.haml (9.2ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students?sort=first" for 127.0.0.1 at 2015-04-02 21:08:11 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"first"}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"  ORDER BY first
+  Rendered students/index.html.haml (26.2ms)
+Completed 200 OK in 65ms (Views: 53.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/students?sort=first" for 127.0.0.1 at 2015-04-02 21:08:14 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"first"}
+  [1m[36mStudent Load (0.6ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY first[0m
+  Rendered students/index.html.haml (4.0ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2015-04-02 21:08:27 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.haml (91.8ms)
+Completed 200 OK in 113ms (Views: 112.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2015-04-02 21:09:16 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q7bfcnDyzPaGOPFMtk+1R8w5AP5O+ELyieEEbSYFw1SAFng3FovyUsI2hq/mJ6NzfQwJfSCnCyrMC5c3BX0oVA==", "student"=>{"first"=>"John", "last"=>"Doe", "sid"=>"918273645", "year"=>"2017", "major"=>"Biology"}, "commit"=>"Create Student"}
+Completed 400 Bad Request in 2ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: product):
+  app/controllers/students_controller.rb:55:in `safe_params'
+  app/controllers/students_controller.rb:22:in `create'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (19.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (22.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (6.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (9.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (129.4ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2015-04-02 21:09:32 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q7bfcnDyzPaGOPFMtk+1R8w5AP5O+ELyieEEbSYFw1SAFng3FovyUsI2hq/mJ6NzfQwJfSCnCyrMC5c3BX0oVA==", "student"=>{"first"=>"John", "last"=>"Doe", "sid"=>"918273645", "year"=>"2017", "major"=>"Biology"}, "commit"=>"Create Student"}
+Unpermitted parameter: year
+  [1m[35m (1.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "major") VALUES (?, ?, ?, ?)[0m  [["first", "John"], ["last", "Doe"], ["sid", "918273645"], ["major", "Biology"]]
+  [1m[35m (33.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/students
+Completed 302 Found in 112ms (ActiveRecord: 36.9ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-04-02 21:09:32 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.6ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY last[0m
+  Rendered students/index.html.haml (8.4ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students?sort=first" for 127.0.0.1 at 2015-04-02 21:09:36 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"first"}
+  [1m[35mStudent Load (0.9ms)[0m  SELECT "students".* FROM "students"  ORDER BY first
+  Rendered students/index.html.haml (16.5ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/students?sort=first" for 127.0.0.1 at 2015-04-02 21:11:47 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"first"}
+  [1m[36mStudent Load (1.9ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY first[0m
+  Rendered students/index.html.haml (38.6ms)
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-04-02 21:11:49 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.7ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/show.html.haml (11.3ms)
+Completed 500 Internal Server Error in 95ms
+
+ActionView::Template::Error (Inconsistent indentation: "\t\t  " used for indentation, but the rest of the document was indented using 2 spaces.):
+     7:         %th First
+     8:         %th Last
+     9:         %th Student ID
+    10: 		  %th Year
+    11:         %th Major
+    12: 		  %th Courses Taken
+    13:         %th Courses Progress
+  app/views/students/show.html.haml:10
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (57.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (14.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (5.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (150.0ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-04-02 21:12:19 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (1.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered students/show.html.haml (18.2ms)
+Completed 500 Internal Server Error in 88ms
+
+ActionView::Template::Error (Inconsistent indentation: "\t\t  " used for indentation, but the rest of the document was indented using 2 spaces.):
+     9:         %th Student ID
+    10:         %th Year
+    11:         %th Major
+    12: 		  %th Courses Taken
+    13:         %th Courses Progress
+    14:     %tbody
+    15:       %tr
+  app/views/students/show.html.haml:12
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (29.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (15.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (3.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (123.7ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-04-02 21:13:34 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.4ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/show.html.haml (29.0ms)
+Completed 500 Internal Server Error in 145ms
+
+ActionView::Template::Error (undefined method `last' for nil:NilClass):
+    1: #main
+    2:   %h3= @student.first @student.last
+    3: 
+    4:   %table.students_table
+    5:     %thead
+  app/views/students/show.html.haml:2:in `_app_views_students_show_html_haml___20502601_102362790'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (27.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (9.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (5.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (11.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (148.1ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-04-02 21:13:56 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.4ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered students/show.html.haml (48.5ms)
+Completed 500 Internal Server Error in 60ms
+
+ActionView::Template::Error (undefined method `last' for nil:NilClass):
+    1: #main
+    2:   %h3= @student.first @student.last
+    3: 
+    4:   %table.students_table
+    5:     %thead
+  app/views/students/show.html.haml:2:in `_app_views_students_show_html_haml___20502601_102527130'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (31.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (14.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (14.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (159.7ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-04-02 21:14:27 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.4ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/show.html.haml (37.6ms)
+Completed 500 Internal Server Error in 64ms
+
+ActionView::Template::Error (undefined method `first' for nil:NilClass):
+    1: #main
+    2:   %h3= "#{@student.first}, #{@student.last}"
+    3: 
+    4:   %table.students_table
+    5:     %thead
+  app/views/students/show.html.haml:2:in `_app_views_students_show_html_haml___20502601_102470400'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (17.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (14.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (3.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (136.5ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-04-02 21:14:54 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.4ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered students/show.html.haml (27.0ms)
+Completed 500 Internal Server Error in 87ms
+
+ActionView::Template::Error (undefined method `first' for nil:NilClass):
+    1: #main
+    2:   %h3= @student.first 
+    3:   %h3= @student.last
+    4: 
+    5:   %table.students_table
+  app/views/students/show.html.haml:2:in `_app_views_students_show_html_haml___20502601_102395490'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (31.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (23.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (18.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (146.3ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-04-02 21:15:12 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.7ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/show.html.haml (52.8ms)
+Completed 500 Internal Server Error in 133ms
+
+ActionView::Template::Error (undefined local variable or method `student_destroy' for #<#<Class:0xc009018>:0xbffa9b4>):
+    23:         %td= @student.courses_progress
+    24: 
+    25:   %p= link_to("Edit Student details", edit_student_path)
+    26:   %p= link_to("Delete student", student_destroy)
+  app/views/students/show.html.haml:26:in `_app_views_students_show_html_haml___20502601_102395490'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (84.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (30.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (326.2ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-04-02 21:16:43 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.4ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered students/show.html.haml (21.5ms)
+Completed 200 OK in 38ms (Views: 30.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/3/edit" for 127.0.0.1 at 2015-04-02 21:16:45 -0400
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.5ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/edit.html.haml (23.3ms)
+Completed 200 OK in 39ms (Views: 30.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/3/edit" for 127.0.0.1 at 2015-04-02 21:16:50 -0400
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered students/edit.html.haml (6.5ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/students/3" for 127.0.0.1 at 2015-04-02 21:16:51 -0400
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f7+iitS/YOnq13XJHgVGA+q4vGuZYthTVN0F2nSpPXpUHwXPssZeTa7ZAipObVA3W4216Pc9kYsRN5aAV9HWeg==", "student"=>{"first"=>"Courtney", "last"=>"McGill", "sid"=>"789123654", "year"=>"2016", "major"=>""}, "commit"=>"Update Student", "id"=>"3"}
+  [1m[35mStudent Load (3.6ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+Unpermitted parameter: year
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.8ms)[0m  UPDATE "students" SET "major" = ? WHERE "students"."id" = ?  [["major", ""], ["id", 3]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/students/3
+Completed 302 Found in 35ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-04-02 21:16:51 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/show.html.haml (0.8ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-04-02 21:17:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.5ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/show.html.haml (16.4ms)
+Completed 500 Internal Server Error in 132ms
+
+SyntaxError (/home/csvm/course_scheduler/app/views/students/show.html.haml:27: syntax error, unexpected ';', expecting ')'
+));}</p>\n</div>\n", -1, false);...
+   ^
+/home/csvm/course_scheduler/app/views/students/show.html.haml:27: unknown regexp options - dv
+/home/csvm/course_scheduler/app/views/students/show.html.haml:27: syntax error, unexpected $undefined
+));}</p>\n</div>\n", -1, false);::Haml::Util.h...
+                 ^
+/home/csvm/course_scheduler/app/views/students/show.html.haml:27: unterminated string meets end of file
+/home/csvm/course_scheduler/app/views/students/show.html.haml:27: syntax error, unexpected end-of-input, expecting tSTRING_DEND):
+  app/views/students/show.html.haml:27: syntax error, unexpected ';', expecting ')'
+  app/views/students/show.html.haml:27: unknown regexp options - dv
+  app/views/students/show.html.haml:27: syntax error, unexpected $undefined
+  app/views/students/show.html.haml:27: unterminated string meets end of file
+  app/views/students/show.html.haml:27: syntax error, unexpected end-of-input, expecting tSTRING_DEND
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (51.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (23.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (39.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (5.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (208.5ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-04-02 21:18:23 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.4ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered students/show.html.haml (163.8ms)
+Completed 500 Internal Server Error in 196ms
+
+ActionView::Template::Error (undefined method `student_destroy' for #<#<Class:0xb599b988>:0xb57c8ee4>):
+    23:         %td= @student.courses_progress
+    24: 
+    25:   %p= link_to("Edit Student details", edit_student_path)
+    26:   %p= link_to("Delete student", student_destroy(@student))
+  app/views/students/show.html.haml:26:in `_app_views_students_show_html_haml___239206129__625065868'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (54.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (7.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (3.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (164.1ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2015-04-02 21:19:33 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.7ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/show.html.haml (7.0ms)
+Completed 200 OK in 45ms (Views: 29.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-02 21:19:41 -0400
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (12.5ms)
+Completed 200 OK in 25ms (Views: 25.1ms | ActiveRecord: 0.0ms)

@@ -1,5 +1,6 @@
 #main
-  %h3= @student.first @student.last
+  %h3= @student.first 
+  %h3= @student.last
 
   %table.students_table
     %thead
@@ -7,20 +8,20 @@
         %th First
         %th Last
         %th Student ID
-		  %th Year
+        %th Year
         %th Major
-		  %th Courses Taken
+        %th Courses Taken
         %th Courses Progress
     %tbody
       %tr
-        %td= @students.first
-        %td= @students.last
-        %td= @students.sid
-		  %td= @students.year
-        %td= @students.major
-        %td= @students.courses_taken
-        %td= @students.courses_progress
+        %td= @student.first
+        %td= @student.last
+        %td= @student.sid
+        %td= @student.year
+        %td= @student.major
+        %td= @student.courses_taken
+        %td= @student.courses_progress
 
   %p= link_to("Edit Student details", edit_student_path)
-  %p= link_to("Delete student", student_destroy)
+  %p= link_to("Delete student", student_path(@student, :method => :delete))
 
