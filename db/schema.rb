@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 20150403000659) do
     t.string  "first"
     t.string  "last"
     t.string  "sid"
+    t.integer "year"
+    t.string  "major"
     t.integer "courses_taken"
     t.integer "courses_progress"
   end

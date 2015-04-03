@@ -640,3 +640,343 @@ Processing by RequirementsController#index as HTML
   [1m[35mRequirement Load (1.0ms)[0m  SELECT "requirements".* FROM "requirements"  ORDER BY name
   Rendered requirements/index.html.haml (12.4ms)
 Completed 200 OK in 20ms (Views: 13.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-02 20:49:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.haml (11.6ms)
+Completed 500 Internal Server Error in 78ms
+
+ActionView::Template::Error (Inconsistent indentation: 2 tabs used for indentation, but the rest of the document was indented using 2 spaces.):
+     6:       %th= link_to "First", students_path(sort: 'first')
+     7:       %th= link_to "Last", students_path(sort: 'last')
+     8:       %th ID
+     9: 		%th Class
+    10:       %th= link_to "Major", students_path(sort: 'major')
+    11: 
+    12:     -@students.each do |s|
+  app/views/students/index.html.haml:9
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (36.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (12.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (65.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (6.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (292.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-02 20:50:15 -0400
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.haml (15.1ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (Inconsistent indentation: "\t\t  " used for indentation, but the rest of the document was indented using 2 spaces.):
+    14:         %td= s.first
+    15:         %td= s.last
+    16:         %td= s.id
+    17: 		  %td= s.class
+    18:         %td= s.major
+    19: 
+    20:   %p= link_to("Create new student", new_student_path)
+  app/views/students/index.html.haml:17
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (29.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (19.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (3.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (141.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-02 20:50:35 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.9ms)[0m  SELECT "students".* FROM "students"  ORDER BY last
+  Rendered students/index.html.haml (13.5ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2015-04-02 20:50:39 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.haml (13.2ms)
+Completed 500 Internal Server Error in 67ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: %h3 Create new student
+    2: 
+    3: =form_for @student do |f|
+    4:   %div
+    5:   =f.label :first
+    6:   =f.text_field :first
+  app/views/students/new.html.haml:3:in `_app_views_students_new_html_haml__182311485__620099928'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (25.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (21.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (16.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (8.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (132.7ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2015-04-02 20:53:06 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.haml (34.9ms)
+Completed 500 Internal Server Error in 44ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: %h3 Create new student
+    2: 
+    3: =form_for @student do |f|
+    4:   %div
+    5:   =f.label :first
+    6:   =f.text_field :first
+  app/views/students/new.html.haml:3:in `_app_views_students_new_html_haml__182311485__620099928'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (32.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (28.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (7.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (219.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (11.6ms)[0m  DELETE FROM "students"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (8.4ms)[0m  DELETE FROM "students"
+  [1m[36m (8.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (5.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCourses (20150401204517)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "crn" integer, "course_name" varchar, "title" text, "instructor" varchar, "days" varchar, "starts" integer, "ends" integer, "building_room" varchar, "credits" decimal(2,2), "coreq" varchar, "crosslist" varchar, "restrictions" text, "prereq" varchar, "notes" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150401204517"]]
+  [1m[35m (6.0ms)[0m  commit transaction
+Migrating to CreateRequirements (20150402172713)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "requirements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "course" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150402172713"]]
+  [1m[35m (15.9ms)[0m  commit transaction
+Migrating to CreateStudents (20150403000659)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.6ms)[0m  CREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "sid" varchar, "year" integer, "courses_taken" integer, "courses_progress" integer) 
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150403000659"]]
+  [1m[35m (7.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (10.0ms)[0m  DELETE FROM "students"
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Peter"], ["last", "McGrath"], ["sid", "000878761"], ["year", 2015]]
+  [1m[36m (5.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Dan"], ["last", "Miller"], ["sid", "123456789"], ["year", 2015]]
+  [1m[35m (5.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Courtney"], ["last", "McGill"], ["sid", "789123654"], ["year", 2016]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Tom"], ["last", "Wheeler"], ["sid", "192837465"], ["year", 2016]]
+  [1m[35m (5.2ms)[0m  commit transaction
+  [1m[36mSQL (5.8ms)[0m  [1mDELETE FROM "requirements"[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Computer Science"], ["course", 10091], ["created_at", "2015-04-03 00:56:58.243154"], ["updated_at", "2015-04-03 00:56:58.243154"]]
+  [1m[35m (6.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Sociology"], ["course", 10387], ["created_at", "2015-04-03 00:56:58.253908"], ["updated_at", "2015-04-03 00:56:58.253908"]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Geology"], ["course", 10120], ["created_at", "2015-04-03 00:56:58.262921"], ["updated_at", "2015-04-03 00:56:58.262921"]]
+  [1m[35m (4.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Women's Studies"], ["course", 10550], ["created_at", "2015-04-03 00:56:58.271083"], ["updated_at", "2015-04-03 00:56:58.271083"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Biology"], ["course", 10001], ["created_at", "2015-04-03 00:56:58.280886"], ["updated_at", "2015-04-03 00:56:58.280886"]]
+  [1m[35m (5.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Hisory"], ["course", 10287], ["created_at", "2015-04-03 00:56:58.289375"], ["updated_at", "2015-04-03 00:56:58.289375"]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (5.2ms)[0m  DELETE FROM "courses"
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "coreq", "crosslist", "restrictions", "prereq", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10111], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 120], ["ends", 235], ["building_room", "Lawrence 105"], ["credits", 1.0], ["coreq", "COSC_480_Lab"], ["crosslist", "none"], ["restrictions", "none"], ["prereq", "COSC_301"], ["notes", "kinda difficult"], ["created_at", "2015-04-03 00:56:58.345631"], ["updated_at", "2015-04-03 00:56:58.345631"]]
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/students/new" for 127.0.0.1 at 2015-04-02 20:57:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.haml (34.1ms)
+Completed 500 Internal Server Error in 101ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: %h3 Create new student
+    2: 
+    3: =form_for @student do |f|
+    4:   %div
+    5:   =f.label :first
+    6:   =f.text_field :first
+  app/views/students/new.html.haml:3:in `_app_views_students_new_html_haml___379042412__624221308'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (24.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (14.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (41.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (3.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (186.8ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2015-04-02 20:57:11 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.haml (8.6ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: %h3 Create new student
+    2: 
+    3: =form_for @student do |f|
+    4:   %div
+    5:   =f.label :first
+    6:   =f.text_field :first
+  app/views/students/new.html.haml:3:in `_app_views_students_new_html_haml___379042412__624221308'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (21.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (16.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (123.0ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2015-04-02 20:58:19 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.haml (30.4ms)
+Completed 500 Internal Server Error in 65ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    2: 
+    3:   %h3 Create new student
+    4: 
+    5:   =form_for @student do |f|
+    6:     %div
+    7:     =f.label :first
+    8:     =f.text_field :first
+  app/views/students/new.html.haml:5:in `_app_views_students_new_html_haml___379042412_87824000'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (29.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (18.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (129.1ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2015-04-02 20:59:06 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.haml (148.1ms)
+Completed 500 Internal Server Error in 159ms
+
+ActionView::Template::Error (undefined method `major' for #<Student:0xa519834>):
+    17:     =f.number_field :year
+    18:     %div
+    19:     =f.label :major
+    20:     =f.text_field :major
+    21:     %div
+    22:     =f.submit
+  app/views/students/new.html.haml:20:in `block in _app_views_students_new_html_haml___379042412_87441930'
+  app/views/students/new.html.haml:5:in `_app_views_students_new_html_haml___379042412_87441930'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (30.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (13.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (8.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (8.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (123.9ms)
+  [1m[36m (11.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (6.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCourses (20150401204517)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "crn" integer, "course_name" varchar, "title" text, "instructor" varchar, "days" varchar, "starts" integer, "ends" integer, "building_room" varchar, "credits" decimal(2,2), "coreq" varchar, "crosslist" varchar, "restrictions" text, "prereq" varchar, "notes" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (5.8ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150401204517"]]
+  [1m[35m (7.3ms)[0m  commit transaction
+Migrating to CreateRequirements (20150402172713)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "requirements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "course" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150402172713"]]
+  [1m[35m (7.8ms)[0m  commit transaction
+Migrating to CreateStudents (20150403000659)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "sid" varchar, "year" integer, "major" varchar, "courses_taken" integer, "courses_progress" integer) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150403000659"]]
+  [1m[35m (15.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (8.6ms)[0m  DELETE FROM "students"
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Peter"], ["last", "McGrath"], ["sid", "000878761"], ["year", 2015]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Dan"], ["last", "Miller"], ["sid", "123456789"], ["year", 2015]]
+  [1m[35m (4.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Courtney"], ["last", "McGill"], ["sid", "789123654"], ["year", 2016]]
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Tom"], ["last", "Wheeler"], ["sid", "192837465"], ["year", 2016]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36mSQL (5.3ms)[0m  [1mDELETE FROM "requirements"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Computer Science"], ["course", 10091], ["created_at", "2015-04-03 01:00:03.529009"], ["updated_at", "2015-04-03 01:00:03.529009"]]
+  [1m[35m (6.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Sociology"], ["course", 10387], ["created_at", "2015-04-03 01:00:03.538054"], ["updated_at", "2015-04-03 01:00:03.538054"]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Geology"], ["course", 10120], ["created_at", "2015-04-03 01:00:03.545085"], ["updated_at", "2015-04-03 01:00:03.545085"]]
+  [1m[35m (6.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Women's Studies"], ["course", 10550], ["created_at", "2015-04-03 01:00:03.552891"], ["updated_at", "2015-04-03 01:00:03.552891"]]
+  [1m[36m (5.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Biology"], ["course", 10001], ["created_at", "2015-04-03 01:00:03.560296"], ["updated_at", "2015-04-03 01:00:03.560296"]]
+  [1m[35m (5.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Hisory"], ["course", 10287], ["created_at", "2015-04-03 01:00:03.567430"], ["updated_at", "2015-04-03 01:00:03.567430"]]
+  [1m[36m (5.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mSQL (5.4ms)[0m  DELETE FROM "courses"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "coreq", "crosslist", "restrictions", "prereq", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10111], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 120], ["ends", 235], ["building_room", "Lawrence 105"], ["credits", 1.0], ["coreq", "COSC_480_Lab"], ["crosslist", "none"], ["restrictions", "none"], ["prereq", "COSC_301"], ["notes", "kinda difficult"], ["created_at", "2015-04-03 01:00:03.616473"], ["updated_at", "2015-04-03 01:00:03.616473"]]
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/students/new" for 127.0.0.1 at 2015-04-02 21:00:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.haml (96.4ms)
+Completed 200 OK in 194ms (Views: 130.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2015-04-02 21:00:47 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"39Zl9G6KXk56lSUrvR0+jqZfEoakm7WlDAcsQ9RxXHr0dsKxCPNg6j6bUsjtdSi6F2obBcrE/H1J7b8Z9wm3eg==", "student"=>{"first"=>"John", "last"=>"Doe", "sid"=>"132465879", "year"=>"2017", "major"=>"Biology"}, "commit"=>"Create Student"}
+Completed 400 Bad Request in 3ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: product):
+  app/controllers/students_controller.rb:55:in `safe_params'
+  app/controllers/students_controller.rb:22:in `create'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (18.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (27.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (5.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (131.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-02 21:01:06 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (7.4ms)[0m  SELECT "students".* FROM "students"  ORDER BY last
+  Rendered students/index.html.haml (28.5ms)
+Completed 200 OK in 54ms (Views: 46.0ms | ActiveRecord: 7.4ms)
