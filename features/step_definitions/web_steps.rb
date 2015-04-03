@@ -18,15 +18,9 @@
 # * http://elabs.se/blog/15-you-re-cuking-it-wrong
 #
 
-Given /^these products:$/i do |table|
+Given /^these requirements:$/i do |table|
   table.hashes.each do |fhash|
-    if fhash.has_key? "minage"
-      fhash["minimum_age_appropriate"]=fhash.delete("minage")
-    end
-    if fhash.has_key? "maxage"
-      fhash["maximum_age_appropriate"]=fhash.delete("maxage")
-    end
-    Product.create!(fhash)
+    Requirement.create!(fhash)
   end
 end
 
@@ -53,8 +47,12 @@ When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
 end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
+  if page_name == "the create new requirements page"
+    page_name = "the new requirements page"
+  end
   visit path_to(page_name)
 end
+
 
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)

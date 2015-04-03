@@ -1391,3 +1391,252 @@ ActionView::Template::Error (Inconsistent indentation: 2 tabs used for indentati
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (45.5ms)
 >>>>>>> 7aea831b77f504a39f7ae4f699e09e74b77d663a
 >>>>>>> 6fedc6d408e215aaba455879027da884eaacb865
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-02 20:55:45 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (7.8ms)
+Completed 200 OK in 46ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-02 20:55:46 -0400
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (0.4ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-04-02 20:55:48 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY last
+  Rendered students/index.html.haml (13.1ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/requirements" for 127.0.0.1 at 2015-04-02 20:55:53 -0400
+Processing by RequirementsController#index as HTML
+  [1m[36mRequirement Load (0.3ms)[0m  [1mSELECT "requirements".* FROM "requirements"  ORDER BY name[0m
+  Rendered requirements/index.html.haml (14.8ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-04-02 20:55:55 -0400
+Processing by CoursesController#index as HTML
+  Rendered courses/index.html.haml (4.0ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    20:     -@courses.each do |c|
+    21:       %tr
+    22: <<<<<<< HEAD
+    23:         %td= p.crn
+    24: 	%td= link_to "#{p.course_name}", course_path(p)
+    25: 	%td= p.title
+    26: 	%td= p.instructor
+  app/views/courses/index.html.haml:23
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (10.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (9.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (16.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (74.2ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-04-02 20:55:57 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY last
+  Rendered students/index.html.haml (5.9ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2015-04-02 20:55:58 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.haml (116.3ms)
+Completed 200 OK in 120ms (Views: 119.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students?sort=first" for 127.0.0.1 at 2015-04-02 20:56:04 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"first"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY last[0m
+  Rendered students/index.html.haml (4.6ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?sort=last" for 127.0.0.1 at 2015-04-02 20:56:05 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"last"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY last
+  Rendered students/index.html.haml (5.9ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?sort=last" for 127.0.0.1 at 2015-04-02 20:56:07 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"last"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY last[0m
+  Rendered students/index.html.haml (4.5ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?sort=first" for 127.0.0.1 at 2015-04-02 20:56:09 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"first"}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"  ORDER BY last
+  Rendered students/index.html.haml (4.7ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students?sort=major" for 127.0.0.1 at 2015-04-02 20:56:10 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"major"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY last[0m
+  Rendered students/index.html.haml (2.1ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?sort=first" for 127.0.0.1 at 2015-04-02 20:56:11 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"first"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY last
+  Rendered students/index.html.haml (8.0ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?sort=first" for 127.0.0.1 at 2015-04-02 20:56:12 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"first"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY last[0m
+  Rendered students/index.html.haml (5.4ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?sort=last" for 127.0.0.1 at 2015-04-02 20:56:13 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"last"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY last
+  Rendered students/index.html.haml (2.7ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/requirements" for 127.0.0.1 at 2015-04-02 20:56:19 -0400
+Processing by RequirementsController#index as HTML
+  [1m[36mRequirement Load (0.2ms)[0m  [1mSELECT "requirements".* FROM "requirements"  ORDER BY name[0m
+  Rendered requirements/index.html.haml (2.0ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/requirements/1" for 127.0.0.1 at 2015-04-02 20:56:21 -0400
+Processing by RequirementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRequirement Load (0.2ms)[0m  SELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered requirements/show.html.haml (7.7ms)
+Completed 200 OK in 23ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-02 21:05:41 -0400
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (0.3ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-04-02 21:05:44 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY crn[0m
+  Rendered courses/index.html.haml (20.8ms)
+Completed 200 OK in 37ms (Views: 29.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/courses/4" for 127.0.0.1 at 2015-04-02 21:05:49 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered courses/show.html.haml (9.5ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (undefined method `description' for #<Course:0xaf1020c>):
+    12:       %td= @course.course_name
+    13:       %td= @course.title
+    14:       %td= @course.instructor
+    15:       %td= @course.description
+    16:   %tr
+    17:   %td= link_to "Back to course catalog", courses_path
+    18:   %td= link_to "Edit the existing product", edit_product_path
+  app/views/courses/show.html.haml:15:in `_app_views_courses_show_html_haml___759451785_91772480'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (10.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (51.3ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2015-04-02 21:05:54 -0400
+Processing by CoursesController#new as HTML
+  Rendered courses/new.html.haml (23.3ms)
+Completed 200 OK in 29ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-02 21:33:34 -0400
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml (0.4ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/requirements" for 127.0.0.1 at 2015-04-02 21:34:04 -0400
+Processing by RequirementsController#index as HTML
+  [1m[36mRequirement Load (0.2ms)[0m  [1mSELECT "requirements".* FROM "requirements"  ORDER BY name[0m
+  Rendered requirements/index.html.haml (5.1ms)
+Completed 200 OK in 20ms (Views: 14.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/requirements/new" for 127.0.0.1 at 2015-04-02 21:36:50 -0400
+Processing by RequirementsController#new as HTML
+  Rendered requirements/new.html.haml (9.2ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-04-02 21:37:20 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY last
+  Rendered students/index.html.haml (1.2ms)
+Completed 200 OK in 15ms (Views: 6.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2015-04-02 21:37:21 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.haml (3.7ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `year' for #<Student:0xa77e980>):
+    14:     =f.text_field :sid
+    15:     %div
+    16:     =f.label :year
+    17:     =f.number_field :year
+    18:     %div
+    19:     =f.label :major
+    20:     =f.text_field :major
+  app/views/students/new.html.haml:17:in `block in _app_views_students_new_html_haml___544795803__624336528'
+  app/views/students/new.html.haml:5:in `_app_views_students_new_html_haml___544795803__624336528'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (13.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (44.1ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-04-02 21:37:28 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY crn[0m
+  Rendered courses/index.html.haml (6.8ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2015-04-02 21:37:29 -0400
+Processing by CoursesController#new as HTML
+  Rendered courses/new.html.haml (9.4ms)
+Completed 200 OK in 18ms (Views: 18.0ms | ActiveRecord: 0.0ms)
