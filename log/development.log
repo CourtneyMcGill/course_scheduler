@@ -640,3 +640,119 @@ Processing by RequirementsController#index as HTML
   [1m[35mRequirement Load (1.0ms)[0m  SELECT "requirements".* FROM "requirements"  ORDER BY name
   Rendered requirements/index.html.haml (12.4ms)
 Completed 200 OK in 20ms (Views: 13.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-02 20:49:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.haml (10.1ms)
+Completed 500 Internal Server Error in 61ms
+
+ActionView::Template::Error (Inconsistent indentation: 2 tabs used for indentation, but the rest of the document was indented using 2 spaces.):
+     6:       %th= link_to "First", students_path(sort: 'first')
+     7:       %th= link_to "Last", students_path(sort: 'last')
+     8:       %th ID
+     9: 		%th Class
+    10:       %th= link_to "Major", students_path(sort: 'major')
+    11: 
+    12:     -@students.each do |s|
+  app/views/students/index.html.haml:9
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (22.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (7.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (28.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (102.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-02 20:50:14 -0400
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.haml (1.6ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (Inconsistent indentation: 2 tabs used for indentation, but the rest of the document was indented using 2 spaces.):
+     6:       %th= link_to "First", students_path(sort: 'first')
+     7:       %th= link_to "Last", students_path(sort: 'last')
+     8:       %th ID
+     9: 		%th Class
+    10:       %th= link_to "Major", students_path(sort: 'major')
+    11: 
+    12:     -@students.each do |s|
+  app/views/students/index.html.haml:9
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (12.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (52.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-02 20:50:59 -0400
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.haml (2.8ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (Inconsistent indentation: 2 tabs used for indentation, but the rest of the document was indented using 2 spaces.):
+     6:       %th= link_to "First", students_path(sort: 'first')
+     7:       %th= link_to "Last", students_path(sort: 'last')
+     8:       %th ID
+     9: 		%th Class
+    10:       %th= link_to "Major", students_path(sort: 'major')
+    11: 
+    12:     -@students.each do |s|
+  app/views/students/index.html.haml:9
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (10.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (5.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (48.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-02 20:51:02 -0400
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.haml (2.0ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (Inconsistent indentation: 2 tabs used for indentation, but the rest of the document was indented using 2 spaces.):
+     6:       %th= link_to "First", students_path(sort: 'first')
+     7:       %th= link_to "Last", students_path(sort: 'last')
+     8:       %th ID
+     9: 		%th Class
+    10:       %th= link_to "Major", students_path(sort: 'major')
+    11: 
+    12:     -@students.each do |s|
+  app/views/students/index.html.haml:9
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (12.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (7.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (50.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-02 21:01:11 -0400
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.haml (3.0ms)
+Completed 500 Internal Server Error in 66ms
+
+ActionView::Template::Error (Inconsistent indentation: 2 tabs used for indentation, but the rest of the document was indented using 2 spaces.):
+     6:       %th= link_to "First", students_path(sort: 'first')
+     7:       %th= link_to "Last", students_path(sort: 'last')
+     8:       %th ID
+     9: 		%th Class
+    10:       %th= link_to "Major", students_path(sort: 'major')
+    11: 
+    12:     -@students.each do |s|
+  app/views/students/index.html.haml:9
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (13.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (6.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (56.3ms)
