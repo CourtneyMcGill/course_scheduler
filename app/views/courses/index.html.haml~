@@ -34,5 +34,3 @@
         %td= c.prereq
         %td= c.notes
   %td= link_to "Create a new course", new_course_path
-  %br
-  %p= link_to("Back to administrator options", root_path)

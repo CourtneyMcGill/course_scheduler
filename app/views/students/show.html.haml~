@@ -23,5 +23,7 @@
         %td= @student.courses_progress
 
   %p= link_to("Edit Student details", edit_student_path)
-  %p= link_to("Delete student", student_destroy(@student))
+  %br
+  %td= link_to "Delete student", students_path, :method => :destroy
 
+%p= link_to "Back to students list", students_path

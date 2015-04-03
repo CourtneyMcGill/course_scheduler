@@ -1,12 +1,12 @@
 #main
 
+  %h3 All requirements
+
   .searchbox
     =form_tag requirements_path, method: :get do
       =label_tag "requirement_search"
       =text_field_tag "requirement_search", nil, maxlength: 50
       =submit_tag "Find requirement"
-
-  %h3 All requirements
 
   %table.requirement_table
     %tr.requirements_header
