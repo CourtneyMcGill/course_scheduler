@@ -4,6 +4,7 @@ class CreateStudents < ActiveRecord::Migration
       t.string :first
       t.string :last
       t.string :sid
+      t.integer :year
       t.integer :courses_taken
       t.integer :courses_progress
     end
