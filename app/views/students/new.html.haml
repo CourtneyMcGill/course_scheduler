@@ -1,20 +1,22 @@
-%h3 Create new student
+#main
 
-=form_for @student do |f|
-  %div
-  =f.label :first
-  =f.text_field :first
-  %div
-  =f.label :last
-  =f.text_field :last
-  %div
-  =f.label :sid
-  =f.text_field :sid
-  %div
-  =f.label :class
-  =f.number_field :class
-  %div
-  =f.label :major
-  =f.text_field :major
-  %div
-  =f.submit
+  %h3 Create new student
+
+  =form_for Student.new do |f|
+    %div
+    =f.label :first
+    =f.text_field :first
+    %div
+    =f.label :last
+    =f.text_field :last
+    %div
+    =f.label :sid
+    =f.text_field :sid
+    %div
+    =f.label :year
+    =f.number_field :year
+    %div
+    =f.label :major
+    =f.text_field :major
+    %div
+    =f.submit
