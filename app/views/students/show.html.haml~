@@ -20,4 +20,5 @@
         %td= @students.courses_progress
 
   %p= link_to("Edit Student details", edit_student_path)
+  %p= link_to("Delete student", student_destroy)
 

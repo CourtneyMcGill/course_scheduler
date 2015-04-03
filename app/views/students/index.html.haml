@@ -6,6 +6,7 @@
       %th= link_to "First", students_path(sort: 'first')
       %th= link_to "Last", students_path(sort: 'last')
       %th ID
+		%th Class
       %th= link_to "Major", students_path(sort: 'major')
 
     -@students.each do |s|
@@ -13,6 +14,7 @@
         %td= s.first
         %td= s.last
         %td= s.id
+		  %td= s.class
         %td= s.major
 
   %p= link_to("Create new student", new_student_path)
