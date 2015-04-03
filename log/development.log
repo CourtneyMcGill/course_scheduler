@@ -2283,3 +2283,24 @@ Migrating to AddCourseIdToRequirements (20150403015138)
   [1m[35m (5.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150402172713')
   [1m[36m (4.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150403015100')[0m
   [1m[35m (4.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150403014909')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddStudentIdToRequirements (20150403192437)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150403192437"]]
+  [1m[35m (43.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (44.4ms)[0m  [1mCREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "crn" integer, "course_name" varchar, "title" text, "instructor" varchar, "days" varchar, "starts" integer, "ends" integer, "building_room" varchar, "credits" decimal(2,2), "coreq" varchar, "crosslist" varchar, "restrictions" text, "prereq" varchar, "notes" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "student_id" integer) [0m
+  [1m[35m (43.1ms)[0m  CREATE TABLE "requirements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "course" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "course_id" integer) 
+  [1m[36m (85.5ms)[0m  [1mCREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "sid" varchar, "year" integer, "major" varchar, "courses_taken" integer, "courses_progress" integer, "course_id" integer, "requirement_id" integer) [0m
+  [1m[35m (39.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (108.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (56.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150403192437')
+  [1m[36m (57.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150401204517')[0m
+  [1m[35m (64.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150403015138')
+  [1m[36m (66.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150403000659')[0m
+  [1m[35m (56.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150403014647')
+  [1m[36m (55.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150402172713')[0m
+  [1m[35m (56.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150403015100')
+  [1m[36m (64.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150403014909')[0m
