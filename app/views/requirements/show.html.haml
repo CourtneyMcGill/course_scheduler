@@ -4,9 +4,14 @@
     =precede "Requirement details for " do
       %span= @requirement.name
   %table.requirements_table
-    %th Course
-    %tr
-      %td= @requirement.course
+    %thead
+      %tr.requirements_header
+        %th Course
+        %th Major Requirements
+      %tbody
+        %tr
+          %td= @requirement.course
+          %td= @requirement.courses.name
   %tr
   %td= link_to "Edit requirement", edit_requirement_path
   %br

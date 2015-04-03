@@ -10,8 +10,8 @@
         %th Student ID
         %th Year
         %th Major
-        %th Courses Taken
-        %th Courses Progress
+        %th Courses-Taken
+        %th Courses-Progress
     %tbody
       %tr
         %td= @student.first
@@ -19,8 +19,8 @@
         %td= @student.sid
         %td= @student.year
         %td= @student.major
-        %td= @student.courses_taken
-        %td= @student.courses_progress
+        %td= @student.courses.name
+        %td= @student.courses.name
 
   %p= link_to("Edit Student details", edit_student_path)
   %br
