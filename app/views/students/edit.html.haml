@@ -1,0 +1,17 @@
+%h3 Edit student
+
+=form_for @student do |f|
+  %div
+  =f.label :first
+  =f.text_field :first
+  %div
+  =f.label :last
+  =f.text_field :last
+  %div
+  =f.label :sid
+  =f.text_field :sid
+  %div
+  =f.label :major
+  =f.text_field :major
+  %div
+  =f.submit
