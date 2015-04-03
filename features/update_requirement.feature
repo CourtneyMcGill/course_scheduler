@@ -18,4 +18,5 @@ Feature: Update existing requirement
     And I fill in "Course" with "10286"
     And I press "Update Requirement"
     Then I should see "10286"
+    And I should see "History successfully updated"
     And I should not see "10287"
