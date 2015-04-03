@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
     root 'centeral#index'
-    resources :courses
-    resources :students
-    resources :requirements
+    resources :courses do
+	resources :students
+	resources :requirements
+    end
+    resources :students do
+	resources :courses
+    end
+    resources :requirements do
+	resources :students
+    end
 end
