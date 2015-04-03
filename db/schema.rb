@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20150403015138) do
     t.text     "notes"
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
+    t.integer  "student_id"
   end
 
   create_table "requirements", force: :cascade do |t|
@@ -37,6 +38,7 @@ ActiveRecord::Schema.define(version: 20150403015138) do
     t.integer  "course"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "course_id"
   end
 
   create_table "students", force: :cascade do |t|
@@ -47,6 +49,8 @@ ActiveRecord::Schema.define(version: 20150403015138) do
     t.string  "major"
     t.integer "courses_taken"
     t.integer "courses_progress"
+    t.integer "course_id"
+    t.integer "requirement_id"
   end
 
 end
