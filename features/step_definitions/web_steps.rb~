@@ -50,9 +50,6 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   if page_name == "the create new requirement page"
     page_name = "the new requirement page"
   end
-  if page_name == "the create new course page"
-    page_name  = "the new course page"
-  end
   visit path_to(page_name)
 end
 
@@ -131,6 +128,7 @@ Then /^I should see that "(.*?)" has an image "(.*?)"$/ do |toy, image|
       expect(row.find('td.image')).to have_css("img[src*='#{image}']")
     end
   end
+
 end
 
 Then /^I should see the image "(.*?)"$/ do |image|
@@ -145,53 +143,44 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
   end
 end
 
-Given /^these courses:$/ do |table|
-  table.hashes.each do |fhash|
-    Course.create!(fhash)
+Then /^I should see product name in sorted order$/ do
+  rows=page.all('tr.data')
+  names=Array.new()
+  rows.each do |row|
+    names<<row.find('td.productname').text
   end
-
+  sorted=true
+  if(names.length>=2)
+    i=0
+    while(i<(names.length-1))
+      if((names[i]<=>names[i+1])!=-1)
+        sorted=false
+      end
+      i=i+1
+    end
+  end
+  expect(sorted).to eq(true)
 end
 
-Then /^I should see that "(.*?)" has a course name of "(.*?)"$/ do |arg1, arg2|
-  
+Then /^I should see product price in sorted order$/ do
+  rows=page.all('tr.data')
+  prices=Array.new()
+  rows.each do |row|
+    tmp=row.find('td.price').text
+    prices<<(tmp.sub('$','')).to_f
+  end
+  sorted=true
+  if(prices.length>=2)
+    i=0
+    while(i<(prices.length-1))
+      if((prices[i]<=>prices[i+1])!=-1)
+        sorted=false
+      end
+      i=i+1
+    end
+  end
+  expect(sorted).to eq(true)
 end
-
-Then /^I should see that "(.*?)" has a title of "(.*?)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^I should see that "(.*?)" has an instructor of "(.*?)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^I should see that "(.*?)" has a days of "(.*?)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^I should see that "(.*?)" has a starts of "(.*?)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^I should see that "(.*?)" has an ends of "(.*?)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^I should see that "(.*?)" has a building\/room of "(.*?)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^I should see that "(.*?)" has a credits of "(.*?)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-When /^I fill in title with "(.*?)"$/ do |arg1|
-  fill_in("course_title", :with => arg1)
-end
-
-When /^I fill in instructor with "(.*?)"$/ do |arg1|
-  fill_in("Instructor", :with => arg1)
-end
-
 
 
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|

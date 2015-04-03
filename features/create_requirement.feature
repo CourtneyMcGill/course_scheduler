@@ -17,3 +17,5 @@ Feature: Create new requirement
     And I press "Create Requirement"
     Then I should be on the requirements page
     And I should see that "Religion" has a course of "10545"
+    And I should see "New requiremenent Religion created successfully"
+

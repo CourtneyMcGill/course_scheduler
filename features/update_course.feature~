@@ -4,9 +4,9 @@ Feature: Update existing course
   I want to be able to update course information.
 
   Background: there are several courses
-    Given these courses:
-      | crn | course_name | title | instructor | days | starts | ends | building_room | credits|
-      | 10003 | COSC_480 | Cloud Computing | Sommers | MWF | 1020 | 1110 | Lawrence 105 | 1 |
+    Given these requirements:
+      | course name   | title             | instructor    | days      | starts    | ends  |
+      | COSC_480      | Cloud Computing   | Sommers       | MWF       | 1020      | 1110  |
       
     Scenario: Edit a course
       Given I am on the courses page
@@ -17,9 +17,9 @@ Feature: Update existing course
       And I should see "1020"
       And I should see "1110"
       When I press "Edit the existing course"
-      And I fill in title with "Networks"
+      And I fill in title with "Computer Networks"
       And I fill in instructor with "Vijay"
       And I press "Update Course"
-      And I should see "Networks was successfully updated"
+      Then I should see "Computer Networks"
       And I should see "Vijay"
 
