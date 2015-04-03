@@ -47,8 +47,8 @@ When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
 end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
-  if page_name == "the create new requirements page"
-    page_name = "the new requirements page"
+  if page_name == "the create new requirement page"
+    page_name = "the new requirement page"
   end
   visit path_to(page_name)
 end
@@ -111,7 +111,7 @@ When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
   attach_file(field, File.expand_path(path))
 end
 
-Then /^I should see that "(.*?)" has a price of "(.*?)"$/ do |toy, price|
+Then /^I should see that "(.*?)" has a course of "(.*?)"$/ do |req, course|
   rows=page.all('tr.data')
   rows.each do |row|
     if(row.find('td.productname').has_text?toy)
@@ -301,9 +301,6 @@ end
  
 Then /^(?:|I )should be on (.+)$/ do |page_name|
   current_path = URI.parse(current_url).path
-  if(current_path=='/'&&(path_to(page_name))=='/products')
-    current_path='/products'
-  end
   if current_path.respond_to? :should
     current_path.should == path_to(page_name)
   else

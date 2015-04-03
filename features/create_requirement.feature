@@ -10,10 +10,10 @@ Feature: Create new requirement
       | Biology      | 10001  |
 
   Scenario: Create a new requirement
-    Given I am on the create new requirements page
+    Given I am on the create new requirement page
     When I fill in the following:
       | Name        | Religion        |
       | Course      | 10545           |
     And I press "Create Requirement"
-    Then I should be on the requiremets page
-    And I should see that "religion" has a course of "10545"
+    Then I should be on the requirements page
+    And I should see that "Religion" has a course of "10545"
