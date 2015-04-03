@@ -4,7 +4,7 @@ class StudentsController < ApplicationController
 		if params[:query]
 			query = params[:query]
 		else
-			query = session[:query]
+			query = 'last'
 		end
 		@students = Student.sorted_by(query)
 	end
@@ -36,14 +36,14 @@ class StudentsController < ApplicationController
 	def update
 		@student = Student.find params[:id]
 		@student.update(safe_params)
-		flash[:notice] = "#{@student.name} was successfully updated."
+		flash[:notice] = "#{@student.first} was successfully updated."
 		redirect_to student_path(@student)
 	end
 
 	def destroy
 		@student = Student.find(params[:id])
 		@student.destroy
-		flash[:notice] = "Student '#{@student.name}' deleted."
+		flash[:notice] = "Student '#{@student.first}' deleted."
 		redirect_to students_path
 	end
 
