@@ -65,4 +65,14 @@ RSpec.describe CoursesController, type: :controller do
       response.should redirect_to(courses_path)
     end
   end
+
+    describe "delete course" do
+    it "should delete and redirect" do
+      c=Course.new
+      expect(Course).to receive(:find).with("1"){c}
+      expect(c).to receive(:destroy){c}
+      delete :destroy, id:1
+      expect(response).to redirect_to(courses_path)
+    end
+  end
 end
