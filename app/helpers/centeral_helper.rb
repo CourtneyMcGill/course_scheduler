@@ -1,0 +1,2 @@
+module CenteralHelper
+end
