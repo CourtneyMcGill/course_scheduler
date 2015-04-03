@@ -65,15 +65,4 @@ RSpec.describe CoursesController, type: :controller do
       response.should redirect_to(courses_path)
     end
   end
-
-  describe "update course" do
-    it "should show success flash message and show on success" do
-      c=Course.new
-      expect(Course).to receive(:find).with("1"){c}
-      expect(c).to receive(:update){c}
-      expect(c).to receive(:safe_params){}
-      put :update, id: 1
-      response.should redirect_to(courses_path)
-    end
-  end
 end
