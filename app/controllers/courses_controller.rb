@@ -15,7 +15,7 @@ class CoursesController < ApplicationController
   def create
         c = Course.new(safe_params)
         if c.save
-            flash[:notice] = "Course #{s.title} successfully created"
+            flash[:notice] = "Course #{c.title} successfully created"
             redirect_to courses_path
         else
             flash[:warning] = "Course couldn't be created"
@@ -43,7 +43,7 @@ class CoursesController < ApplicationController
 
   private
   def safe_params
-        params.require(:crn, :course_name, :title, :instructor, :days, :starts, :ends, :building_room, :credits).permit(:coreq, :crosslist, :restrictions, :prereq, :notes)
+        params.require(:course).permit(:crn, :course_name, :title, :instructor, :days, :starts, :ends, :building_room, :credits, :coreq, :crosslist, :restrictions, :prereq, :notes)
   end
 
 end
