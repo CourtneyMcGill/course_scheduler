@@ -1,0 +1,18 @@
+#main
+  %h3
+    =precede "Course details for" do
+      %span= @course.title
+
+  %table.courses_table
+    %th Course
+    %th Title
+    %th Instructor
+    %th Description
+    %tr
+      %td= @course.course_name
+      %td= @course.title
+      %td= @course.instructor
+      %td= @course.description
+  %tr
+  %td= link_to "Back to course catalog", courses_path
+  %td= link_to "Edit the existing product", edit_product_path
