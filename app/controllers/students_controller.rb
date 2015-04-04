@@ -52,7 +52,7 @@ class StudentsController < ApplicationController
 		def safe_params
 			# we require a product to be in params
 			# allow name, description, and price to be mass-assigned		
-			params.require(:student).permit(:first, :last, :sid, :major)
+			params.require(:student).permit(:first, :last, :sid, :year, :major)
 		end
 
 end
