@@ -1,8 +1,14 @@
 class CoursesController < ApplicationController
 
   def index
-	@courses = Course.sorted_by("crn")
+        if params[:sort] != nil
+            @courses = Course.sorted_by(params[:sort])
+        else
+            @courses = Course.sorted_by("crn")
+        end
   end
+
+
 
   def show
 	@course = Course.find(params[:id])

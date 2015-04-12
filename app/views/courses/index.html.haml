@@ -9,9 +9,9 @@
       %th= link_to "Instructor", courses_path(sort: 'instructor')
       %th Days
       %th= link_to "Starts", courses_path(sort: 'starts')
-      %th Ends
-      %th Building/Room
-      %th Credits
+      %th= link_to "Ends", courses_path(sort: 'ends')
+      %th= link_to "Building/Room", courses_path(sort: 'building_room')
+      %th= link_to "Credits", courses_path(sort: 'credits')
       %th Co-Reqs
       %th CrossList
       %th Restrictions

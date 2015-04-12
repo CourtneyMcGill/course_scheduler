@@ -1,8 +1,6 @@
 class RequirementsController < ApplicationController
   def index
- #   @requirements = Requirement.sorted_by("name")
-    searchfield = params[:product_search]
-    @requirements = Requirement.search(searchfield).sorted_by("name")
+    @requirements = Requirement.sorted_by("name")
   end
 
   def show

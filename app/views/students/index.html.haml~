@@ -3,20 +3,21 @@
 
   %table.students_table
     %tr.students_header
-      %th= link_to "First", students_path(sort: 'first')
-      %th= link_to "Last", students_path(sort: 'last')
-      %th ID
-      %th Class
-      %th= link_to "Major", students_path(sort: 'major')
+      %th{:class => "first"}= link_to "First", students_path(sort: 'first')
+      %th{:class => "last"}= link_to "Last", students_path(sort: 'last')
+      %th{:class => "sid"} ID
+      %th{:class => "year"} Year
+      %th{:class => "major"}= link_to "Major", students_path(sort: 'major')
 
     -@students.each do |s|
       %tr
-        %td= link_to "#{s.first}", student_path(s)
-        %td= s.last
-        %td= s.id
-        %td= s.year
-        %td= s.major
+        %td{:class => "first"}= link_to "#{s.first}", student_path(s)
+        %td{:class => "last"}= s.last
+        %td{:class => "sid"}= s.id
+        %td{:class => "year"}= s.year
+        %td{:class => "major"}= s.major
 
   %p= link_to("Create new student", new_student_path)
   %br
-  %p= link_to("Back to administrator options", "")
+  %p= link_to("Back to administrator options", root_path)
+

@@ -5,8 +5,8 @@
     %tr.students_header
       %th{:class => "first"}= link_to "First", students_path(sort: 'first')
       %th{:class => "last"}= link_to "Last", students_path(sort: 'last')
-      %th{:class => "sid"} ID
-      %th{:class => "year"} Year
+      %th{:class => "sid"}= link_to "ID", students_path(sort: 'sid')
+      %th{:class => "year"}= link_to "Year", students_path(sort: 'year')
       %th{:class => "major"}= link_to "Major", students_path(sort: 'major')
 
     -@students.each do |s|

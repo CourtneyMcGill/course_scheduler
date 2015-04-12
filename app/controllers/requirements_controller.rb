@@ -1,10 +1,12 @@
 class RequirementsController < ApplicationController
+
   def index
     @requirements = Requirement.sorted_by("name")
   end
 
+
   def show
-        @requirement = Requirement.find(params[:id])
+    @requirement = Requirement.find(params[:id])
   end
 
   def new
