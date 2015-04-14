@@ -24,6 +24,12 @@ Given /^these requirements:$/i do |table|
   end
 end
 
+Given /^these students:$/i do |table|
+  table.hashes.each do |fhash|
+    Student.create!(fhash)
+  end
+end
+
 require 'uri'
 require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
@@ -52,6 +58,9 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   end
   if page_name == "the create new course page"
     page_name  = "the new course page"
+  end
+  if page_name == "the create new student page"
+    page_name = "the new student page"
   end
   visit path_to(page_name)
 end
@@ -150,6 +159,54 @@ Given /^these courses:$/ do |table|
     Course.create!(fhash)
   end
 
+end
+
+Then(/^I should see that "(.*?)" has a last of "(.*?)"$/) do |first, last|
+  firsts,lasts = [],[]
+  page.all('.first').each { |f| firsts << f.text }
+  page.all('.last').each { |l| lasts << l.text }
+  i = firsts.index(first)
+  lasts[i-1].should eq last
+end
+
+Then(/^I should see that "(.*?)" has a sid of "(.*?)"$/) do |first, sid|
+  firsts,sids = [],[]
+  page.all('.first').each { |f| firsts << f.text }
+  page.all('.sid').each { |s| sids << s.text }
+  i = firsts.index(first)
+  sids[i-1].should eq sid
+end
+
+Then(/^I should see that "(.*?)" has a major of "(.*?)"$/) do |first, major|
+  firsts,majors = [],[]
+  page.all('.first').each { |f| firsts << f.text }
+  page.all('.major').each { |m| majors << m.text }
+  i = firsts.index(first)
+  majors[i-1].should eq major
+end
+
+Then(/^I should see that "(.*?)" has a year of "(.*?)"$/) do |first, year|
+  firsts,years = [],[]
+  page.all('.first').each { |f| firsts << f.text }
+  page.all('.year').each { |y| years << y.text }
+  i = firsts.index(first)
+  years[i-1].should eq year
+end
+
+Then(/^I should see student last in sorted order$/) do
+  names = []
+  page.all('.first').each { |n| names << n.text }
+  names.delete_at(0)
+  sorted_names = names.sort
+  names.should eq sorted_names
+end
+
+Then(/^I should see student year in sorted order$/) do
+  years = []
+  page.all('.year').each { |y| years << y.text }
+  names.delete_at(0)
+  sorted_years = years.sort
+  years.should eq sorted_years
 end
 
 Then /^I should see that "(.*?)" has a course name of "(.*?)"$/ do |arg1, arg2|
