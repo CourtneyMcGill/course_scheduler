@@ -2,45 +2,45 @@
 
   .searchbox
     =form_tag courses_path, method: :get do
-      =label_tag "courses_search"
-      =text_field_tag "courses_search", nil, maxlengh: 20
+      =label_tag "crn_search"
+      =text_field_tag "crn_search", nil, maxlengh: 7
       =submit_tag "Find courses"
 
-  =form 
-    %p=f.label :dept
-    %p=f.text_field :dept
+  %br
+  %br
+  %h4 Filter courses
+  .filterbox
+    =form_tag courses_path, method: :get do
+      =label_tag "dept"
+      =text_field_tag "dept", nil, maxlengh: 4
+      %br
+      =label_tag "level"
+      =text_field_tag "level"
+      %br
+      =label_tag "instructor"
+      =text_field_tag "instructor"
+      %br
+      =label_tag "day"
+      =text_field_tag "day"
+      %br
+      =label_tag "after"
+      =text_field_tag "after"
+      %br
+      =label_tag "before"
+      =text_field_tag "before"
+      %br
+      =submit_tag "Filter courses"
 
-    %p=f.label :core
-    %p=f.text_field :core
+      
 
-    %p=f.label :inquiry
-    %p=f.text_field :inquiry
-
-    %p=f.label :instructor
-    %p=f.text_field :instructor
-
-    %p=f.label :days
-    %p=f.text_field :days
-
-    %p=f.label :starts_after
-    %p=f.number_field :starts_after, :in => 100..1259
-
-    %p=f.label :ends_before
-    %p=f.number_field :ends_before, :in => 100..1259
-
-    %p=f.label :level
-    %p=f.text_field :level
-
-    %p=f.label :credits
-    %p=f.number_field :credits, :in => 0.0..1.0
-
-    %p=f.submit
 
   %h3 Course Listings
 
   %table.courses_table
     %tr.courses_header
       %th= link_to "CRN", courses_path(sort: 'crn')
+      %th= link_to "Dept", courses_path(sort: 'dept')
+      %th= link_to "Level", courses_path(sort: 'level')
       %th= link_to "Course Name", courses_path(sort: 'course_name')
       %th= link_to "Title", courses_path(sort: 'title')
       %th= link_to "Instructor", courses_path(sort: 'instructor')
@@ -57,6 +57,8 @@
     -@courses.each do |c|
       %tr
         %td= c.crn
+        %td= c.dept
+        %td= c.level
         %td= link_to "#{c.course_name}", course_path(c)
         %td= c.title
         %td= c.instructor

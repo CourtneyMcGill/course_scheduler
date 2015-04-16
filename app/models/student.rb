@@ -4,9 +4,17 @@ class Student < ActiveRecord::Base
 
   def self.sorted_by(field)
 	if self.column_names.include?(field)
-       	  self.order(field)
+          if field == "first"
+       	    self.order("LOWER(first)")
+          elsif field == "last"
+            self.order("LOWER(last)")
+          elsif field == "major"
+            self.order("LOWER(major)")
+          else
+            self.order(field)
+          end
         else
-          self.order("last")
+          self.order("LOWER(last)")
         end
   end
 

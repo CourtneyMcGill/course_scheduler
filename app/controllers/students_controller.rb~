@@ -11,7 +11,7 @@ class StudentsController < ApplicationController
                         @students = searchfield ? Student.search(searchfield) : Student.sorted_by(query)
 
                 else
-                        @students = Student.sorted_by(query)
+                        @students = Student.sorted_by((query)
                 end
 	end
 
