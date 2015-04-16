@@ -11829,6 +11829,85 @@ Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.1ms)
 =======
 >>>>>>> 3ade27eca1b1339086cc7c11c3f3cf4169bf93b3
 >>>>>>> 767291ac741c6e3db0456d004f8b8b42c099681f
+<<<<<<< HEAD
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10005], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1020], ["ends", 1110], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-03 21:53:56.340759"], ["updated_at", "2015-04-03 21:53:56.340759"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses/new" for 127.0.0.1 at 2015-04-03 17:53:56 -0400
+Processing by CoursesController#new as HTML
+  Rendered courses/new.html.haml within layouts/application (67.8ms)
+Completed 200 OK in 215ms (Views: 215.0ms | ActiveRecord: 0.0ms)
+Started POST "/courses" for 127.0.0.1 at 2015-04-03 17:53:56 -0400
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "course"=>{"crn"=>"10006", "course_name"=>"COSC_465", "title"=>"Computer Networks", "instructor"=>"Stratton", "days"=>"TR", "starts"=>"955", "ends"=>"1120", "building_room"=>"Lawrence 200", "credits"=>"1", "coreq"=>"COSC_465_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"difficult"}, "commit"=>"Create Course"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (11.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "coreq", "crosslist", "restrictions", "prereq", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10006], ["course_name", "COSC_465"], ["title", "Computer Networks"], ["instructor", "Stratton"], ["days", "TR"], ["starts", 955], ["ends", 1120], ["building_room", "Lawrence 200"], ["credits", 1.0], ["coreq", "COSC_465_Lab"], ["crosslist", "none"], ["restrictions", "none"], ["prereq", "COSC_301"], ["notes", "difficult"], ["created_at", "2015-04-03 21:53:56.794470"], ["updated_at", "2015-04-03 21:53:56.794470"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/courses
+Completed 302 Found in 19ms (ActiveRecord: 11.4ms)
+Started GET "/courses" for 127.0.0.1 at 2015-04-03 17:53:56 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY crn[0m
+  Rendered courses/index.html.haml within layouts/application (11.1ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Geology"], ["course", 10120], ["created_at", "2015-04-03 21:53:56.921587"], ["updated_at", "2015-04-03 21:53:56.921587"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Biology"], ["course", 10001], ["created_at", "2015-04-03 21:53:56.923806"], ["updated_at", "2015-04-03 21:53:56.923806"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/requirements/new" for 127.0.0.1 at 2015-04-03 17:53:56 -0400
+Processing by RequirementsController#new as HTML
+  Rendered requirements/new.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+Started POST "/requirements" for 127.0.0.1 at 2015-04-03 17:53:56 -0400
+Processing by RequirementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "requirement"=>{"name"=>"Religion", "course"=>"10545"}, "commit"=>"Create Requirement"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Religion"], ["course", 10545], ["created_at", "2015-04-03 21:53:56.993020"], ["updated_at", "2015-04-03 21:53:56.993020"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/requirements
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+Started GET "/requirements" for 127.0.0.1 at 2015-04-03 17:53:56 -0400
+Processing by RequirementsController#index as HTML
+  [1m[36mRequirement Load (0.2ms)[0m  [1mSELECT "requirements".* FROM "requirements"  ORDER BY name[0m
+  Rendered requirements/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10003], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1020], ["ends", 1110], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-03 21:53:57.047657"], ["updated_at", "2015-04-03 21:53:57.047657"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2015-04-03 17:53:57 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY crn[0m
+  Rendered courses/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-03 17:53:57 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.3ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."course_id" = ?  ORDER BY "students"."id" DESC LIMIT 1[0m  [["course_id", 1]]
+  Rendered courses/show.html.haml within layouts/application (46.5ms)
+Completed 200 OK in 184ms (Views: 63.1ms | ActiveRecord: 0.7ms)
+Started GET "/courses/1/edit" for 127.0.0.1 at 2015-04-03 17:53:57 -0400
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered courses/edit.html.haml within layouts/application (16.4ms)
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.1ms)
+Started PATCH "/courses/1" for 127.0.0.1 at 2015-04-03 17:53:57 -0400
+=======
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  begin transaction
 Processing by CenteralController#index as HTML
@@ -12111,19 +12190,74 @@ Processing by CoursesController#edit as HTML
   Rendered courses/edit.html.haml within layouts/application (24.3ms)
 Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.1ms)
 Started PATCH "/courses/1" for 127.0.0.1 at 2015-04-03 17:06:17 -0400
+>>>>>>> a86effbb9e1f598ec35538c41438e90aa5defe2a
 Processing by CoursesController#update as HTML
   Parameters: {"utf8"=>"✓", "course"=>{"crn"=>"10003", "course_name"=>"COSC_480", "title"=>"Networks", "instructor"=>"Vijay", "days"=>"MWF", "starts"=>"1020", "ends"=>"1110", "building_room"=>"Lawrence 105", "credits"=>"1", "coreq"=>"", "crosslist"=>"", "restrictions"=>"", "prereq"=>"", "notes"=>""}, "commit"=>"Update Course", "id"=>"1"}
   [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
   [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+<<<<<<< HEAD
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "courses" SET "title" = ?, "instructor" = ?, "coreq" = ?, "crosslist" = ?, "restrictions" = ?, "prereq" = ?, "notes" = ?, "updated_at" = ? WHERE "courses"."id" = ?[0m  [["title", "Networks"], ["instructor", "Vijay"], ["coreq", ""], ["crosslist", ""], ["restrictions", ""], ["prereq", ""], ["notes", ""], ["updated_at", "2015-04-03 21:53:57.364808"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/courses/1
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-03 17:53:57 -0400
+=======
   [1m[36mSQL (0.9ms)[0m  [1mUPDATE "courses" SET "title" = ?, "instructor" = ?, "coreq" = ?, "crosslist" = ?, "restrictions" = ?, "prereq" = ?, "notes" = ?, "updated_at" = ? WHERE "courses"."id" = ?[0m  [["title", "Networks"], ["instructor", "Vijay"], ["coreq", ""], ["crosslist", ""], ["restrictions", ""], ["prereq", ""], ["notes", ""], ["updated_at", "2015-04-03 21:06:17.674719"], ["id", 1]]
   [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
 Redirected to http://www.example.com/courses/1
 Completed 302 Found in 16ms (ActiveRecord: 1.1ms)
 Started GET "/courses/1" for 127.0.0.1 at 2015-04-03 17:06:17 -0400
+>>>>>>> a86effbb9e1f598ec35538c41438e90aa5defe2a
 Processing by CoursesController#show as HTML
   Parameters: {"id"=>"1"}
   [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
   [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."course_id" = ?  ORDER BY "students"."id" DESC LIMIT 1  [["course_id", 1]]
+<<<<<<< HEAD
+  Rendered courses/show.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "History"], ["course", 10287], ["created_at", "2015-04-03 21:53:57.398795"], ["updated_at", "2015-04-03 21:53:57.398795"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Biology"], ["course", 10001], ["created_at", "2015-04-03 21:53:57.401308"], ["updated_at", "2015-04-03 21:53:57.401308"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Geology"], ["course", 101287], ["created_at", "2015-04-03 21:53:57.402823"], ["updated_at", "2015-04-03 21:53:57.402823"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/requirements" for 127.0.0.1 at 2015-04-03 17:53:57 -0400
+Processing by RequirementsController#index as HTML
+  [1m[35mRequirement Load (0.2ms)[0m  SELECT "requirements".* FROM "requirements"  ORDER BY name
+  Rendered requirements/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+Started GET "/requirements/1" for 127.0.0.1 at 2015-04-03 17:53:57 -0400
+Processing by RequirementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRequirement Load (0.2ms)[0m  [1mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered requirements/show.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+Started GET "/requirements/1/edit" for 127.0.0.1 at 2015-04-03 17:53:57 -0400
+Processing by RequirementsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRequirement Load (0.2ms)[0m  SELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered requirements/edit.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+Started PATCH "/requirements/1" for 127.0.0.1 at 2015-04-03 17:53:57 -0400
+Processing by RequirementsController#update as HTML
+  Parameters: {"utf8"=>"✓", "requirement"=>{"name"=>"History", "course"=>"10286"}, "commit"=>"Update Requirement", "id"=>"1"}
+  [1m[36mRequirement Load (0.1ms)[0m  [1mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "requirements" SET "course" = ?, "updated_at" = ? WHERE "requirements"."id" = ?[0m  [["course", 10286], ["updated_at", "2015-04-03 21:53:57.498507"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/requirements/1
+Completed 302 Found in 10ms (ActiveRecord: 1.6ms)
+Started GET "/requirements/1" for 127.0.0.1 at 2015-04-03 17:53:57 -0400
+=======
   Rendered courses/show.html.haml within layouts/application (5.7ms)
 Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.1ms)
   [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
@@ -12168,10 +12302,14 @@ Processing by RequirementsController#update as HTML
 Redirected to http://www.example.com/requirements/1
 Completed 302 Found in 7ms (ActiveRecord: 1.5ms)
 Started GET "/requirements/1" for 127.0.0.1 at 2015-04-03 17:06:17 -0400
+>>>>>>> a86effbb9e1f598ec35538c41438e90aa5defe2a
 Processing by RequirementsController#show as HTML
   Parameters: {"id"=>"1"}
   [1m[36mRequirement Load (0.1ms)[0m  [1mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered requirements/show.html.haml within layouts/application (1.2ms)
+<<<<<<< HEAD
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms)
+=======
 Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.1ms)
   [1m[35m (0.2ms)[0m  rollback transaction
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
@@ -18537,6 +18675,7 @@ Processing by StudentsController#show as HTML
   [1m[36mStudent Load (0.0ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered students/show.html.haml within layouts/application (0.9ms)
 Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+>>>>>>> a86effbb9e1f598ec35538c41438e90aa5defe2a
   [1m[35m (0.2ms)[0m  rollback transaction
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  begin transaction
