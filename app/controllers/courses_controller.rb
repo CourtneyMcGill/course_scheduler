@@ -28,6 +28,9 @@ class CoursesController < ApplicationController
         @course = Course.new
   end
 
+  def buildQueryString
+  end
+
   def create
         c = Course.new(safe_params)
         if c.save

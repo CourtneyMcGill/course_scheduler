@@ -1,10 +1,40 @@
 #main
 
   .searchbox
-    =form_tag requirements_path, method: :get do
-      =label_tag "requirements_search"
-      =text_field_tag "requirements_search", nil, maxlengh: 20
-      =submit_tag "Find requirements"
+    =form_tag courses_path, method: :get do
+      =label_tag "courses_search"
+      =text_field_tag "courses_search", nil, maxlengh: 20
+      =submit_tag "Find courses"
+
+  =form 
+    %p=f.label :dept
+    %p=f.text_field :dept
+
+    %p=f.label :core
+    %p=f.text_field :core
+
+    %p=f.label :inquiry
+    %p=f.text_field :inquiry
+
+    %p=f.label :instructor
+    %p=f.text_field :instructor
+
+    %p=f.label :days
+    %p=f.text_field :days
+
+    %p=f.label :starts_after
+    %p=f.number_field :starts_after, :in => 100..1259
+
+    %p=f.label :ends_before
+    %p=f.number_field :ends_before, :in => 100..1259
+
+    %p=f.label :level
+    %p=f.text_field :level
+
+    %p=f.label :credits
+    %p=f.number_field :credits, :in => 0.0..1.0
+
+    %p=f.submit
 
   %h3 Course Listings
 
