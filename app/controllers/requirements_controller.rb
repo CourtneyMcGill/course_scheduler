@@ -1,7 +1,8 @@
 class RequirementsController < ApplicationController
 
   def index
-    @requirements = Requirement.sorted_by("name")
+    searchfield = params[:requirements_search]
+    @requirements = searchfield ? Requirement.search(searchfield) : Requirement.sorted_by("name")
   end
 
 
@@ -43,7 +44,7 @@ class RequirementsController < ApplicationController
   def destroy
     @requirement = Requirement.find(params[:id])
     @requirement.destroy
-    flash[:notice] = "Requirement #{@requirement.name} sucessfully deleted"
+    flash[:notice] = "#{@requirement.name} requirement sucessfully deleted"
     redirect_to requirements_path
   end
 

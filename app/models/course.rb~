@@ -3,11 +3,15 @@ class Course < ActiveRecord::Base
   belongs_to :requirements
 
   def self.sorted_by(field)
-	if self.column_names.include?(field)
+      if self.column_names.include?(field)
        	  self.order(field)
-        else
+      else
           self.order("course_name")
-        end
+      end
+  end
+
+  def self.search(string)
+     Course.where("course_name like ?", "%#{string}%")
   end
 
 end

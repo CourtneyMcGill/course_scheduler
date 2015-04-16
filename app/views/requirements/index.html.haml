@@ -1,4 +1,11 @@
 #main
+
+  .searchbox
+    =form_tag requirements_path, method: :get do
+      =label_tag "requirements_search"
+      =text_field_tag "requirements_search", nil, maxlengh: 20
+      =submit_tag "Find requirements"
+
   %h3 All requirements
 
   %table.requirement_table
@@ -9,6 +16,7 @@
       %br
       %td= link_to "#{r.name}", requirement_path(r)
       %td= r.course
+
 %p= link_to "Create a new requirement", new_requirement_path
 %br
 %p= link_to("Back to administrator options", root_path)

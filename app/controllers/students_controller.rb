@@ -1,13 +1,20 @@
 class StudentsController < ApplicationController
 
-  def index
+       def index
 		if params[:sort]
 			query = params[:sort]
 		else
 			query = 'last'
-		end
-		@students = Student.sorted_by(query)
+		end  
+                if params[:students_search] != nil
+                        searchfield = params[:students_search]
+                        @students = searchfield ? Student.search(searchfield) : Student.sorted_by(query)
+
+                else
+                        @students = Student.sorted_by(query)
+                end
 	end
+
 
 	def show
 		@student = Student.find(params[:id])
@@ -36,14 +43,14 @@ class StudentsController < ApplicationController
 	def update
 		@student = Student.find params[:id]
 		@student.update(safe_params)
-		flash[:notice] = "#{@student.first} was successfully updated."
+		flash[:notice] = "#{@student.first} '#{@student.last}' was successfully updated."
 		redirect_to student_path(@student)
 	end
 
 	def destroy
 		@student = Student.find(params[:id])
 		@student.destroy
-		flash[:notice] = "Student '#{@student.first}' deleted."
+		flash[:notice] = "Student- '#{@student.first}' '#{@student.last}' deleted."
 		redirect_to students_path
 	end
 

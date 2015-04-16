@@ -2,10 +2,20 @@ class CoursesController < ApplicationController
 
   def index
         if params[:sort] != nil
-            @courses = Course.sorted_by(params[:sort])
+            query = params[:sort]
+#            @courses = Course.sorted_by(params[:sort])
         else
-            @courses = Course.sorted_by("crn")
+            query = "crn"
+#            @courses = Course.sorted_by("crn")
         end
+        if params[:courses_search] != nil
+            searchfield = params[:courses_search]
+            @courses = searchfield ? Course.search(searchfield) : Course.sorted_by(query)
+
+        else
+            @courses = Course.sorted_by(query)
+        end
+
   end
 
 
@@ -43,7 +53,7 @@ class CoursesController < ApplicationController
   def destroy
         @course = Course.find(params[:id])
         @course.destroy
-        flash[:notice] = "Course #{@course.title} deleted"
+        flash[:notice] = "Course- #{@course.title} deleted"
         redirect_to courses_path
   end
 

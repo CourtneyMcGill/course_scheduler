@@ -1,0 +1,58 @@
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 14pt;
+  font-weight: 200;
+  font-style: normal;
+  background-color: #486C9B;
+  color: white; 
+}
+body #main {
+  background-color: #1B406F;
+  color: #FFF0B8;
+  width: 80%;
+  left: 10%;
+  position: relative;
+  padding: 10px;
+  border: 1px solid #ECCE62;
+  border-radius: 10px; 
+}
+body h3 {
+  font-family: Helvetica, sans-serif;
+  font-size: 20pt;
+  font-weight: 200;
+  font-style: normal;
+  text-align: center; 
+}
+body .products_table {
+  position: relative;
+  top: 10px;
+  width: 80%;
+  left: 10%;
+  background-color: #6D8DB7;
+  color: #FFD3B8;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-family: Helvetica, sans-serif;
+  font-size: 13pt;
+  font-weight: 200;
+  font-style: normal; 
+}
+
+body .products_table caption {
+  font-family: Helvetica, sans-serif;
+  font-size: 20pt;
+  font-weight: 200;
+  font-style: normal; 
+}
+body th {
+  font-weight: bold; 
+}
+body a:link, body a:visited, body .products_table th {
+  color: #A9511D;
+  background-color: #6D8DB7; 
+}
+
+body #price{
+  text-align: right;
+}

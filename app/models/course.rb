@@ -10,5 +10,9 @@ class Course < ActiveRecord::Base
       end
   end
 
+  def self.search(string)
+     Course.where("crn like ?", "%#{string}%")
+  end
+
 end
 

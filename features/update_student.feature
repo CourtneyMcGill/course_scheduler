@@ -22,8 +22,6 @@ Feature: Update existing student
     And I fill in "Sid" with "987654321"
     And I fill in "Year" with "2018"
     And I press "Update Student"
-    Then I should see "howard"
-    And I should see "dean"
     And I should see "987654321"
     And I should see "2018"
     And I should see "howard was successfully updated"

@@ -1,4 +1,11 @@
 #main
+
+  .searchbox
+    =form_tag courses_path, method: :get do
+      =label_tag "courses_search"
+      =text_field_tag "courses_search", nil, maxlengh: 20
+      =submit_tag "Find courses"
+
   %h3 Course Listings
 
   %table.courses_table

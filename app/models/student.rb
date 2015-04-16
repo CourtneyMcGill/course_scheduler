@@ -10,4 +10,8 @@ class Student < ActiveRecord::Base
         end
   end
 
+  def self.search(string)
+        Student.where("first like ?", "%#{string}%")
+  end
+
 end

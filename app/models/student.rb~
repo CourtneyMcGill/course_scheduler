@@ -1,6 +1,5 @@
 class Student < ActiveRecord::Base
   has_many :courses
-  has_many :requirements
 
 
   def self.sorted_by(field)
@@ -8,6 +7,16 @@ class Student < ActiveRecord::Base
        	  self.order(field)
         else
           self.order("last")
+        end
+  end
+
+  def self.search(string)
+        if Student.where("first like ?", "%#{string}%")
+          Student.where("first like ?", "%#{string}%")
+        elsif Student.where("last like ?", "%#{string}%")
+          Student.where("last like ?", "%#{string}%")
+        else Student.where("sid like ?", "%#{string}%")
+          Student.where("sid like ?", "%#{string}%")
         end
   end
 

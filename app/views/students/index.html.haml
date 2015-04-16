@@ -1,4 +1,11 @@
 #main
+
+  .searchbox
+    =form_tag students_path, method: :get do
+      =label_tag "students_search"
+      =text_field_tag "students_search", nil, maxlengh: 20
+      =submit_tag "Find Students"
+
   %h3 Student Listings
 
   %table.students_table
@@ -13,7 +20,7 @@
       %tr
         %td{:class => "first"}= link_to "#{s.first}", student_path(s)
         %td{:class => "last"}= s.last
-        %td{:class => "sid"}= s.id
+        %td{:class => "sid"}= s.sid
         %td{:class => "year"}= s.year
         %td{:class => "major"}= s.major
 
