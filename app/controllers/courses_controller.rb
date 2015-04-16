@@ -3,11 +3,10 @@ class CoursesController < ApplicationController
   def index
         if params[:sort] != nil
             query = params[:sort]
-#            @courses = Course.sorted_by(params[:sort])
         else
             query = "crn"
-#            @courses = Course.sorted_by("crn")
         end
+
         if params[:courses_search] != nil
             searchfield = params[:courses_search]
             @courses = searchfield ? Course.search(searchfield) : Course.sorted_by(query)

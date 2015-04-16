@@ -1,10 +1,10 @@
 #main
 
   .searchbox
-    =form_tag requirements_path, method: :get do
-      =label_tag "requirements_search"
-      =text_field_tag "requirements_search", nil, maxlengh: 20
-      =submit_tag "Find requirements"
+    =form_tag courses_path, method: :get do
+      =label_tag "crn_search"
+      =text_field_tag "crn_search", nil, maxlengh: 7
+      =submit_tag "Find courses"
 
   %h3 Course Listings
 
@@ -17,7 +17,7 @@
       %th Days
       %th= link_to "Starts", courses_path(sort: 'starts')
       %th= link_to "Ends", courses_path(sort: 'ends')
-      %th= link_to "Building/Room", courses_path(sort: 'building_room')
+      %th Building/Room
       %th= link_to "Credits", courses_path(sort: 'credits')
       %th Co-Reqs
       %th CrossList

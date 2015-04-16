@@ -6,12 +6,12 @@ class Course < ActiveRecord::Base
       if self.column_names.include?(field)
        	  self.order(field)
       else
-          self.order("course_name")
+          self.order("LOWER(course_name)")
       end
   end
 
   def self.search(string)
-     Course.where("course_name like ?", "%#{string}%")
+     Course.where("crn like ?", "%#{string}%")
   end
 
 end

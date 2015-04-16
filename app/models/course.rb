@@ -4,9 +4,20 @@ class Course < ActiveRecord::Base
 
   def self.sorted_by(field)
       if self.column_names.include?(field)
+          if field == "course_name"
+              self.order("LOWER(course_name)")
+          elsif field == "title"
+              self.order("LOWER(title)")
        	  self.order(field)
+          elsif field == "instructor"
+              self.order("LOWER(instructor)")
+          elsif field == "building_room"
+              self.order("LOWER(building_room)")
+          else
+              self.order(field)
+          end
       else
-          self.order("course_name")
+          self.order("LOWER(course_name)")
       end
   end
 
