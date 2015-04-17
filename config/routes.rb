@@ -8,11 +8,9 @@ Rails.application.routes.draw do
   #end
 
     root 'centeral#index'
-<<<<<<< HEAD
     resources :courses
     resources :students
     resources :requirements
-=======
     resources :courses do
 	resources :students
 	resources :requirements
@@ -27,5 +25,4 @@ Rails.application.routes.draw do
     get "/auth/:provider/callback" => 'sessions#create'
     #get "/users/sign_out" => 'sessions#destroy'
   
->>>>>>> 4d8b5e995e5720fda0906671b119aedacf4ac46f
 end

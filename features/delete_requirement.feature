@@ -14,7 +14,7 @@ Feature: Delete existing requirement
     Given I am on the requirements page
     When I press "Geology"
     Then I should see "10127"
-    When I press "Delete requirement"
+    When I press "Delete"
     Then I should be on the requirements page
     And I should see "10287"
     And I should see "10001"

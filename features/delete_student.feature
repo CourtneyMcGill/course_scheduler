@@ -14,7 +14,7 @@ Feature: Delete existing student
     Given I am on the students page
     When I press "Pedro"
     Then I should see "321456987"
-    When I press "Delete student"
+    When I press "delete"
     Then I should be on the students page
     And I should see "123456789"
     And I should see "333222111"
