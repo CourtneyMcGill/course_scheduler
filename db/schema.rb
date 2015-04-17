@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150414191004) do
+ActiveRecord::Schema.define(version: 20150417022906) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -33,8 +33,6 @@ ActiveRecord::Schema.define(version: 20150414191004) do
 
   create_table "courses", force: :cascade do |t|
     t.integer  "crn"
-    t.string   "dept"
-    t.integer  "level"
     t.string   "course_name"
     t.text     "title"
     t.string   "instructor"
@@ -50,7 +48,16 @@ ActiveRecord::Schema.define(version: 20150414191004) do
     t.text     "notes"
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
-    t.integer  "student_id"
+  end
+
+  create_table "courses_requirements", id: false, force: :cascade do |t|
+    t.integer "courses_id"
+    t.integer "requirements_id"
+  end
+
+  create_table "courses_students", id: false, force: :cascade do |t|
+    t.integer "courses_id"
+    t.integer "products_id"
   end
 
   create_table "requirements", force: :cascade do |t|
@@ -58,7 +65,11 @@ ActiveRecord::Schema.define(version: 20150414191004) do
     t.integer  "course"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "course_id"
+  end
+
+  create_table "requirements_students", id: false, force: :cascade do |t|
+    t.integer "requirements_id"
+    t.integer "students_id"
   end
 
   create_table "students", force: :cascade do |t|
@@ -69,8 +80,6 @@ ActiveRecord::Schema.define(version: 20150414191004) do
     t.string  "major"
     t.integer "courses_taken"
     t.integer "courses_progress"
-    t.integer "course_id"
-    t.integer "requirement_id"
   end
 
   create_table "users", force: :cascade do |t|
