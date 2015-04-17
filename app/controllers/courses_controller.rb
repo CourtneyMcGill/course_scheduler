@@ -35,6 +35,9 @@ class CoursesController < ApplicationController
 
   def show
 	@course = Course.find(params[:id])
+        Students.all.each do |s|
+          @course.students<<s
+        end
   end
 
   def new

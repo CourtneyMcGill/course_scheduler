@@ -51,13 +51,13 @@ ActiveRecord::Schema.define(version: 20150417022906) do
   end
 
   create_table "courses_requirements", id: false, force: :cascade do |t|
-    t.integer "courses_id"
-    t.integer "requirements_id"
+    t.integer "course_id"
+    t.integer "requirement_id"
   end
 
   create_table "courses_students", id: false, force: :cascade do |t|
-    t.integer "courses_id"
-    t.integer "products_id"
+    t.integer "course_id"
+    t.integer "student_id"
   end
 
   create_table "requirements", force: :cascade do |t|
@@ -68,8 +68,8 @@ ActiveRecord::Schema.define(version: 20150417022906) do
   end
 
   create_table "requirements_students", id: false, force: :cascade do |t|
-    t.integer "requirements_id"
-    t.integer "students_id"
+    t.integer "requirement_id"
+    t.integer "student_id"
   end
 
   create_table "students", force: :cascade do |t|

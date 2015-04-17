@@ -6,11 +6,11 @@
   %table.requirements_table
     %thead
       %tr.requirements_header
-        %th Course
-        %th Major Requirements
+        %th Courses
       %tbody
+      -@requirement.courses.each do |c|
         %tr
-          %td= @requirement.course
+          %td= @c.course_name
   %tr
   %td= link_to "Edit requirement", edit_requirement_path
   %br
