@@ -52392,6 +52392,7 @@ ActionView::Template::Error (undefined method `course_name' for nil:NilClass):
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (35.8ms)
+<<<<<<< HEAD
 >>>>>>> 8ed866995275f69e7e6e54e1f84a6da7e0caf915
   [1m[36m (100.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
   [1m[35m (0.1ms)[0m  select sqlite_version(*)
@@ -52592,6 +52593,19 @@ Completed 200 OK in 44ms (Views: 44.0ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 09:18:30 -0400
+=======
+<<<<<<< HEAD
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-17 13:25:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 74ms (Views: 73.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:25:28 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -52620,6 +52634,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (13.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (59.3ms)
@@ -52629,6 +52644,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 09:18:31 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (7.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (4.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (135.3ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:25:28 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -52657,6 +52683,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.2ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.0ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.6ms)
@@ -52673,6 +52700,24 @@ Completed 200 OK in 144ms (Views: 107.8ms | ActiveRecord: 0.8ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 09:18:34 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (72.8ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-04-17 13:25:30 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (1.1ms)[0m  SELECT "students".* FROM "students"  ORDER BY LOWER(last)
+  Rendered students/index.html.haml within layouts/application (14.9ms)
+Completed 200 OK in 80ms (Views: 54.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:25:30 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -52701,6 +52746,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.2ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (8.5ms)
@@ -52710,6 +52756,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 09:18:34 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (113.6ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:25:30 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -52738,6 +52795,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.0ms)
@@ -52755,6 +52813,30 @@ Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.4ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 09:18:36 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (82.2ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2015-04-17 13:25:32 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "courses_students" ("student_id", "course_id") VALUES (?, ?)  [["student_id", 1], ["course_id", 1]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_students" ON "courses"."id" = "courses_students"."course_id" WHERE "courses_students"."student_id" = ?  [["student_id", 1]]
+  Rendered students/show.html.haml within layouts/application (26.5ms)
+Completed 200 OK in 162ms (Views: 69.6ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:25:32 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -52783,6 +52865,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.2ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (13.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.6ms)
@@ -52792,6 +52875,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 09:18:37 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (4.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (75.3ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:25:32 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -52820,6 +52914,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.8ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.6ms)
@@ -52837,6 +52932,30 @@ Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 09:18:38 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (80.2ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2015-04-17 13:25:35 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses_students" ("student_id", "course_id") VALUES (?, ?)  [["student_id", 1], ["course_id", 1]]
+  [1m[36m (8.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_students" ON "courses"."id" = "courses_students"."course_id" WHERE "courses_students"."student_id" = ?  [["student_id", 1]]
+  Rendered students/show.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 60ms (Views: 38.1ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:25:35 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -52865,6 +52984,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.0ms)
@@ -52874,6 +52994,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 09:18:38 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (8.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (3.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (76.4ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:25:35 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -52902,6 +53033,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (4.8ms)
@@ -52918,6 +53050,30 @@ Completed 200 OK in 83ms (Views: 72.6ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 09:18:47 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (18.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (88.4ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2015-04-17 13:25:37 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCourse Load (10.5ms)[0m  SELECT "courses".* FROM "courses"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "courses_students" ("student_id", "course_id") VALUES (?, ?)  [["student_id", 1], ["course_id", 1]]
+  [1m[36m (8.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_students" ON "courses"."id" = "courses_students"."course_id" WHERE "courses_students"."student_id" = ?  [["student_id", 1]]
+  Rendered students/show.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 77ms (Views: 38.5ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:25:37 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -52946,6 +53102,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (4.8ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (4.8ms)
@@ -52955,6 +53112,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 09:18:47 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (16.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (114.3ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:25:37 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -52983,6 +53151,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (22.0ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (9.8ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.8ms)
@@ -53017,6 +53186,24 @@ Completed 200 OK in 133ms (Views: 132.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 09:19:06 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (14.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (8.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (117.9ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 13:25:41 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY crn[0m
+  Rendered courses/index.html.haml within layouts/application (17.2ms)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:25:42 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53045,6 +53232,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (4.9ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
@@ -53054,6 +53242,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 09:19:06 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (4.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (8.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (90.3ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:25:42 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53082,6 +53281,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (5.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.4ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.4ms)
@@ -53098,6 +53298,24 @@ Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 09:19:08 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (10.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (92.7ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 13:25:49 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.4ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY crn
+  Rendered courses/index.html.haml within layouts/application (14.9ms)
+Completed 200 OK in 56ms (Views: 55.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:25:49 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53126,6 +53344,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.4ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (9.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
@@ -53135,6 +53354,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 09:19:08 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (11.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (84.2ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:25:49 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53163,6 +53393,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.0ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (8.2ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.7ms)
@@ -53178,6 +53409,47 @@ Completed 200 OK in 78ms (Views: 78.2ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 12:26:56 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (3.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (86.6ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 13:25:51 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 5ms
+
+NameError (uninitialized constant CoursesController::Students):
+  app/controllers/courses_controller.rb:38:in `show'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (67.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 13:26:28 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses_students" ("course_id", "student_id") VALUES (?, ?)[0m  [["course_id", 1], ["student_id", 1]]
+  [1m[35m (3.2ms)[0m  commit transaction
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students" INNER JOIN "courses_students" ON "students"."id" = "courses_students"."student_id" WHERE "courses_students"."course_id" = ?  ORDER BY "students"."id" DESC LIMIT 1[0m  [["course_id", 1]]
+  Rendered courses/show.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 101ms (Views: 42.0ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:26:28 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53206,6 +53478,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.9ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (13.4ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (9.9ms)
@@ -53215,6 +53488,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 12:26:56 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (104.1ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:26:29 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53243,6 +53527,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (10.9ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.3ms)
@@ -53259,6 +53544,30 @@ Completed 200 OK in 52ms (Views: 46.3ms | ActiveRecord: 0.5ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 12:26:58 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (8.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (102.4ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 13:26:37 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "courses_students" ("course_id", "student_id") VALUES (?, ?)[0m  [["course_id", 1], ["student_id", 1]]
+  [1m[35m (10.4ms)[0m  commit transaction
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" INNER JOIN "courses_students" ON "students"."id" = "courses_students"."student_id" WHERE "courses_students"."course_id" = ?  ORDER BY "students"."id" DESC LIMIT 1[0m  [["course_id", 1]]
+  Rendered courses/show.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 55ms (Views: 33.6ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:26:38 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53287,6 +53596,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.4ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.0ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (14.4ms)
@@ -53296,6 +53606,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 12:26:58 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (8.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (10.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (4.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (94.4ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:26:38 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53324,6 +53645,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (6.4ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (8.3ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.3ms)
@@ -53339,6 +53661,30 @@ Completed 200 OK in 192ms (Views: 191.4ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 12:28:04 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (92.2ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 13:26:41 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (4.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses_students" ("course_id", "student_id") VALUES (?, ?)[0m  [["course_id", 1], ["student_id", 1]]
+  [1m[35m (9.6ms)[0m  commit transaction
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" INNER JOIN "courses_students" ON "students"."id" = "courses_students"."student_id" WHERE "courses_students"."course_id" = ?  ORDER BY "students"."id" DESC LIMIT 1[0m  [["course_id", 1]]
+  Rendered courses/show.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 67ms (Views: 39.8ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:26:41 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53367,6 +53713,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.3ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (13.2ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.7ms)
@@ -53376,6 +53723,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 12:28:04 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (8.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (77.1ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:26:41 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53404,6 +53762,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.7ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
@@ -53430,6 +53789,24 @@ Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.3ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 12:28:28 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (4.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (76.5ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 13:26:48 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (10.4ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY crn
+  Rendered courses/index.html.haml within layouts/application (17.8ms)
+Completed 200 OK in 66ms (Views: 55.6ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:26:49 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53458,6 +53835,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (7.2ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (8.9ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.2ms)
@@ -53467,6 +53845,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 12:28:29 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (72.2ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:26:49 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53495,6 +53884,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.9ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (12.4ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.6ms)
@@ -53512,6 +53902,23 @@ Completed 200 OK in 43ms (Views: 42.6ms | ActiveRecord: 0.3ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 12:28:33 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (71.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-17 13:26:50 -0400
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 46ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:26:50 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53540,6 +53947,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.3ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (4.5ms)
@@ -53549,6 +53957,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 12:28:33 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (74.5ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:26:51 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53577,6 +53996,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.9ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.1ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.4ms)
@@ -53594,6 +54014,24 @@ Completed 200 OK in 56ms (Views: 53.5ms | ActiveRecord: 1.7ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 12:31:11 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (4.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (77.8ms)
+
+
+Started GET "/requirements" for 127.0.0.1 at 2015-04-17 13:26:52 -0400
+Processing by RequirementsController#index as HTML
+  [1m[36mRequirement Load (0.1ms)[0m  [1mSELECT "requirements".* FROM "requirements"  ORDER BY name[0m
+  Rendered requirements/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 59ms (Views: 48.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:26:53 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53622,6 +54060,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (10.7ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (6.5ms)
@@ -53631,6 +54070,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 12:31:11 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (89.3ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:26:53 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53659,6 +54109,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.7ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.6ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (4.5ms)
@@ -53676,6 +54127,23 @@ Completed 200 OK in 39ms (Views: 38.8ms | ActiveRecord: 0.1ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 12:34:08 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (84.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-17 13:27:40 -0400
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:27:41 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53704,6 +54172,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (9.1ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.5ms)
@@ -53713,6 +54182,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 12:34:09 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (67.1ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:27:41 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53741,6 +54221,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.4ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.7ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.8ms)
@@ -53756,6 +54237,24 @@ Completed 200 OK in 67ms (Views: 67.1ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 12:34:17 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (77.5ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-04-17 13:27:43 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"  ORDER BY LOWER(last)
+  Rendered students/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:27:43 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53784,6 +54283,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.1ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.6ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.6ms)
@@ -53793,6 +54293,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 12:34:17 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (9.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (94.8ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:27:44 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53821,6 +54332,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.7ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (9.0ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.3ms)
@@ -53847,6 +54359,30 @@ Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 12:34:54 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (79.2ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2015-04-17 13:27:45 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses_students" ("student_id", "course_id") VALUES (?, ?)  [["student_id", 1], ["course_id", 1]]
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.4ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_students" ON "courses"."id" = "courses_students"."course_id" WHERE "courses_students"."student_id" = ?  [["student_id", 1]]
+  Rendered students/show.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 77ms (Views: 44.8ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:27:46 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53875,6 +54411,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
@@ -53884,6 +54421,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 12:34:54 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (81.7ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:27:46 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53912,6 +54460,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.7ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.3ms)
@@ -53929,6 +54478,24 @@ Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 12:34:58 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (10.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (70.2ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2015-04-17 13:27:48 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY LOWER(last)[0m
+  Rendered students/index.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 59ms (Views: 58.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:27:49 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53957,6 +54524,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
@@ -53966,6 +54534,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 12:34:58 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (4.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (77.4ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:27:49 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -53994,6 +54573,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.4ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.7ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.4ms)
@@ -54011,6 +54591,23 @@ Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 12:36:56 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (4.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (5.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (3.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (77.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-17 13:27:50 -0400
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:27:50 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54039,6 +54636,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.3ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.5ms)
@@ -54048,6 +54646,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 12:36:56 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (6.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (81.3ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:27:51 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54076,6 +54685,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.4ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.0ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.2ms)
@@ -54093,6 +54703,24 @@ Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 12:37:34 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (13.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (89.6ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 13:27:52 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY crn
+  Rendered courses/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:27:52 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54122,6 +54750,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (9.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.1ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
@@ -54130,6 +54759,16 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 12:37:34 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (3.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (82.6ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:27:52 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54158,6 +54797,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.3ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (8.3ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.4ms)
@@ -54175,6 +54815,30 @@ Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.4ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 12:37:35 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (73.8ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 13:27:54 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses_students" ("course_id", "student_id") VALUES (?, ?)  [["course_id", 1], ["student_id", 1]]
+  [1m[36m (7.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" INNER JOIN "courses_students" ON "students"."id" = "courses_students"."student_id" WHERE "courses_students"."course_id" = ?  ORDER BY "students"."id" DESC LIMIT 1  [["course_id", 1]]
+  Rendered courses/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 61ms (Views: 34.4ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:27:54 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54203,6 +54867,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.2ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (8.8ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.4ms)
@@ -54212,6 +54877,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 12:37:36 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (10.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (82.9ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:27:54 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54240,6 +54916,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.9ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.7ms)
@@ -54257,6 +54934,24 @@ Completed 200 OK in 48ms (Views: 47.6ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 12:37:38 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (4.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (5.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (79.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 13:27:56 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY crn[0m
+  Rendered courses/index.html.haml within layouts/application (12.7ms)
+Completed 200 OK in 51ms (Views: 50.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:27:56 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54285,6 +54980,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.9ms)
@@ -54294,6 +54990,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 12:37:38 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (98.9ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:27:56 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54322,6 +55029,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (13.1ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.8ms)
@@ -54339,6 +55047,23 @@ Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.8ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 12:37:42 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (85.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-17 13:27:58 -0400
+Processing by CenteralController#index as HTML
+  Rendered centeral/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 53ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:27:58 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54368,6 +55093,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (10.1ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
@@ -54376,6 +55102,16 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 12:37:42 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (7.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (118.1ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:27:58 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54404,6 +55140,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (6.0ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (8.2ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.4ms)
@@ -54457,6 +55194,24 @@ Completed 200 OK in 140ms (Views: 139.7ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:04:21 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (8.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (84.0ms)
+
+
+Started GET "/requirements" for 127.0.0.1 at 2015-04-17 13:28:00 -0400
+Processing by RequirementsController#index as HTML
+  [1m[35mRequirement Load (10.9ms)[0m  SELECT "requirements".* FROM "requirements"  ORDER BY name
+  Rendered requirements/index.html.haml within layouts/application (14.9ms)
+Completed 200 OK in 52ms (Views: 40.4ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:28:00 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54485,6 +55240,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.9ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (13.3ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
@@ -54494,6 +55250,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:04:21 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (4.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (87.2ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:28:00 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54522,6 +55289,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (5.0ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (13.8ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.4ms)
@@ -54538,6 +55306,61 @@ Completed 200 OK in 67ms (Views: 66.8ms | ActiveRecord: 0.3ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:04:25 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (91.6ms)
+
+
+Started GET "/requirements/1" for 127.0.0.1 at 2015-04-17 13:28:02 -0400
+Processing by RequirementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRequirement Load (0.2ms)[0m  [1mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses_requirements" ("requirement_id", "course_id") VALUES (?, ?)  [["requirement_id", 1], ["course_id", 1]]
+  [1m[36m (4.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.4ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_requirements" ON "courses"."id" = "courses_requirements"."course_id" WHERE "courses_requirements"."requirement_id" = ?  [["requirement_id", 1]]
+  Rendered requirements/show.html.haml within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 44ms
+
+ActionView::Template::Error (undefined method `course_name' for nil:NilClass):
+    10:       %tbody
+    11:       -@requirement.courses.each do |c|
+    12:         %tr
+    13:           %td= @c.course_name
+    14:   %tr
+    15:   %td= link_to "Edit requirement", edit_requirement_path
+    16:   %br
+  app/views/requirements/show.html.haml:13:in `block in _app_views_requirements_show_html_haml___268115763_98493170'
+  app/views/requirements/show.html.haml:11:in `_app_views_requirements_show_html_haml___268115763_98493170'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (6.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (46.0ms)
+
+
+Started GET "/requirements/1" for 127.0.0.1 at 2015-04-17 13:29:21 -0400
+Processing by RequirementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRequirement Load (0.1ms)[0m  [1mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCourse Load (0.4ms)[0m  SELECT "courses".* FROM "courses"
+  [1m[36m (1.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses_requirements" ("requirement_id", "course_id") VALUES (?, ?)  [["requirement_id", 1], ["course_id", 1]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_requirements" ON "courses"."id" = "courses_requirements"."course_id" WHERE "courses_requirements"."requirement_id" = ?  [["requirement_id", 1]]
+  Rendered requirements/show.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 64ms (Views: 45.6ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:29:21 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54566,6 +55389,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (11.0ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (4.6ms)
@@ -54575,6 +55399,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:04:25 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (78.5ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:29:21 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54603,6 +55438,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.3ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.7ms)
@@ -54619,6 +55455,30 @@ Completed 200 OK in 67ms (Views: 66.1ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:04:27 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (81.7ms)
+
+
+Started GET "/requirements/1" for 127.0.0.1 at 2015-04-17 13:29:24 -0400
+Processing by RequirementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRequirement Load (0.1ms)[0m  [1mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses_requirements" ("requirement_id", "course_id") VALUES (?, ?)  [["requirement_id", 1], ["course_id", 1]]
+  [1m[36m (12.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.4ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_requirements" ON "courses"."id" = "courses_requirements"."course_id" WHERE "courses_requirements"."requirement_id" = ?  [["requirement_id", 1]]
+  Rendered requirements/show.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 68ms (Views: 44.9ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:29:24 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54647,6 +55507,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.3ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (12.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.2ms)
@@ -54656,6 +55517,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:04:27 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (90.2ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:29:24 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54684,6 +55556,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (6.8ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (11.4ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.4ms)
@@ -54701,6 +55574,30 @@ Completed 200 OK in 59ms (Views: 56.6ms | ActiveRecord: 1.5ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:05:03 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (11.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (4.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (111.3ms)
+
+
+Started GET "/requirements/1" for 127.0.0.1 at 2015-04-17 13:29:25 -0400
+Processing by RequirementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRequirement Load (0.1ms)[0m  [1mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT "courses".* FROM "courses"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses_requirements" ("requirement_id", "course_id") VALUES (?, ?)  [["requirement_id", 1], ["course_id", 1]]
+  [1m[36m (11.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_requirements" ON "courses"."id" = "courses_requirements"."course_id" WHERE "courses_requirements"."requirement_id" = ?  [["requirement_id", 1]]
+  Rendered requirements/show.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 68ms (Views: 44.2ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:29:26 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54729,6 +55626,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (15.9ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (4.2ms)
@@ -54738,6 +55636,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:05:03 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (8.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (5.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (6.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (3.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (146.0ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:29:26 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54766,6 +55675,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (11.6ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.1ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (4.2ms)
@@ -54781,6 +55691,30 @@ Completed 200 OK in 58ms (Views: 57.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:09:10 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (11.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (86.3ms)
+
+
+Started GET "/requirements/1" for 127.0.0.1 at 2015-04-17 13:29:28 -0400
+Processing by RequirementsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRequirement Load (0.1ms)[0m  [1mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCourse Load (0.6ms)[0m  SELECT "courses".* FROM "courses"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses_requirements" ("requirement_id", "course_id") VALUES (?, ?)  [["requirement_id", 1], ["course_id", 1]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_requirements" ON "courses"."id" = "courses_requirements"."course_id" WHERE "courses_requirements"."requirement_id" = ?  [["requirement_id", 1]]
+  Rendered requirements/show.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 78ms (Views: 54.2ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:29:28 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54809,6 +55743,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.1ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (11.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
@@ -54818,6 +55753,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:09:10 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (12.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (109.7ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:29:28 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54846,6 +55792,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.1ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.9ms)
@@ -54862,6 +55809,24 @@ Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.3ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:09:14 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (8.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (3.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (86.7ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 13:29:46 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY crn[0m
+  Rendered courses/index.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:29:46 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54890,6 +55855,7 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (22.4ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.0ms)
@@ -54899,6 +55865,17 @@ ActionController::RoutingError (No route matches [GET] "/stylesheets/application
 
 
 Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:09:14 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (122.2ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:29:46 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -54927,6 +55904,7 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (10.0ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.6ms)
@@ -55014,45 +55992,31 @@ Completed 200 OK in 107ms (Views: 99.8ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:21:11 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (8.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (4.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (3.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (96.1ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 13:29:48 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.8ms)[0m  [1mINSERT INTO "courses_students" ("course_id", "student_id") VALUES (?, ?)[0m  [["course_id", 1], ["student_id", 1]]
+  [1m[35m (4.7ms)[0m  commit transaction
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students" INNER JOIN "courses_students" ON "students"."id" = "courses_students"."student_id" WHERE "courses_students"."course_id" = ?  ORDER BY "students"."id" DESC LIMIT 1[0m  [["course_id", 1]]
+  Rendered courses/show.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 76ms (Views: 48.7ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:29:48 -0400
 
 ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
-  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
-  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
-  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.0) lib/rails/engine.rb:518:in `call'
-  railties (4.2.0) lib/rails/application.rb:164:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
-  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.4ms)
-  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (26.4ms)
-  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.2ms)
-  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
-  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (21.7ms)
-  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (279.3ms)
-
-
-Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:21:12 -0400
-
-ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
   actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
@@ -55080,58 +56044,14 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
 
 
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
-  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (12.0ms)
-  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.3ms)
-  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (3.9ms)
-  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (4.3ms)
-  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (85.8ms)
-
-
-Started GET "/courses" for 127.0.0.1 at 2015-04-17 13:21:13 -0400
-Processing by CoursesController#index as HTML
-  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY crn[0m
-  Rendered courses/index.html.haml within layouts/application (8.4ms)
-Completed 200 OK in 70ms (Views: 69.4ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:21:13 -0400
-
-ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
-  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
-  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
-  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.0) lib/rails/engine.rb:518:in `call'
-  railties (4.2.0) lib/rails/application.rb:164:in `call'
-  rack (1.6.0) lib/rack/lock.rb:17:in `call'
-  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
-  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
-  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (4.7ms)
-  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (7.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (8.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.7ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.5ms)
-  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
-  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (93.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (104.9ms)
 
 
-Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:21:13 -0400
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:29:48 -0400
 
 ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
   web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
@@ -55160,6 +56080,494 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/application
   /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (4.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (93.3ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 13:30:40 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses_students" ("course_id", "student_id") VALUES (?, ?)[0m  [["course_id", 1], ["student_id", 1]]
+  [1m[35m (5.7ms)[0m  commit transaction
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" INNER JOIN "courses_students" ON "students"."id" = "courses_students"."student_id" WHERE "courses_students"."course_id" = ?  ORDER BY "students"."id" DESC LIMIT 1[0m  [["course_id", 1]]
+  Rendered courses/show.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 66ms (Views: 50.0ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:30:40 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (3.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (100.3ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:30:40 -0400
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (9.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (81.3ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 13:30:49 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses_students" ("course_id", "student_id") VALUES (?, ?)[0m  [["course_id", 1], ["student_id", 1]]
+  [1m[35m (7.8ms)[0m  commit transaction
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" INNER JOIN "courses_students" ON "students"."id" = "courses_students"."student_id" WHERE "courses_students"."course_id" = ?  ORDER BY "students"."id" DESC LIMIT 1[0m  [["course_id", 1]]
+  Rendered courses/show.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 70ms (Views: 50.6ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:30:50 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+<<<<<<< HEAD
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (26.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (21.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (279.3ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:21:12 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (7.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (83.2ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:30:50 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+<<<<<<< HEAD
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (12.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (3.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (4.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (85.8ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 13:21:13 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY crn[0m
+  Rendered courses/index.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 70ms (Views: 69.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:21:13 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (7.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (4.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (87.9ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 13:33:42 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "courses_students" ("course_id", "student_id") VALUES (?, ?)[0m  [["course_id", 1], ["student_id", 1]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  Rendered courses/show.html.haml within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 24ms
+
+SyntaxError (/home/csvm/course_scheduler/app/views/courses/show.html.haml:32: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/home/csvm/course_scheduler/app/views/courses/show.html.haml:35: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/courses/show.html.haml:32: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/courses/show.html.haml:35: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (9.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (47.9ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 13:34:06 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses_students" ("course_id", "student_id") VALUES (?, ?)  [["course_id", 1], ["student_id", 1]]
+  [1m[36m (10.7ms)[0m  [1mcommit transaction[0m
+  Rendered courses/show.html.haml within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 27ms
+
+SyntaxError (/home/csvm/course_scheduler/app/views/courses/show.html.haml:32: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/home/csvm/course_scheduler/app/views/courses/show.html.haml:35: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/courses/show.html.haml:32: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/courses/show.html.haml:35: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (12.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (7.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (51.2ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 13:34:17 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStudent Load (1.9ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses_students" ("course_id", "student_id") VALUES (?, ?)[0m  [["course_id", 1], ["student_id", 1]]
+  [1m[35m (7.3ms)[0m  commit transaction
+  Rendered courses/show.html.haml within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 30ms
+
+SyntaxError (/home/csvm/course_scheduler/app/views/courses/show.html.haml:33: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/home/csvm/course_scheduler/app/views/courses/show.html.haml:36: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/courses/show.html.haml:33: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/courses/show.html.haml:36: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (11.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (43.0ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 13:34:32 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses_students" ("course_id", "student_id") VALUES (?, ?)  [["course_id", 1], ["student_id", 1]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  Rendered courses/show.html.haml within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 32ms
+
+SyntaxError (/home/csvm/course_scheduler/app/views/courses/show.html.haml:34: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/home/csvm/course_scheduler/app/views/courses/show.html.haml:37: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/courses/show.html.haml:34: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/courses/show.html.haml:37: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (9.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (46.9ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 13:35:41 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "courses_students" ("course_id", "student_id") VALUES (?, ?)[0m  [["course_id", 1], ["student_id", 1]]
+  [1m[35m (6.4ms)[0m  commit transaction
+  Rendered courses/show.html.haml within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 17ms
+
+SyntaxError (/home/csvm/course_scheduler/app/views/courses/show.html.haml:33: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/home/csvm/course_scheduler/app/views/courses/show.html.haml:36: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/courses/show.html.haml:33: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/courses/show.html.haml:36: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (22.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (62.9ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 13:37:42 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses_students" ("course_id", "student_id") VALUES (?, ?)  [["course_id", 1], ["student_id", 1]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  Rendered courses/show.html.haml within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 20ms
+
+SyntaxError (/home/csvm/course_scheduler/app/views/courses/show.html.haml:33: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/home/csvm/course_scheduler/app/views/courses/show.html.haml:36: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/courses/show.html.haml:33: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/courses/show.html.haml:36: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (15.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (46.7ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 13:38:21 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses_students" ("course_id", "student_id") VALUES (?, ?)[0m  [["course_id", 1], ["student_id", 1]]
+  [1m[35m (5.4ms)[0m  commit transaction
+  Rendered courses/show.html.haml within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 22ms
+
+SyntaxError (/home/csvm/course_scheduler/app/views/courses/show.html.haml:33: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/home/csvm/course_scheduler/app/views/courses/show.html.haml:36: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/courses/show.html.haml:33: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/courses/show.html.haml:36: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (11.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (42.5ms)
+
+
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 13:42:15 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStudent Load (0.1ms)[0m  SELECT "students".* FROM "students"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses_students" ("course_id", "student_id") VALUES (?, ?)  [["course_id", 1], ["student_id", 1]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" INNER JOIN "courses_students" ON "students"."id" = "courses_students"."student_id" WHERE "courses_students"."course_id" = ?  [["course_id", 1]]
+  Rendered courses/show.html.haml within layouts/application (20.0ms)
+Completed 200 OK in 63ms (Views: 52.9ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/stylesheets/application.css" for 127.0.0.1 at 2015-04-17 13:42:16 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+<<<<<<< HEAD
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (4.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (7.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (93.3ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:21:13 -0400
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (84.3ms)
+
+
+Started GET "/javascripts/application.js" for 127.0.0.1 at 2015-04-17 13:42:16 -0400
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+<<<<<<< HEAD
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (6.5ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (2.8ms)
@@ -55202,3 +56610,71 @@ NameError (uninitialized constant CoursesController::Courses):
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
   Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (46.0ms)
+=======
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (5.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (73.6ms)
+=======
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDeviseToUsers (20150417152713)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+SQLite3::SQLException: duplicate column name: email: ALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDeviseToUsers (20150417152713)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+SQLite3::SQLException: duplicate column name: email: ALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDeviseToUsers (20150417152713)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+SQLite3::SQLException: duplicate column name: email: ALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDeviseToUsers (20150417152713)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+SQLite3::SQLException: duplicate column name: email: ALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+>>>>>>> a4ffcda7ae4870f4d287434bc7efa06eced09af7
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547

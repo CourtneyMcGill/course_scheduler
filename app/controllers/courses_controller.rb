@@ -35,7 +35,11 @@ class CoursesController < ApplicationController
 
   def show
 	@course = Course.find(params[:id])
+<<<<<<< HEAD
         Courses.all.each do |s|
+=======
+        Student.all.each do |s|
+>>>>>>> a2dc6799e69ed1914409e97571258082f8696547
           @course.students<<s
         end
   end

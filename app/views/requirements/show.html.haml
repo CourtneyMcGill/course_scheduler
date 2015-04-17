@@ -10,7 +10,7 @@
       %tbody
       -@requirement.courses.each do |c|
         %tr
-          %td= @c.course_name
+          %td= c.course_name
   %tr
   %td= link_to "Edit requirement", edit_requirement_path
   %br
