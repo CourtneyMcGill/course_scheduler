@@ -8,9 +8,6 @@ class RequirementsController < ApplicationController
 
   def show
     @requirement = Requirement.find(params[:id])
-    Course.all.each do |c|
-      @requirement.courses<<c
-    end
   end
 
   def new

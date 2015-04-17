@@ -18,9 +18,6 @@ class StudentsController < ApplicationController
 
 	def show
 		@student = Student.find(params[:id])
-                Course.all.each do |c|
-                  @student.courses<<c
-                end
 	end
 
 	def new
