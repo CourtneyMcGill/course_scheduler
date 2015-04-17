@@ -2,8 +2,8 @@
 
   .searchbox
     =form_tag students_path, method: :get do
-      =label_tag "students_search"
-      =text_field_tag "students_search", nil, maxlengh: 20
+      =label_tag "student_search_by_id_number"
+      =text_field_tag "student_search_by_id_number", nil, maxlengh: 20
       =submit_tag "Find Students"
 
   %h3 Student Listings

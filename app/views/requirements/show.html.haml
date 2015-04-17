@@ -14,6 +14,6 @@
   %tr
   %td= link_to "Edit requirement", edit_requirement_path
   %br
-  %td= link_to "Delete requirement", {:controller => "requirements", :action => "del", :id =>"#{@requirement.id}"}, class: "del"
+  %p= link_to "Delete requirement", requirements_path, :method => :delete
   
 %p= link_to "Back to requirement list", requirements_path

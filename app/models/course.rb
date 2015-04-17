@@ -25,9 +25,20 @@ class Course < ActiveRecord::Base
      Course.where("crn like ?", "%#{string}%")
   end
 
-  def self.filter(string)
-     Course.where(string)
-  end
 
+  def self.filter_by(filter)
+    after = filter[:after]
+    before = filter[:before]
+    if after != "" && before != ""
+        Course.where("starts < ? AND starts > ?", before, after)
+    elsif after != ""
+        Course.where("starts > ?", after)
+    elsif before != ""
+        Course.where("starts < ?", before)
+    else
+        Course.all
+    end
+  end
+  
 end
 

@@ -30,6 +30,21 @@ Given /^these students:$/i do |table|
   end
 end
 
+Given /^(?:|I )am on (.+)$/ do |page_name|
+  if page_name == "the create new requirement page"
+    page_name = "the new requirement page"
+  end
+  if page_name == "the create new course page"
+    page_name  = "the new course page"
+  end
+  if page_name == "the create new student page"
+    page_name = "the new student page"
+  end
+  visit path_to(page_name)
+end
+
+
+
 require 'uri'
 require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
@@ -51,20 +66,6 @@ end
 When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
   with_scope(parent) { When "#{step}:", table_or_string }
 end
-
-Given /^(?:|I )am on (.+)$/ do |page_name|
-  if page_name == "the create new requirement page"
-    page_name = "the new requirement page"
-  end
-  if page_name == "the create new course page"
-    page_name  = "the new course page"
-  end
-  if page_name == "the create new student page"
-    page_name = "the new student page"
-  end
-  visit path_to(page_name)
-end
-
 
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
@@ -161,7 +162,7 @@ Given /^these courses:$/ do |table|
 
 end
 
-Then(/^I should see that "(.*?)" has a last of "(.*?)"$/) do |first, last|
+Then /^I should see that "(.*?)" has a last of "(.*?)"$/ do |first, last|
   firsts,lasts = [],[]
   page.all('.first').each { |f| firsts << f.text }
   page.all('.last').each { |l| lasts << l.text }
@@ -169,7 +170,7 @@ Then(/^I should see that "(.*?)" has a last of "(.*?)"$/) do |first, last|
   lasts[i-1].should eq last
 end
 
-Then(/^I should see that "(.*?)" has a sid of "(.*?)"$/) do |first, sid|
+Then /^I should see that "(.*?)" has a sid of "(.*?)"$/ do |first, sid|
   firsts,sids = [],[]
   page.all('.first').each { |f| firsts << f.text }
   page.all('.sid').each { |s| sids << s.text }
@@ -177,7 +178,7 @@ Then(/^I should see that "(.*?)" has a sid of "(.*?)"$/) do |first, sid|
   sids[i-1].should eq sid
 end
 
-Then(/^I should see that "(.*?)" has a major of "(.*?)"$/) do |first, major|
+Then /^I should see that "(.*?)" has a major of "(.*?)"$/ do |first, major|
   firsts,majors = [],[]
   page.all('.first').each { |f| firsts << f.text }
   page.all('.major').each { |m| majors << m.text }
@@ -185,7 +186,7 @@ Then(/^I should see that "(.*?)" has a major of "(.*?)"$/) do |first, major|
   majors[i-1].should eq major
 end
 
-Then(/^I should see that "(.*?)" has a year of "(.*?)"$/) do |first, year|
+Then /^I should see that "(.*?)" has a year of "(.*?)"$/ do |first, year|
   firsts,years = [],[]
   page.all('.first').each { |f| firsts << f.text }
   page.all('.year').each { |y| years << y.text }
@@ -193,7 +194,7 @@ Then(/^I should see that "(.*?)" has a year of "(.*?)"$/) do |first, year|
   years[i-1].should eq year
 end
 
-Then(/^I should see student last in sorted order$/) do
+Then /^I should see student last in sorted order$/ do
   names = []
   page.all('.first').each { |n| names << n.text }
   names.delete_at(0)
@@ -201,44 +202,19 @@ Then(/^I should see student last in sorted order$/) do
   names.should eq sorted_names
 end
 
-Then(/^I should see student year in sorted order$/) do
+Then /^I should see "(.*?)" before "(.*?)"$/ do |arg1, arg2|
+  idx_one = page.body.index(arg1)
+  idx_two = page.body.index(arg2)
+  idx_one < idx_two
+end
+
+
+Then /^I should see student year in sorted order$/ do
   years = []
   page.all('.year').each { |y| years << y.text }
   names.delete_at(0)
   sorted_years = years.sort
   years.should eq sorted_years
-end
-
-Then /^I should see that "(.*?)" has a course name of "(.*?)"$/ do |arg1, arg2|
-  
-end
-
-Then /^I should see that "(.*?)" has a title of "(.*?)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^I should see that "(.*?)" has an instructor of "(.*?)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^I should see that "(.*?)" has a days of "(.*?)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^I should see that "(.*?)" has a starts of "(.*?)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^I should see that "(.*?)" has an ends of "(.*?)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^I should see that "(.*?)" has a building\/room of "(.*?)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^I should see that "(.*?)" has a credits of "(.*?)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
 end
 
 When /^I fill in title with "(.*?)"$/ do |arg1|

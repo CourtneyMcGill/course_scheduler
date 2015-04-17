@@ -12,17 +12,11 @@
   .filterbox
     =form_tag courses_path, method: :get do
       %br
-      =label_tag "instructor"
-      =text_field_tag "instructor"
+      =label_tag :before
+      =number_field_tag 'filter[before]', nil, min: 0
       %br
-      =label_tag "days"
-      =text_field_tag "days"
-      %br
-      =label_tag "after"
-      =text_field_tag "after"
-      %br
-      =label_tag "before"
-      =text_field_tag "before"
+      =label_tag :after
+      =number_field_tag 'filter[after]', nil, min: 0
       %br
       =submit_tag "Filter courses"
 
