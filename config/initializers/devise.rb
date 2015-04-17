@@ -20,6 +20,11 @@ Devise.setup do |config|
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
   require 'devise/orm/active_record'
+  require 'omniauth-github'
+
+  APP_SECRET = "aa4201b7281b0bbb23f881bf292964c1e1ac0aa5"
+  APP_ID = "f1a5aeac99965101da2e"
+  config.omniauth :github, APP_ID, APP_SECRET
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
