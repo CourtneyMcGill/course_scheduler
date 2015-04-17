@@ -10,10 +10,10 @@
       %tbody
       -@requirement.courses.each do |c|
         %tr
-          %td= @c.course_name
+          %td= c.course_name
   %tr
   %td= link_to "Edit requirement", edit_requirement_path
   %br
-  %td= link_to "Delete requirement", requirements_path, :method => :delete
-
+  %td= link_to "Delete requirement", {:controller => "requirements", :action => "del", :id =>"#{@requirement.id}"}, class: "del"
+  
 %p= link_to "Back to requirement list", requirements_path
