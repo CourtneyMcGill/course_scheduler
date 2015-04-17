@@ -22652,3 +22652,5 @@ Processing by StudentsController#show as HTML
   Rendered students/show.html.haml within layouts/application (1.3ms)
 Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.4ms)
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
