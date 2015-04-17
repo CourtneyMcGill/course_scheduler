@@ -19,7 +19,7 @@ class Student < ActiveRecord::Base
   end
 
   def self.search(string)
-        Student.where("first like ?", "%#{string}%")
+        Student.where("sid like ?", "%#{string}%")
   end
 
 end

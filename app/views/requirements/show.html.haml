@@ -14,5 +14,19 @@
   %tr
   %td= link_to "Edit requirement", edit_requirement_path
   %br
+<<<<<<< HEAD
   %td= button_to "delete", @student, :method => :delete, :class=>:destroy
+=======
+<<<<<<< HEAD
+  %p= link_to "Delete requirement", requirements_path, :method => :delete
+=======
+<<<<<<< HEAD
+  %td= button_to "delete", @student, :method => :delete, :class=>:destroy
+
+=======
+  %td= link_to "Delete requirement", {:controller => "requirements", :action => "del", :id =>"#{@requirement.id}"}, class: "del"
+>>>>>>> dae5ac2338db61a704a52b428cbb853e15475726
+  
+>>>>>>> 4d8b5e995e5720fda0906671b119aedacf4ac46f
+>>>>>>> e4b41d7dea789690e926f5ec6376d277e4df730f
 %p= link_to "Back to requirement list", requirements_path

@@ -43,7 +43,7 @@ class StudentsController < ApplicationController
 	def update
 		@student = Student.find params[:id]
 		@student.update(safe_params)
-		flash[:notice] = "#{@student.first} '#{@student.last}' was successfully updated."
+		flash[:notice] = "#{@student.first} was successfully updated."
 		redirect_to student_path(@student)
 	end
 

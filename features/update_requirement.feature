@@ -8,15 +8,17 @@ Feature: Update existing requirement
       | name         |  course     |
       | History      |  10287      |
       | Biology      |  10001      |            
-      | Geology      |  101287     | 
+      | Geology      |  10128      | 
+      | French       |  12345      |
 
   Scenario: Edit a requirement
     Given I am on the requirements page
-    When I press "History"
-    Then I should see "10287"
+    When I press "French"
     When I press "Edit requirement"
-    And I fill in "Course" with "10286"
+    And I fill in "Course" with "10288"
     And I press "Update Requirement"
-    Then I should see "10286"
-    And I should see "History successfully updated"
-    And I should not see "10287"
+    And I should see "French successfully updated"
+    And I press "Back to requirement list"
+    Then I should be on the requirements page
+    And I should see "10288"
+    And I should not see "12345"
