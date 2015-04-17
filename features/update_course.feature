@@ -1,3 +1,4 @@
+
 Feature: Edit and update course information
   As the admin,
   So I can keep the registrar updated,
@@ -5,10 +6,10 @@ Feature: Edit and update course information
 
   Background: there are several courses
     Given these courses:
-      | crn   | dept | level | course_name | title             | instructor | days | starts | ends | building_room | credits|
-      | 10003 | COSC | 480   | COSC_480    | Cloud Computing   | Sommers    | MWF  | 1020   | 1110 | Lawrence 105  | 1.0    |
-      | 10002 | COSC | 320   | COSC_320    | Algorithms        | Stratton   | TR   | 1320   | 1435 | McGregory 205 | 1.0    |
-      | 10001 | MATH | 323   | MATH_323    | Abstraact Algebra | Saracino   | MWF  | 1120   | 1210 | McGregory 105 | 1.0    |
+      | crn   | course_name | title             | instructor | days | starts | ends | building_room | credits|
+      | 10003 | COSC_480    | Cloud Computing   | Sommers    | MWF  | 1020   | 1110 | Lawrence 105  | 1.0    |
+      | 10002 | COSC_320    | Algorithms        | Stratton   | TR   | 1320   | 1435 | McGregory 205 | 1.0    |
+      | 10001 | MATH_323    | Abstraact Algebra | Saracino   | MWF  | 1120   | 1210 | McGregory 105 | 1.0    |
 
 
       

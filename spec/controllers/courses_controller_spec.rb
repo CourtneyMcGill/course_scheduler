@@ -66,7 +66,7 @@ RSpec.describe CoursesController, type: :controller do
     end
   end
 
-    describe "delete course" do
+ describe "delete course" do
     it "should delete and redirect" do
       c=Course.new
       expect(Course).to receive(:find).with("1"){c}

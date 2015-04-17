@@ -76,6 +76,9 @@ RSpec.describe RequirementsController, type: :controller do
     end
   end
 
+  describe "sort course" do
+    it "should 
+
   describe "delete course" do
     it "should delete and redirect" do
       r=Requirement.new

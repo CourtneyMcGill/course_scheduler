@@ -46,13 +46,8 @@ ActiveRecord::Schema.define(version: 20150417022906) do
     t.text     "restrictions"
     t.string   "prereq"
     t.text     "notes"
-<<<<<<< HEAD
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
-    t.integer  "student_id"
-=======
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
   end
 
   create_table "courses_requirements", id: false, force: :cascade do |t|
@@ -63,7 +58,6 @@ ActiveRecord::Schema.define(version: 20150417022906) do
   create_table "courses_students", id: false, force: :cascade do |t|
     t.integer "course_id"
     t.integer "student_id"
->>>>>>> 8ed866995275f69e7e6e54e1f84a6da7e0caf915
   end
 
   create_table "requirements", force: :cascade do |t|
