@@ -10,6 +10,7 @@
     %th Days
     %th Starts
     %th Ends
+    %th Current Students
     %tr
       %td= @course.course_name
       %td= @course.title
@@ -17,6 +18,14 @@
       %td= @course.days
       %td= @course.starts
       %td= @course.ends
+      %td= @course.students.last
   %tr
+  %td= link_to "Edit the existing course", edit_course_path
+  %br
+  %td= link_to "Delete course", courses_path, :method => :delete
+  %br
   %td= link_to "Back to course catalog", courses_path
-  %td= link_to "Edit the existing product", edit_course_path
+  
+
+
+

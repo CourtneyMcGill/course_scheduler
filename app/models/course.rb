@@ -25,5 +25,9 @@ class Course < ActiveRecord::Base
      Course.where("crn like ?", "%#{string}%")
   end
 
+  def self.filter(string)
+     Course.where(string)
+  end
+
 end
 

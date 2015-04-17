@@ -4,6 +4,8 @@
       %span= @course.title
 
   %table.courses_table
+    %th Dept
+    %th Level
     %th Course
     %th Title
     %th Instructor
@@ -12,6 +14,8 @@
     %th Ends
     %th Current Students
     %tr
+      %td= @course.dept
+      %td= @course.level
       %td= @course.course_name
       %td= @course.title
       %td= @course.instructor

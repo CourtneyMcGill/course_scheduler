@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 20150414191004) do
 
   create_table "courses", force: :cascade do |t|
     t.integer  "crn"
+    t.string   "dept"
+    t.integer  "level"
     t.string   "course_name"
     t.text     "title"
     t.string   "instructor"
