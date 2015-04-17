@@ -1,30 +1,38 @@
 #main
-  %h3
-    =precede "Course details for " do
-      %span= @course.title
+  %h3="Course details for "
 
   %table.courses_table
-    %th Course
-    %th Title
-    %th Instructor
-    %th Days
-    %th Starts
-    %th Ends
-    %th Current Students
-    %tr
-      %td= @course.course_name
-      %td= @course.title
-      %td= @course.instructor
-      %td= @course.days
-      %td= @course.starts
-      %td= @course.ends
-      %td= @course.students.last
-  %tr
-  %td= link_to "Edit the existing course", edit_course_path
+    %thead
+      %tr
+        %th Title
+        %th Instructor
+        %th Days
+        %th Starts
+        %th Ends
+      %tbody
+        %tr
+          %td= @course.title
+          %td= @course.instructor
+          %td= @course.days
+          %td= @course.starts
+          %td= @course.ends
+
+  %table.students_table
+    %thead
+      %tr
+        %th Student name
+        %th Student id
+    %tbody
+    -@course.students.each do |s|
+      %tr
+        %td= s.last
+        %td= s.sid
+
+  %p= link_to "Edit the existing course", edit_course_path
   %br
-  %td= link_to "Delete course", courses_path, :method => :delete
+  %p= link_to "Delete course", courses_path, :method => :delete
   %br
-  %td= link_to "Back to course catalog", courses_path
+  %p= link_to "Back to course catalog", courses_path
   
 
 
