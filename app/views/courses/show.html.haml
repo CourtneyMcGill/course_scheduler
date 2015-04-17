@@ -1,5 +1,5 @@
 #main
-  %h3="Course details for "
+  %h3="Course details for "+@course.course_name
 
   %table.courses_table
     %thead
@@ -25,12 +25,13 @@
     %tbody
     -@course.students.each do |s|
       %tr
-        %td= s.last
+        %td= s.last + ", " + s.first
         %td= s.sid
-
+  
+  %br
   %p= link_to "Edit the existing course", edit_course_path
   %br
-  %p= link_to "Delete course", courses_path, :method => :delete
+  %p=button_to "Delete", @course, :method=>:delete, :class=>:destroy
   %br
   %p= link_to "Back to course catalog", courses_path
   
