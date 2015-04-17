@@ -36094,3 +36094,1371 @@ Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms)
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 >>>>>>> dae5ac2338db61a704a52b428cbb853e15475726
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1020], ["ends", 1110], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:32.748145"], ["updated_at", "2015-04-17 21:24:32.748145"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 11143], ["course_name", "SOCI_324"], ["title", "Women, Health, and Medicine"], ["instructor", "Loe"], ["days", "MWF"], ["starts", 245], ["ends", 4], ["building_room", "Alana Sem. room"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:32.756074"], ["updated_at", "2015-04-17 21:24:32.756074"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:24:32 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)[0m
+  Rendered courses/index.html.haml within layouts/application (14.8ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.2ms)
+Started GET "/courses?utf8=%E2%9C%93&crn_search=10003&commit=Find+courses" for 127.0.0.1 at 2015-04-17 17:24:32 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"utf8"=>"✓", "crn_search"=>"10003", "commit"=>"Find courses"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 44ms (Views: 44.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.7ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10005], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1020], ["ends", 1110], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:32.946678"], ["updated_at", "2015-04-17 21:24:32.946678"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses/new" for 127.0.0.1 at 2015-04-17 17:24:32 -0400
+Processing by CoursesController#new as HTML
+  Rendered courses/new.html.haml within layouts/application (27.1ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+Started POST "/courses" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "course"=>{"crn"=>"10006", "course_name"=>"COSC_465", "title"=>"Computer Networks", "instructor"=>"Stratton", "days"=>"TR", "starts"=>"955", "ends"=>"1120", "building_room"=>"Lawrence 200", "credits"=>"1", "coreq"=>"COSC_465_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"difficult"}, "commit"=>"Create Course"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "coreq", "crosslist", "restrictions", "prereq", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10006], ["course_name", "COSC_465"], ["title", "Computer Networks"], ["instructor", "Stratton"], ["days", "TR"], ["starts", 955], ["ends", 1120], ["building_room", "Lawrence 200"], ["credits", 1.0], ["coreq", "COSC_465_Lab"], ["crosslist", "none"], ["restrictions", "none"], ["prereq", "COSC_301"], ["notes", "difficult"], ["created_at", "2015-04-17 21:24:33.070232"], ["updated_at", "2015-04-17 21:24:33.070232"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/courses
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)[0m
+  Rendered courses/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Geology"], ["course", 10120], ["created_at", "2015-04-17 21:24:33.148496"], ["updated_at", "2015-04-17 21:24:33.148496"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Biology"], ["course", 10001], ["created_at", "2015-04-17 21:24:33.150329"], ["updated_at", "2015-04-17 21:24:33.150329"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/requirements/new" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by RequirementsController#new as HTML
+  Rendered requirements/new.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+Started POST "/requirements" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by RequirementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "requirement"=>{"name"=>"Religion", "course"=>"10545"}, "commit"=>"Create Requirement"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Religion"], ["course", 10545], ["created_at", "2015-04-17 21:24:33.218179"], ["updated_at", "2015-04-17 21:24:33.218179"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/requirements
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+Started GET "/requirements" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by RequirementsController#index as HTML
+  [1m[36mRequirement Load (0.2ms)[0m  [1mSELECT "requirements".* FROM "requirements"  ORDER BY name[0m
+  Rendered requirements/index.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "howard"], ["last", "stern"], ["sid", "123456789"], ["year", 2016]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "pedro"], ["last", "martinez"], ["sid", "321456987"], ["year", 2017]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "tom"], ["last", "izzo"], ["sid", "333222111"], ["year", 2015]]
+  [1m[35m (2.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students/new" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.haml within layouts/application (20.3ms)
+Completed 200 OK in 29ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+Started POST "/students" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "student"=>{"first"=>"James", "last"=>"Harden", "sid"=>"888888888", "year"=>"", "major"=>"COSC"}, "commit"=>"Create Student"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first", "last", "sid", "major") VALUES (?, ?, ?, ?)  [["first", "James"], ["last", "Harden"], ["sid", "888888888"], ["major", "COSC"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/students
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/students" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY LOWER(last)
+  Rendered students/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1020], ["ends", 1110], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:33.415172"], ["updated_at", "2015-04-17 21:24:33.415172"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 11143], ["course_name", "SOCI_324"], ["title", "Women, Health, and Medicine"], ["instructor", "Loe"], ["days", "MWF"], ["starts", 245], ["ends", 4], ["building_room", "Alana Sem. room"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:33.419109"], ["updated_at", "2015-04-17 21:24:33.419109"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)[0m
+  Rendered courses/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+Started GET "/courses/2" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" INNER JOIN "courses_students" ON "students"."id" = "courses_students"."student_id" WHERE "courses_students"."course_id" = ?[0m  [["course_id", 2]]
+  Rendered courses/show.html.haml within layouts/application (35.8ms)
+Completed 200 OK in 52ms (Views: 42.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "History"], ["course", 10287], ["created_at", "2015-04-17 21:24:33.541969"], ["updated_at", "2015-04-17 21:24:33.541969"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Biology"], ["course", 10001], ["created_at", "2015-04-17 21:24:33.543300"], ["updated_at", "2015-04-17 21:24:33.543300"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Geology"], ["course", 10127], ["created_at", "2015-04-17 21:24:33.544531"], ["updated_at", "2015-04-17 21:24:33.544531"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/requirements" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by RequirementsController#index as HTML
+  [1m[36mRequirement Load (0.1ms)[0m  [1mSELECT "requirements".* FROM "requirements"  ORDER BY name[0m
+  Rendered requirements/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms)
+Started GET "/requirements/3" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by RequirementsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRequirement Load (0.2ms)[0m  SELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered requirements/show.html.haml within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 12ms
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Howard"], ["last", "Stern"], ["sid", "123456789"], ["year", 2016]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Pedro"], ["last", "Martinez"], ["sid", "321456987"], ["year", 2017]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Tom"], ["last", "Izzo"], ["sid", "333222111"], ["year", 2015]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/students" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY LOWER(last)
+  Rendered students/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+Started GET "/students/2" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_students" ON "courses"."id" = "courses_students"."course_id" WHERE "courses_students"."student_id" = ?  [["student_id", 2]]
+  Rendered students/show.html.haml within layouts/application (15.2ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (1.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:33.710558"], ["updated_at", "2015-04-17 21:24:33.710558"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:33.714788"], ["updated_at", "2015-04-17 21:24:33.714788"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:33.720122"], ["updated_at", "2015-04-17 21:24:33.720122"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.3ms)
+Started GET "/courses?utf8=%E2%9C%93&filter[before]=1200&filter[after]=&commit=Filter+courses" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"before"=>"1200", "after"=>""}, "commit"=>"Filter courses"}
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE (starts < '1200')[0m
+  Rendered courses/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:33.809441"], ["updated_at", "2015-04-17 21:24:33.809441"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:33.812730"], ["updated_at", "2015-04-17 21:24:33.812730"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:33.818113"], ["updated_at", "2015-04-17 21:24:33.818113"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)[0m
+  Rendered courses/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+Started GET "/courses?utf8=%E2%9C%93&filter[before]=&filter[after]=1215&commit=Filter+courses" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"before"=>"", "after"=>"1215"}, "commit"=>"Filter courses"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" WHERE (starts > '1215')
+  Rendered courses/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:33.897715"], ["updated_at", "2015-04-17 21:24:33.897715"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:33.901281"], ["updated_at", "2015-04-17 21:24:33.901281"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:33.903749"], ["updated_at", "2015-04-17 21:24:33.903749"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+Started GET "/courses?utf8=%E2%9C%93&filter[before]=1300&filter[after]=1110&commit=Filter+courses" for 127.0.0.1 at 2015-04-17 17:24:33 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"before"=>"1300", "after"=>"1110"}, "commit"=>"Filter courses"}
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE (starts < '1300' AND starts > '1110')[0m
+  Rendered courses/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (2.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "History"], ["course", 10287], ["created_at", "2015-04-17 21:24:33.976726"], ["updated_at", "2015-04-17 21:24:33.976726"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Biology"], ["course", 10001], ["created_at", "2015-04-17 21:24:33.980493"], ["updated_at", "2015-04-17 21:24:33.980493"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Geology"], ["course", 10128], ["created_at", "2015-04-17 21:24:33.982213"], ["updated_at", "2015-04-17 21:24:33.982213"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "French"], ["course", 12345], ["created_at", "2015-04-17 21:24:33.984040"], ["updated_at", "2015-04-17 21:24:33.984040"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/requirements" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by RequirementsController#index as HTML
+  [1m[35mRequirement Load (0.2ms)[0m  SELECT "requirements".* FROM "requirements"  ORDER BY name
+  Rendered requirements/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+Started GET "/requirements?utf8=%E2%9C%93&requirements_search=Biology&commit=Find+requirements" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by RequirementsController#index as HTML
+  Parameters: {"utf8"=>"✓", "requirements_search"=>"Biology", "commit"=>"Find requirements"}
+  [1m[36mRequirement Load (0.2ms)[0m  [1mSELECT "requirements".* FROM "requirements" WHERE (name like '%Biology%')[0m
+  Rendered requirements/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 14ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Courtney"], ["last", "McGill"], ["sid", "000896274"], ["year", 2016]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Tom"], ["last", "Wheeler"], ["sid", "000456987"], ["year", 2017]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Dan"], ["last", "Miller"], ["sid", "220853945"], ["year", 2015]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.5ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY LOWER(last)[0m
+  Rendered students/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.5ms)
+Started GET "/students?utf8=%E2%9C%93&student_search_by_id_number=000896274&commit=Find+Students" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"utf8"=>"✓", "student_search_by_id_number"=>"000896274", "commit"=>"Find Students"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY LOWER(last)
+  Rendered students/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.136365"], ["updated_at", "2015-04-17 21:24:34.136365"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.140197"], ["updated_at", "2015-04-17 21:24:34.140197"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.144957"], ["updated_at", "2015-04-17 21:24:34.144957"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.3ms)
+Started GET "/courses?sort=crn" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"sort"=>"crn"}
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY crn[0m
+  Rendered courses/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.232850"], ["updated_at", "2015-04-17 21:24:34.232850"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.235910"], ["updated_at", "2015-04-17 21:24:34.235910"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.241596"], ["updated_at", "2015-04-17 21:24:34.241596"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)[0m
+  Rendered courses/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+Started GET "/courses?sort=course_name" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"sort"=>"course_name"}
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.309993"], ["updated_at", "2015-04-17 21:24:34.309993"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.313091"], ["updated_at", "2015-04-17 21:24:34.313091"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.319528"], ["updated_at", "2015-04-17 21:24:34.319528"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+Started GET "/courses?sort=title" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY title[0m
+  Rendered courses/index.html.haml within layouts/application (9.3ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.390961"], ["updated_at", "2015-04-17 21:24:34.390961"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.395445"], ["updated_at", "2015-04-17 21:24:34.395445"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.402297"], ["updated_at", "2015-04-17 21:24:34.402297"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.6ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)[0m
+  Rendered courses/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.6ms)
+Started GET "/courses?sort=instructor" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"sort"=>"instructor"}
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(instructor)
+  Rendered courses/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 29ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.479584"], ["updated_at", "2015-04-17 21:24:34.479584"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.485954"], ["updated_at", "2015-04-17 21:24:34.485954"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.490427"], ["updated_at", "2015-04-17 21:24:34.490427"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+Started GET "/courses?sort=starts" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"sort"=>"starts"}
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY starts[0m
+  Rendered courses/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (4.2ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.557407"], ["updated_at", "2015-04-17 21:24:34.557407"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.565428"], ["updated_at", "2015-04-17 21:24:34.565428"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.568235"], ["updated_at", "2015-04-17 21:24:34.568235"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)[0m
+  Rendered courses/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+Started GET "/courses?sort=ends" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"sort"=>"ends"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY ends
+  Rendered courses/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.637243"], ["updated_at", "2015-04-17 21:24:34.637243"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.640379"], ["updated_at", "2015-04-17 21:24:34.640379"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.645955"], ["updated_at", "2015-04-17 21:24:34.645955"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+Started GET "/courses?sort=building_room" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"sort"=>"building_room"}
+  [1m[36mCourse Load (0.9ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(building_room)[0m
+  Rendered courses/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.706646"], ["updated_at", "2015-04-17 21:24:34.706646"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.710825"], ["updated_at", "2015-04-17 21:24:34.710825"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:34.713985"], ["updated_at", "2015-04-17 21:24:34.713985"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)[0m
+  Rendered courses/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+Started GET "/courses?sort=credits" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"sort"=>"credits"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY credits
+  Rendered courses/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Howard"], ["last", "Stern"], ["sid", "123456789"], ["year", 2016]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Pedro"], ["last", "Martinez"], ["sid", "321456987"], ["year", 2017]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Tom"], ["last", "Izzo"], ["sid", "333222111"], ["year", 2015]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/students" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"  ORDER BY LOWER(last)
+  Rendered students/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.3ms)
+Started GET "/students?sort=last" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"last"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY LOWER(last)[0m
+  Rendered students/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Howard"], ["last", "Stern"], ["sid", "123456789"], ["year", 2016]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Pedro"], ["last", "Martinez"], ["sid", "321456987"], ["year", 2017]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (3.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Tom"], ["last", "Izzo"], ["sid", "333222111"], ["year", 2015]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY LOWER(last)[0m
+  Rendered students/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.2ms)
+Started GET "/students?sort=first" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"first"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY LOWER(first)
+  Rendered students/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Howard"], ["last", "Stern"], ["sid", "123456789"], ["year", 2016]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Pedro"], ["last", "Martinez"], ["sid", "321456987"], ["year", 2017]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Tom"], ["last", "Izzo"], ["sid", "333222111"], ["year", 2015]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/students" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY LOWER(last)
+  Rendered students/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.2ms)
+Started GET "/students?sort=sid" for 127.0.0.1 at 2015-04-17 17:24:34 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"sid"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY sid[0m
+  Rendered students/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (2.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Howard"], ["last", "Stern"], ["sid", "123456789"], ["year", 2016]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Pedro"], ["last", "Martinez"], ["sid", "321456987"], ["year", 2017]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Tom"], ["last", "Izzo"], ["sid", "333222111"], ["year", 2015]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2015-04-17 17:24:35 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY LOWER(last)[0m
+  Rendered students/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+Started GET "/students?sort=year" for 127.0.0.1 at 2015-04-17 17:24:35 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"year"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY year
+  Rendered students/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1020], ["ends", 1110], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:24:35.071536"], ["updated_at", "2015-04-17 21:24:35.071536"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:24:35 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 17:24:35 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" INNER JOIN "courses_students" ON "students"."id" = "courses_students"."student_id" WHERE "courses_students"."course_id" = ?  [["course_id", 1]]
+  Rendered courses/show.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+Started GET "/courses/1/edit" for 127.0.0.1 at 2015-04-17 17:24:35 -0400
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered courses/edit.html.haml within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 9ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "History"], ["course", 10287], ["created_at", "2015-04-17 21:24:35.175128"], ["updated_at", "2015-04-17 21:24:35.175128"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Biology"], ["course", 10001], ["created_at", "2015-04-17 21:24:35.177401"], ["updated_at", "2015-04-17 21:24:35.177401"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Geology"], ["course", 10128], ["created_at", "2015-04-17 21:24:35.179461"], ["updated_at", "2015-04-17 21:24:35.179461"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "French"], ["course", 12345], ["created_at", "2015-04-17 21:24:35.181222"], ["updated_at", "2015-04-17 21:24:35.181222"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/requirements" for 127.0.0.1 at 2015-04-17 17:24:35 -0400
+Processing by RequirementsController#index as HTML
+  [1m[35mRequirement Load (0.2ms)[0m  SELECT "requirements".* FROM "requirements"  ORDER BY name
+  Rendered requirements/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+Started GET "/requirements/4" for 127.0.0.1 at 2015-04-17 17:24:35 -0400
+Processing by RequirementsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRequirement Load (0.1ms)[0m  [1mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered requirements/show.html.haml within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 8ms
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "howard"], ["last", "stern"], ["sid", "123456789"], ["year", 2016]]
+  [1m[35m (1.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "pedro"], ["last", "martinez"], ["sid", "321456987"], ["year", 2017]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "tom"], ["last", "izzo"], ["sid", "333222111"], ["year", 2015]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2015-04-17 17:24:35 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY LOWER(last)[0m
+  Rendered students/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+Started GET "/students/1" for 127.0.0.1 at 2015-04-17 17:24:35 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT "courses".* FROM "courses" INNER JOIN "courses_students" ON "courses"."id" = "courses_students"."course_id" WHERE "courses_students"."student_id" = ?[0m  [["student_id", 1]]
+  Rendered students/show.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+Started GET "/students/1/edit" for 127.0.0.1 at 2015-04-17 17:24:35 -0400
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/edit.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+Started PATCH "/students/1" for 127.0.0.1 at 2015-04-17 17:24:35 -0400
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "student"=>{"first"=>"howard", "last"=>"dean", "sid"=>"987654321", "year"=>"2018", "major"=>""}, "commit"=>"Update Student", "id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "students" SET "last" = ?, "sid" = ?, "year" = ?, "major" = ? WHERE "students"."id" = ?[0m  [["last", "dean"], ["sid", "987654321"], ["year", 2018], ["major", ""], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/students/1
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+Started GET "/students/1" for 127.0.0.1 at 2015-04-17 17:24:35 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCourse Load (0.0ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_students" ON "courses"."id" = "courses_students"."course_id" WHERE "courses_students"."student_id" = ?  [["student_id", 1]]
+  Rendered students/show.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1020], ["ends", 1110], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:54.140930"], ["updated_at", "2015-04-17 21:30:54.140930"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 11143], ["course_name", "SOCI_324"], ["title", "Women, Health, and Medicine"], ["instructor", "Loe"], ["days", "MWF"], ["starts", 245], ["ends", 4], ["building_room", "Alana Sem. room"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:54.150473"], ["updated_at", "2015-04-17 21:30:54.150473"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:30:54 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)[0m
+  Rendered courses/index.html.haml within layouts/application (13.2ms)
+Completed 200 OK in 46ms (Views: 45.8ms | ActiveRecord: 0.3ms)
+Started GET "/courses?utf8=%E2%9C%93&crn_search=10003&commit=Find+courses" for 127.0.0.1 at 2015-04-17 17:30:54 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"utf8"=>"✓", "crn_search"=>"10003", "commit"=>"Find courses"}
+  [1m[35mCourse Load (0.4ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10005], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1020], ["ends", 1110], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:54.320145"], ["updated_at", "2015-04-17 21:30:54.320145"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses/new" for 127.0.0.1 at 2015-04-17 17:30:54 -0400
+Processing by CoursesController#new as HTML
+  Rendered courses/new.html.haml within layouts/application (28.7ms)
+Completed 200 OK in 34ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+Started POST "/courses" for 127.0.0.1 at 2015-04-17 17:30:54 -0400
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "course"=>{"crn"=>"10006", "course_name"=>"COSC_465", "title"=>"Computer Networks", "instructor"=>"Stratton", "days"=>"TR", "starts"=>"955", "ends"=>"1120", "building_room"=>"Lawrence 200", "credits"=>"1", "coreq"=>"COSC_465_Lab", "crosslist"=>"none", "restrictions"=>"none", "prereq"=>"COSC_301", "notes"=>"difficult"}, "commit"=>"Create Course"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "coreq", "crosslist", "restrictions", "prereq", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10006], ["course_name", "COSC_465"], ["title", "Computer Networks"], ["instructor", "Stratton"], ["days", "TR"], ["starts", 955], ["ends", 1120], ["building_room", "Lawrence 200"], ["credits", 1.0], ["coreq", "COSC_465_Lab"], ["crosslist", "none"], ["restrictions", "none"], ["prereq", "COSC_301"], ["notes", "difficult"], ["created_at", "2015-04-17 21:30:54.459742"], ["updated_at", "2015-04-17 21:30:54.459742"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/courses
+Completed 302 Found in 13ms (ActiveRecord: 1.1ms)
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:30:54 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)[0m
+  Rendered courses/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Geology"], ["course", 10120], ["created_at", "2015-04-17 21:30:54.538032"], ["updated_at", "2015-04-17 21:30:54.538032"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Biology"], ["course", 10001], ["created_at", "2015-04-17 21:30:54.540021"], ["updated_at", "2015-04-17 21:30:54.540021"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/requirements/new" for 127.0.0.1 at 2015-04-17 17:30:54 -0400
+Processing by RequirementsController#new as HTML
+  Rendered requirements/new.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 18ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+Started POST "/requirements" for 127.0.0.1 at 2015-04-17 17:30:54 -0400
+Processing by RequirementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "requirement"=>{"name"=>"Religion", "course"=>"10545"}, "commit"=>"Create Requirement"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Religion"], ["course", 10545], ["created_at", "2015-04-17 21:30:54.602122"], ["updated_at", "2015-04-17 21:30:54.602122"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/requirements
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+Started GET "/requirements" for 127.0.0.1 at 2015-04-17 17:30:54 -0400
+Processing by RequirementsController#index as HTML
+  [1m[36mRequirement Load (0.2ms)[0m  [1mSELECT "requirements".* FROM "requirements"  ORDER BY name[0m
+  Rendered requirements/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "howard"], ["last", "stern"], ["sid", "123456789"], ["year", 2016]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "pedro"], ["last", "martinez"], ["sid", "321456987"], ["year", 2017]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (3.9ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "tom"], ["last", "izzo"], ["sid", "333222111"], ["year", 2015]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students/new" for 127.0.0.1 at 2015-04-17 17:30:54 -0400
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.haml within layouts/application (19.4ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+Started POST "/students" for 127.0.0.1 at 2015-04-17 17:30:54 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "student"=>{"first"=>"James", "last"=>"Harden", "sid"=>"888888888", "year"=>"", "major"=>"COSC"}, "commit"=>"Create Student"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first", "last", "sid", "major") VALUES (?, ?, ?, ?)  [["first", "James"], ["last", "Harden"], ["sid", "888888888"], ["major", "COSC"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/students
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+Started GET "/students" for 127.0.0.1 at 2015-04-17 17:30:54 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY LOWER(last)
+  Rendered students/index.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1020], ["ends", 1110], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:54.800176"], ["updated_at", "2015-04-17 21:30:54.800176"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 11143], ["course_name", "SOCI_324"], ["title", "Women, Health, and Medicine"], ["instructor", "Loe"], ["days", "MWF"], ["starts", 245], ["ends", 4], ["building_room", "Alana Sem. room"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:54.803014"], ["updated_at", "2015-04-17 21:30:54.803014"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:30:54 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)[0m
+  Rendered courses/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+Started GET "/courses/2" for 127.0.0.1 at 2015-04-17 17:30:54 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" INNER JOIN "courses_students" ON "students"."id" = "courses_students"."student_id" WHERE "courses_students"."course_id" = ?[0m  [["course_id", 2]]
+  Rendered courses/show.html.haml within layouts/application (41.1ms)
+Completed 200 OK in 52ms (Views: 45.6ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "History"], ["course", 10287], ["created_at", "2015-04-17 21:30:54.916572"], ["updated_at", "2015-04-17 21:30:54.916572"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Biology"], ["course", 10001], ["created_at", "2015-04-17 21:30:54.918095"], ["updated_at", "2015-04-17 21:30:54.918095"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Geology"], ["course", 10127], ["created_at", "2015-04-17 21:30:54.919295"], ["updated_at", "2015-04-17 21:30:54.919295"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/requirements" for 127.0.0.1 at 2015-04-17 17:30:54 -0400
+Processing by RequirementsController#index as HTML
+  [1m[36mRequirement Load (0.2ms)[0m  [1mSELECT "requirements".* FROM "requirements"  ORDER BY name[0m
+  Rendered requirements/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+Started GET "/requirements/3" for 127.0.0.1 at 2015-04-17 17:30:54 -0400
+Processing by RequirementsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRequirement Load (0.1ms)[0m  SELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered requirements/show.html.haml within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 11ms
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Howard"], ["last", "Stern"], ["sid", "123456789"], ["year", 2016]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Pedro"], ["last", "Martinez"], ["sid", "321456987"], ["year", 2017]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Tom"], ["last", "Izzo"], ["sid", "333222111"], ["year", 2015]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/students" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY LOWER(last)
+  Rendered students/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+Started GET "/students/2" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_students" ON "courses"."id" = "courses_students"."course_id" WHERE "courses_students"."student_id" = ?  [["student_id", 2]]
+  Rendered students/show.html.haml within layouts/application (19.3ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.087084"], ["updated_at", "2015-04-17 21:30:55.087084"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.090629"], ["updated_at", "2015-04-17 21:30:55.090629"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.096590"], ["updated_at", "2015-04-17 21:30:55.096590"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+Started GET "/courses?utf8=%E2%9C%93&filter[before]=1200&filter[after]=&commit=Filter+courses" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"before"=>"1200", "after"=>""}, "commit"=>"Filter courses"}
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE (starts < '1200')[0m
+  Rendered courses/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.187206"], ["updated_at", "2015-04-17 21:30:55.187206"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.191345"], ["updated_at", "2015-04-17 21:30:55.191345"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.194007"], ["updated_at", "2015-04-17 21:30:55.194007"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)[0m
+  Rendered courses/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+Started GET "/courses?utf8=%E2%9C%93&filter[before]=&filter[after]=1215&commit=Filter+courses" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"before"=>"", "after"=>"1215"}, "commit"=>"Filter courses"}
+  [1m[35mCourse Load (0.4ms)[0m  SELECT "courses".* FROM "courses" WHERE (starts > '1215')
+  Rendered courses/index.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.263846"], ["updated_at", "2015-04-17 21:30:55.263846"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.272703"], ["updated_at", "2015-04-17 21:30:55.272703"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.279172"], ["updated_at", "2015-04-17 21:30:55.279172"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+Started GET "/courses?utf8=%E2%9C%93&filter[before]=1300&filter[after]=1110&commit=Filter+courses" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"before"=>"1300", "after"=>"1110"}, "commit"=>"Filter courses"}
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE (starts < '1300' AND starts > '1110')[0m
+  Rendered courses/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "History"], ["course", 10287], ["created_at", "2015-04-17 21:30:55.356490"], ["updated_at", "2015-04-17 21:30:55.356490"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Biology"], ["course", 10001], ["created_at", "2015-04-17 21:30:55.359863"], ["updated_at", "2015-04-17 21:30:55.359863"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Geology"], ["course", 10128], ["created_at", "2015-04-17 21:30:55.361298"], ["updated_at", "2015-04-17 21:30:55.361298"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "French"], ["course", 12345], ["created_at", "2015-04-17 21:30:55.362747"], ["updated_at", "2015-04-17 21:30:55.362747"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/requirements" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by RequirementsController#index as HTML
+  [1m[35mRequirement Load (0.2ms)[0m  SELECT "requirements".* FROM "requirements"  ORDER BY name
+  Rendered requirements/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+Started GET "/requirements?utf8=%E2%9C%93&requirements_search=Biology&commit=Find+requirements" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by RequirementsController#index as HTML
+  Parameters: {"utf8"=>"✓", "requirements_search"=>"Biology", "commit"=>"Find requirements"}
+  [1m[36mRequirement Load (0.5ms)[0m  [1mSELECT "requirements".* FROM "requirements" WHERE (name like '%Biology%')[0m
+  Rendered requirements/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Courtney"], ["last", "McGill"], ["sid", "000896274"], ["year", 2016]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Tom"], ["last", "Wheeler"], ["sid", "000456987"], ["year", 2017]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Dan"], ["last", "Miller"], ["sid", "220853945"], ["year", 2015]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY LOWER(last)[0m
+  Rendered students/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 15ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+Started GET "/students?utf8=%E2%9C%93&student_search_by_id_number=000896274&commit=Find+Students" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"utf8"=>"✓", "student_search_by_id_number"=>"000896274", "commit"=>"Find Students"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY LOWER(last)
+  Rendered students/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.515912"], ["updated_at", "2015-04-17 21:30:55.515912"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.519505"], ["updated_at", "2015-04-17 21:30:55.519505"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.522143"], ["updated_at", "2015-04-17 21:30:55.522143"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+Started GET "/courses?sort=crn" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"sort"=>"crn"}
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY crn[0m
+  Rendered courses/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.601951"], ["updated_at", "2015-04-17 21:30:55.601951"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.607923"], ["updated_at", "2015-04-17 21:30:55.607923"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.612209"], ["updated_at", "2015-04-17 21:30:55.612209"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)[0m
+  Rendered courses/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+Started GET "/courses?sort=course_name" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"sort"=>"course_name"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.9ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.676591"], ["updated_at", "2015-04-17 21:30:55.676591"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.684568"], ["updated_at", "2015-04-17 21:30:55.684568"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.688239"], ["updated_at", "2015-04-17 21:30:55.688239"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+Started GET "/courses?sort=title" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY title[0m
+  Rendered courses/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.754700"], ["updated_at", "2015-04-17 21:30:55.754700"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.757529"], ["updated_at", "2015-04-17 21:30:55.757529"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.760686"], ["updated_at", "2015-04-17 21:30:55.760686"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)[0m
+  Rendered courses/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.3ms)
+Started GET "/courses?sort=instructor" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"sort"=>"instructor"}
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(instructor)
+  Rendered courses/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.843163"], ["updated_at", "2015-04-17 21:30:55.843163"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.849766"], ["updated_at", "2015-04-17 21:30:55.849766"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.853428"], ["updated_at", "2015-04-17 21:30:55.853428"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.5ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.5ms)
+Started GET "/courses?sort=starts" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"sort"=>"starts"}
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY starts[0m
+  Rendered courses/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.917282"], ["updated_at", "2015-04-17 21:30:55.917282"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.920081"], ["updated_at", "2015-04-17 21:30:55.920081"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.926822"], ["updated_at", "2015-04-17 21:30:55.926822"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.5ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)[0m
+  Rendered courses/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.5ms)
+Started GET "/courses?sort=ends" for 127.0.0.1 at 2015-04-17 17:30:55 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"sort"=>"ends"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY ends
+  Rendered courses/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.987477"], ["updated_at", "2015-04-17 21:30:55.987477"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.991338"], ["updated_at", "2015-04-17 21:30:55.991338"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:55.994057"], ["updated_at", "2015-04-17 21:30:55.994057"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+Started GET "/courses?sort=building_room" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"sort"=>"building_room"}
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(building_room)[0m
+  Rendered courses/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10003], ["course_name", "MATH_323"], ["title", "Abstraact Algebra"], ["instructor", "Saracino"], ["days", "MWF"], ["starts", 1020], ["ends", 1120], ["building_room", "McGregory 205"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:56.059316"], ["updated_at", "2015-04-17 21:30:56.059316"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10001], ["course_name", "COSC_320"], ["title", "Algorithms"], ["instructor", "Stratton"], ["days", "MWF"], ["starts", 1120], ["ends", 1220], ["building_room", "McGregory 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:56.062012"], ["updated_at", "2015-04-17 21:30:56.062012"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["crn", 10002], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1320], ["ends", 1435], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:56.066240"], ["updated_at", "2015-04-17 21:30:56.066240"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)[0m
+  Rendered courses/index.html.haml within layouts/application (10.4ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+Started GET "/courses?sort=credits" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"sort"=>"credits"}
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY credits
+  Rendered courses/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Howard"], ["last", "Stern"], ["sid", "123456789"], ["year", 2016]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Pedro"], ["last", "Martinez"], ["sid", "321456987"], ["year", 2017]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Tom"], ["last", "Izzo"], ["sid", "333222111"], ["year", 2015]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/students" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY LOWER(last)
+  Rendered students/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+Started GET "/students?sort=last" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"last"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY LOWER(last)[0m
+  Rendered students/index.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 17ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Howard"], ["last", "Stern"], ["sid", "123456789"], ["year", 2016]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Pedro"], ["last", "Martinez"], ["sid", "321456987"], ["year", 2017]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Tom"], ["last", "Izzo"], ["sid", "333222111"], ["year", 2015]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY LOWER(last)[0m
+  Rendered students/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.2ms)
+Started GET "/students?sort=first" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"first"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY LOWER(first)
+  Rendered students/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Howard"], ["last", "Stern"], ["sid", "123456789"], ["year", 2016]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Pedro"], ["last", "Martinez"], ["sid", "321456987"], ["year", 2017]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Tom"], ["last", "Izzo"], ["sid", "333222111"], ["year", 2015]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/students" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"  ORDER BY LOWER(last)
+  Rendered students/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.3ms)
+Started GET "/students?sort=sid" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"sid"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY sid[0m
+  Rendered students/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Howard"], ["last", "Stern"], ["sid", "123456789"], ["year", 2016]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "Pedro"], ["last", "Martinez"], ["sid", "321456987"], ["year", 2017]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "Tom"], ["last", "Izzo"], ["sid", "333222111"], ["year", 2015]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY LOWER(last)[0m
+  Rendered students/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.2ms)
+Started GET "/students?sort=year" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"year"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"  ORDER BY year
+  Rendered students/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("crn", "course_name", "title", "instructor", "days", "starts", "ends", "building_room", "credits", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["crn", 10003], ["course_name", "COSC_480"], ["title", "Cloud Computing"], ["instructor", "Sommers"], ["days", "MWF"], ["starts", 1020], ["ends", 1110], ["building_room", "Lawrence 105"], ["credits", 1.0], ["created_at", "2015-04-17 21:30:56.400375"], ["updated_at", "2015-04-17 21:30:56.400375"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"  ORDER BY LOWER(course_name)
+  Rendered courses/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+Started GET "/courses/1" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" INNER JOIN "courses_students" ON "students"."id" = "courses_students"."student_id" WHERE "courses_students"."course_id" = ?  [["course_id", 1]]
+  Rendered courses/show.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.4ms)
+Started GET "/courses/1/edit" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered courses/edit.html.haml within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 5ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "History"], ["course", 10287], ["created_at", "2015-04-17 21:30:56.493383"], ["updated_at", "2015-04-17 21:30:56.493383"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Biology"], ["course", 10001], ["created_at", "2015-04-17 21:30:56.495530"], ["updated_at", "2015-04-17 21:30:56.495530"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Geology"], ["course", 10128], ["created_at", "2015-04-17 21:30:56.497475"], ["updated_at", "2015-04-17 21:30:56.497475"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "requirements" ("name", "course", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "French"], ["course", 12345], ["created_at", "2015-04-17 21:30:56.499109"], ["updated_at", "2015-04-17 21:30:56.499109"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/requirements" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by RequirementsController#index as HTML
+  [1m[35mRequirement Load (0.2ms)[0m  SELECT "requirements".* FROM "requirements"  ORDER BY name
+  Rendered requirements/index.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+Started GET "/requirements/4" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by RequirementsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRequirement Load (0.3ms)[0m  [1mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered requirements/show.html.haml within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 5ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "howard"], ["last", "stern"], ["sid", "123456789"], ["year", 2016]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)  [["first", "pedro"], ["last", "martinez"], ["sid", "321456987"], ["year", 2017]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "students" ("first", "last", "sid", "year") VALUES (?, ?, ?, ?)[0m  [["first", "tom"], ["last", "izzo"], ["sid", "333222111"], ["year", 2015]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/students" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students"  ORDER BY LOWER(last)[0m
+  Rendered students/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.1ms)
+Started GET "/students/1" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT "courses".* FROM "courses" INNER JOIN "courses_students" ON "courses"."id" = "courses_students"."course_id" WHERE "courses_students"."student_id" = ?[0m  [["student_id", 1]]
+  Rendered students/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.1ms)
+Started GET "/students/1/edit" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/edit.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.1ms)
+Started PATCH "/students/1" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "student"=>{"first"=>"howard", "last"=>"dean", "sid"=>"987654321", "year"=>"2018", "major"=>""}, "commit"=>"Update Student", "id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "students" SET "last" = ?, "sid" = ?, "year" = ?, "major" = ? WHERE "students"."id" = ?[0m  [["last", "dean"], ["sid", "987654321"], ["year", 2018], ["major", ""], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/students/1
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+Started GET "/students/1" for 127.0.0.1 at 2015-04-17 17:30:56 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCourse Load (0.1ms)[0m  SELECT "courses".* FROM "courses" INNER JOIN "courses_students" ON "courses"."id" = "courses_students"."course_id" WHERE "courses_students"."student_id" = ?  [["student_id", 1]]
+  Rendered students/show.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m

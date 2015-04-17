@@ -30,7 +30,7 @@ Feature: Sort Courses
       Given I am on the courses page
       When I press "Title"
       Then I should be on the courses page
-      And I should see "Abstraact Algebra" before "Algorithms"
+      And I should see "Abstract Algebra" before "Algorithms"
       And I should see "Algorithms" before "Cloud Computing"
 
     Scenario: sort courses by Instructor
