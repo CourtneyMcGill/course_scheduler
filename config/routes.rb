@@ -20,5 +20,6 @@ Rails.application.routes.draw do
     end
     devise_for :users, :controllers => { omniauth_callbacks: "omniauth_callbacks" }	
     get "/auth/:provider/callback" => 'sessions#create'
-
+    #get "/users/sign_out" => 'sessions#destroy'
+  
 end
