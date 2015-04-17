@@ -35,9 +35,6 @@ class CoursesController < ApplicationController
 
   def show
 	@course = Course.find(params[:id])
-        Student.all.each do |s|
-          @course.students<<s
-        end
   end
 
   def new
@@ -108,7 +105,6 @@ class CoursesController < ApplicationController
         flash[:notice] = "Course- #{@course.title} deleted"
         redirect_to courses_path
   end
-
   private
   def safe_params
         params.require(:course).permit(:dept, :level, :crn, :course_name, :title, :instructor, :days, :starts, :ends, :building_room, :credits, :coreq, :crosslist, :restrictions, :prereq, :notes)
