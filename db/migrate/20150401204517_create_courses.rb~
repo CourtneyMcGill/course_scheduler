@@ -9,7 +9,7 @@ class CreateCourses < ActiveRecord::Migration
 	t.integer :starts
 	t.integer :ends
 	t.string :building_room
-	t.decimal :credits, precision:10, scale:2
+	t.decimal :credits, precision:2, scale:2
 	t.string :coreq
 	t.string :crosslist
 	t.text :restrictions
