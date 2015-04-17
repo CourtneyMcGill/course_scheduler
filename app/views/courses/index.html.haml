@@ -11,11 +11,6 @@
   %h4 Filter courses
   .filterbox
     =form_tag courses_path, method: :get do
-      =label_tag "dept"
-      =text_field_tag "dept", nil, maxlengh: 4
-      %br
-      =label_tag "level"
-      =text_field_tag "level"
       %br
       =label_tag "instructor"
       =text_field_tag "instructor"
@@ -39,8 +34,6 @@
   %table.courses_table
     %tr.courses_header
       %th= link_to "CRN", courses_path(sort: 'crn')
-      %th= link_to "Dept", courses_path(sort: 'dept')
-      %th= link_to "Level", courses_path(sort: 'level')
       %th= link_to "Course Name", courses_path(sort: 'course_name')
       %th= link_to "Title", courses_path(sort: 'title')
       %th= link_to "Instructor", courses_path(sort: 'instructor')
@@ -57,8 +50,6 @@
     -@courses.each do |c|
       %tr
         %td= c.crn
-        %td= c.dept
-        %td= c.level
         %td= link_to "#{c.course_name}", course_path(c)
         %td= c.title
         %td= c.instructor

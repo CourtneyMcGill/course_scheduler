@@ -1,26 +1,28 @@
 #main
-  %h3= @student.first 
-  %h3= @student.last
+  %h3= @student.first+" "+@student.last
 
   %table.students_table
     %thead
       %tr.students_header
-        %th First
-        %th Last
         %th Student ID
         %th Year
         %th Major
-        %th Courses-Taken
-        %th Courses-Progress
     %tbody
       %tr
-        %td= @student.first
-        %td= @student.last
         %td= @student.sid
         %td= @student.year
         %td= @student.major
-        %td= @student.courses.name
-        %td= @student.courses.name
+
+  %table.courses_table
+    %thead
+      %tr.courses_header
+        %th Course Name
+        %th CRN
+    %tbody
+    -@student.courses.each do |c|
+      %tr
+        %td=c.course_name
+        %td=c.crn
 
   %p= link_to("Edit Student details", edit_student_path)
   %br
