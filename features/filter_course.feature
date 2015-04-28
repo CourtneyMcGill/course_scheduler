@@ -15,8 +15,8 @@ Feature: Filter courses by start and end time
     And I fill in "filter[before]" with "1200"
     And I press "Filter courses"
     Then I should be on the courses page
-    And I should see "Abstract Algebra"
-    And I should not see "Algorithms"
+    And I should see "Abstraact Algebra"
+    And I should not see "Cloud Computing"
 
   Scenario: filter courses by end time
     When I go to the courses page

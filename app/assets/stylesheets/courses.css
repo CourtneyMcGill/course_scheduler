@@ -1,25 +1,25 @@
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: Georgia, serif;
   font-size: 14pt;
   font-weight: 200;
   font-style: normal;
-  background-color: #486C9B;
-  color: white; 
+  background-color: #5A0000;
+  color: #FFFFF0; 
 }
 body #main {
-  background-color: #1B406F;
-  color: #FFF0B8;
-  width: 80%;
+  background-color: #FFFFF0;
+  color: #000033;
+  width: 90%;
   left: 10%;
   position: relative;
-  padding: 10px;
-  border: 1px solid #ECCE62;
-  border-radius: 10px; 
+  padding: 15px;
+  border: 5px solid #000033;
+  border-radius: 15px; 
 }
 body h3 {
-  font-family: Helvetica, sans-serif;
-  font-size: 20pt;
-  font-weight: 200;
+  font-family: Georgia, serif;
+  font-size: 30pt;
+  font-weight: 2000;
   font-style: normal;
   text-align: center; 
 }
@@ -28,19 +28,21 @@ body .courses_table {
   top: 10px;
   width: 80%;
   left: 10%;
-  background-color: #6D8DB7;
+  background-color: #000033;
   color: #FFD3B8;
   padding: 10px;
+  border: 5px solid #5A0000;
+  border-radius: 10px;
   margin-bottom: 20px;
   text-align: left;
-  font-family: Helvetica, sans-serif;
+  font-family: Georgia, serif;
   font-size: 13pt;
   font-weight: 200;
   font-style: normal; 
 }
 
 body .courses_table caption {
-  font-family: Helvetica, sans-serif;
+  font-family: Georgia, serif;
   font-size: 20pt;
   font-weight: 200;
   font-style: normal; 
@@ -49,7 +51,6 @@ body th {
   font-weight: bold; 
 }
 body a:link, body a:visited, body .products_table th {
-  color: #A9511D;
-  background-color: #6D8DB7; 
+  color: #006BB2;
 }
 
