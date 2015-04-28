@@ -42,10 +42,10 @@ class RequirementsController < ApplicationController
   end
 
   def destroy
-    @requirement = Student.find(params[:id])
+    @requirement = Requirement.find(params[:id])
     @requirement.destroy
     flash[:notice] = "Requirement- #{@requirement.name} deleted."
-    redirect_to students_path
+    redirect_to requirements_path
   end
 
 private
