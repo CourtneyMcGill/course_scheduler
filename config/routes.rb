@@ -11,16 +11,11 @@ Rails.application.routes.draw do
     	resources :courses
     	resources :students
     	resources :requirements
-    resources :courses do
-	resources :students
-	resources :requirements
-    end
+    resources :courses
     resources :students do
-	resources :courses
+	resources :courses, :controller=> 'student_courses', :only=>[:create,:destroy,:index]
     end
-    resources :requirements do
-	resources :students
-    end
+    resources :requirements
 
     devise_for :users, :controllers => { omniauth_callbacks: "omniauth_callbacks" }	
     get "/auth/:provider/callback" => 'sessions#create'
