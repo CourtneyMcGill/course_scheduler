@@ -5,11 +5,11 @@ Feature: Sort Courses
 
   Background: there are several courses
     Given these courses:
-      | crn   | dept | level | course_name | title             | instructor | days | starts | ends | building_room | credits|
-      | 10003 | COSC | 480   | COSC_480    | Cloud Computing   | Sommers    | MWF  | 1020   | 1110 | Lawrence 105  | 1.0    |
-      | 10002 | COSC | 320   | COSC_320    | Algorithms        | Stratton   | TR   | 1320   | 1435 | McGregory 205 | 1.0    |
-      | 10001 | MATH | 323   | MATH_323    | Abstraact Algebra | Saracino   | MWF  | 1120   | 1210 | McGregory 105 | 1.0    |
-
+      | crn | course_name | title | instructor | days | starts | ends | building_room | credits|
+      | 10003 | MATH_323 | Abstraact Algebra | Saracino | MWF | 1020 | 1120 | McGregory 205 | 1 |
+      | 10001 | COSC_320 | Algorithms | Stratton | MWF | 1120 | 1220 | McGregory 105 | 1 |
+      | 10002 | COSC_480 | Cloud Computing | Sommers | MWF | 1320 | 1435 | Lawrence 105 | 1 |
+      
 
       
     Scenario: sort courses by CRN
@@ -30,7 +30,7 @@ Feature: Sort Courses
       Given I am on the courses page
       When I press "Title"
       Then I should be on the courses page
-      And I should see "Abstraact Algebra" before "Algorithms"
+      And I should see "Abstract Algebra" before "Algorithms"
       And I should see "Algorithms" before "Cloud Computing"
 
     Scenario: sort courses by Instructor
@@ -47,7 +47,7 @@ Feature: Sort Courses
       And I should see "1020" before "1120"
       And I should see "1120" before "1320"
 
-    Scenario: sort courses by Start time
+    Scenario: sort courses by End time
       Given I am on the courses page
       When I press "Ends"
       Then I should be on the courses page
@@ -56,10 +56,10 @@ Feature: Sort Courses
 
     Scenario: sort courses by Building/room
       Given I am on the courses page
-      When I press "Ends"
+      When I press "Building/Room"
       Then I should be on the courses page
       And I should see "Lawrence 105" before "McGregory 105"
-      And I should see "McGregory 105" before "McGrefory 205"
+      And I should see "McGregory 105" before "McGregory 205"
 
     Scenario: sort courses by Credits
       Given I am on the courses page

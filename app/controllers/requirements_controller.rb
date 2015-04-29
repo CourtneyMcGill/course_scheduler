@@ -41,10 +41,10 @@ class RequirementsController < ApplicationController
     end
   end
 
-  def del
-    Requirement.find(params[:id])
+  def destroy
+    @requirement = Requirement.find(params[:id])
     @requirement.destroy
-    flash[:notice] = "#{@requirement.name} requirement sucessfully deleted"
+    flash[:notice] = "Requirement- #{@requirement.name} deleted."
     redirect_to requirements_path
   end
 

@@ -13,10 +13,6 @@ Feature: Delete existing requirement
   Scenario: Edit a requirement
     Given I am on the requirements page
     When I press "Geology"
-    Then I should see "10127"
-    When I press "Delete requirement"
+    When I press "delete"
     Then I should be on the requirements page
-    And I should see "10287"
-    And I should see "10001"
-    And I should see "Geology requirement sucessfully deleted"
-    And I should not see "Geology"
+    And I should not see "geology"

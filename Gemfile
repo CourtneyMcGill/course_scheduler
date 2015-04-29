@@ -57,6 +57,8 @@ group :development, :test do
   gem 'capybara'
 end
 
+  gem 'font-awesome-sass'
+
 
 group :production do
   gem 'pg'

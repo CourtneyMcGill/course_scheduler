@@ -14,10 +14,10 @@ Feature: Delete existing course
     Given I am on the courses page
     When I press "SOCI_324"
     Then I should see "Women, Health, and Medicine"
-    When I press "Delete course"
+    When I press "Delete"
     Then I should be on the courses page
     And I should see "Cloud Computing"
-    And I should see "10001"
+    And I should see "10003"
     And I should see "Course- Women, Health, and Medicine deleted"
     And I should not see "SOCI_324"
     And I should not see "11143"

@@ -1,5 +1,4 @@
 #main
-
   .searchbox
     =form_tag requirements_path, method: :get do
       =label_tag "requirements_search"
@@ -7,15 +6,14 @@
       =submit_tag "Find requirements"
 
   %h3 All requirements
-
   %table.requirement_table
     %tr.requirements_header
       %th Name
-  -@requirements.each do |r|
-    %tr
-      %br
-      %td= link_to "#{r.name}", requirement_path(r)
-      %td= r.course
+    -@requirements.each do |r|
+      %tr
+        %br
+        %td= link_to "#{r.name}", requirement_path(r)
+        %td= r.course
 
 %p= link_to "Create a new requirement", new_requirement_path
 %br
