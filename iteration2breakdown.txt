@@ -1,0 +1,9 @@
+Course Scheduler Iteration 2 Breakdown
+
+Dan: completed login, logout, and login/logout rspec tests
+
+Peter: attempted the filter, had a busy week so he was not able to complete his part
+
+Courtney: added search feature to all 3 models, fixed sorts for all 3 models, completed the filter, did cucumber tests for all of these
+
+Tom: got all the associations working, attempted association views, finished delete

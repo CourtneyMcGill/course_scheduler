@@ -23,6 +23,13 @@
       %tr
         %td=c.course_name
         %td=c.crn
+<<<<<<< HEAD
+=======
+        %td=button_to "Remove", "/students/#{@student.id}/courses/#{c.id}", :method=>:delete, :class=>:destroy
+
+  %p= link_to("Edit Student details", edit_student_path)
+  %p= link_to("Add Student to courses", student_courses_path(@student))
+>>>>>>> 9ca8d0e47cf35725349878e1a319e27c5da084ff
   %br
   %p.btn.btn-default= link_to("Edit Student details", edit_student_path)
   %br

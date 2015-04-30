@@ -8,20 +8,21 @@ Rails.application.routes.draw do
   #end
 
     root 'centeral#index'
+    	resources :courses
+    	resources :students
+    	resources :requirements
     resources :courses
-    resources :students
-    resources :requirements
-    resources :courses do
-	resources :students
-	resources :requirements
-    end
     resources :students do
-	resources :courses
+	resources :courses, :controller=> 'student_courses', :only=>[:create,:destroy,:index]
     end
-    resources :requirements do
-	resources :students
-    end
+    resources :requirements
+
     devise_for :users, :controllers => { omniauth_callbacks: "omniauth_callbacks" }	
     get "/auth/:provider/callback" => 'sessions#create'
+    get "/users/sign_out" => "omniauth_callbacks#logout"
+
+    #devise_for :users do
+    #  get "/users/sign_out" => 'sessions#destroy'
+    #end
     #get "/users/sign_out" => 'sessions#destroy'
 end
