@@ -23,9 +23,9 @@
       %tr
         %td=c.course_name
         %td=c.crn
-
-  %p= link_to("Edit Student details", edit_student_path)
   %br
-  %td= button_to "delete", @student, :method => :delete, :class=>:destroy
+  %p.btn.btn-default= link_to("Edit Student details", edit_student_path)
+  %br
+  %td= button_to "delete student", @student, :method => :delete, :class=>:destroy
 
-%p= link_to "Back to students list", students_path
+%p.btn.btn-default= link_to "Back to students list", students_path

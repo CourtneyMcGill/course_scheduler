@@ -3,15 +3,16 @@
   %head
     %meta{ charset: 'utf-8' }
     %title Schedulanator
+    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}
+    %link{:href => "style.css", :rel => "stylesheet"}
     = csrf_meta_tags
     = stylesheet_link_tag 'application', media: 'all'
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     = javascript_include_tag 'application'
-
   
   %body
     #header
-      %h1 Schedulanator
+      %p#title= 'Schedulanator'
+
   .flash
     %p#notice= flash[:notice] if flash[:notice]
     %p#warning= flash[:warning] if flash[:alert]

@@ -1,11 +1,10 @@
 #main
-  %hw Edit Requirement
-  %p= link_to "Cancel", requirement_path(@requirement)
+  %h3 Edit Major
   = form_for @requirement do |field|
     %p=field.label :name
     %p=field.text_field :name
     %p=field.label :course
     %p=field.number_field :course
-    %p=field.submit
+    %button.btn.btn-default{:type => "submit"} Submit
 %br
-%p= link_to "Cancel", requirements_path
+%p.btn.btn-default= link_to "Cancel", requirements_path

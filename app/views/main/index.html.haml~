@@ -1,0 +1,5 @@
+#main
+  %h3 l=Login with github
+  %p= link_to "Sign in with github", user_omniauth_authorize_path(:github)
+  %p= link_to "Sign out of github", destroy_user_session_path
+

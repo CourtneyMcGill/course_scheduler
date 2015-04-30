@@ -29,11 +29,11 @@
         %td= s.sid
   
   %br
-  %p= link_to "Edit the existing course", edit_course_path
+  %p.btn.btn-default= link_to "Edit the existing course", edit_course_path
   %br
   %p=button_to "Delete", @course, :method=>:delete, :class=>:destroy
   %br
-  %p= link_to "Back to course catalog", courses_path
+  %p.btn.btn-default= link_to "Back to course catalog", courses_path
   
 
 
