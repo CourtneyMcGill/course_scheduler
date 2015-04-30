@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :courses
     resources :students do
 	resources :courses, :controller=> 'student_courses', :only=>[:create,:destroy,:index]
+        resources :requirements, :controller=> 'student_requirements', :only=>[:create,:destroy,:index]
     end
     resources :requirements
 

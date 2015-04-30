@@ -25,8 +25,19 @@
         %td=c.crn
         %td=button_to "Remove", "/students/#{@student.id}/courses/#{c.id}", :method=>:delete, :class=>:destroy
 
+  %table.requirements_table
+    %thead
+      %tr.requirements_header
+        %th Requirement
+    %tbody
+    -@student.requirements.each do |r|
+      %tr
+        %td=r.name
+        %td=button_to "Remove", "/students/#{@student.id}/requirements/#{r.id}", :method=>:delete, :class=>:destroy
+
   %p= link_to("Edit Student details", edit_student_path)
   %p= link_to("Add Student to courses", student_courses_path(@student))
+  %p= link_to("Add Student to requirements",student_requirements_path(@student))
   %br
   %td= button_to "delete", @student, :method => :delete, :class=>:destroy
 
