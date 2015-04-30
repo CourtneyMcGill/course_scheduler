@@ -4,11 +4,11 @@
     =form_tag students_path, method: :get do
       =label_tag "student_search_by_id_number"
       =text_field_tag "student_search_by_id_number", nil, maxlengh: 20
-      =submit_tag "Find Students"
+      %button.btn.btn-default{:type => "submit"} Find Student
 
   %h3 Student Listings
 
-  %table.students_table
+  %table.table.table-hover.students_table
     %tr.students_header
       %th{:class => "first"}= link_to "First", students_path(sort: 'first')
       %th{:class => "last"}= link_to "Last", students_path(sort: 'last')
@@ -24,7 +24,7 @@
         %td{:class => "year"}= s.year
         %td{:class => "major"}= s.major
 
-  %p= link_to("Create new student", new_student_path)
-  %br
-  %p= link_to("Back to administrator options", root_path)
+  %p.btn.btn-default= link_to("Create new student", new_student_path)
+%br
+%p.btn.btn-default= link_to("Back to administrator options", root_path)
 

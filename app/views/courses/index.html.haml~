@@ -1,0 +1,66 @@
+#main
+
+
+
+  .searchbox
+    =form_tag courses_path, method: :get do
+      =label_tag "crn_search"
+      =text_field_tag "crn_search", nil, maxlengh: 7
+      %button.btn.btn-default{:type => "submit"} Find Course
+  %br
+  %h4 Filter courses
+  .filterbox
+    =form_tag courses_path, method: :get do
+      =label_tag "before"
+      .row
+        .col-xs-2
+          %input.form-control{:placeholder => "1020", :type => "integer"}
+      =label_tag "after"
+      .row
+        .col-xs-2
+          %input.form-control{:placeholder => "1210", :type => "integer"}
+      %br
+      %button.btn.btn-default{:type => "submit"} Filter Courses
+
+      
+
+
+  %h3 Course Listings
+
+  %table.table.table-hover.courses_table
+    %tr.courses_header
+      %th= link_to "CRN", courses_path(sort: 'crn')
+      %th= link_to "Course Name", courses_path(sort: 'course_name')
+      %th= link_to "Title", courses_path(sort: 'title')
+      %th= link_to "Instructor", courses_path(sort: 'instructor')
+      %th Days
+      %th= link_to "Starts", courses_path(sort: 'starts')
+      %th= link_to "Ends", courses_path(sort: 'ends')
+      %th= link_to "Building/Room", courses_path(sort: 'building_room')
+      %th= link_to "Credits", courses_path(sort: 'credits')
+      %th Co-Reqs
+      %th CrossList
+      %th Restrictions
+      %th Pre-Reqs
+      %th Notes
+    -@courses.each do |c|
+      %tr
+        %td= c.crn
+        %td= link_to "#{c.course_name}", course_path(c)
+        %td= c.title
+        %td= c.instructor
+        %td= c.days
+        %td= c.starts
+        %td= c.ends
+        %td= c.building_room
+        %td= c.credits
+        %td= c.coreq
+        %td= c.crosslist
+        %td= c.restrictions
+        %td= c.prereq
+        %td= c.notes
+%br
+%p.btn.btn-default= link_to "Create a new course", new_course_path
+%br
+%br
+%p.btn.btn-default= link_to("Back to administrator options", root_path)

@@ -19,4 +19,5 @@
     =f.label :major
     =f.text_field :major
     %div
-    =f.submit
+    %button.btn.btn-default{:type => "submit"} Submit New Student
+%p.btn.btn-default= link_to "Cancel", students_path

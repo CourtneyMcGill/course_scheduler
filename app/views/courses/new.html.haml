@@ -44,6 +44,6 @@
     %p=f.label :notes
     %p=f.text_field :notes
 
-    %p=f.submit
+    %button.btn.btn-default{:type => "submit"} Submit New Course
 
-  %td= link_to "Quit creating a new course", courses_path
+  %p.btn.btn-default= link_to "Cancel New Course", courses_path

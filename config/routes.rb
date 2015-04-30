@@ -22,6 +22,10 @@ Rails.application.routes.draw do
     get "/auth/:provider/callback" => 'sessions#create'
     get "/users/sign_out" => "omniauth_callbacks#logout"
 
+	namespace :planner do
+		resources :students
+	end
+
     #devise_for :users do
     #  get "/users/sign_out" => 'sessions#destroy'
     #end
