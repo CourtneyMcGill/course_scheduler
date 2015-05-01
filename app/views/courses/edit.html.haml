@@ -29,21 +29,6 @@
     %p=f.label :credits
     %p=f.number_field :credits, :in => 0.0..1.0
 
-    %p=f.label :coreq
-    %p=f.text_field :coreq
-
-    %p=f.label :crosslist
-    %p=f.text_field :crosslist
-
-    %p=f.label :restrictions
-    %p=f.text_field :restrictions
-
-    %p=f.label :prereq
-    %p=f.text_field :prereq
-
-    %p=f.label :notes
-    %p=f.text_field :notes
-
     %button.btn.btn-default{:type => "submit"} Submit Edited Course
 
   %p.btn.btn-default= link_to "Quit editing an existing course", courses_path

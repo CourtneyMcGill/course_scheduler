@@ -58,7 +58,7 @@ class CoursesController < ApplicationController
   end
   private
   def safe_params
-        params.require(:course).permit(:dept, :level, :crn, :course_name, :title, :instructor, :days, :starts, :ends, :building_room, :credits, :coreq, :crosslist, :restrictions, :prereq, :notes)
+        params.require(:course).permit(:dept, :level, :crn, :course_name, :title, :instructor, :days, :starts, :ends, :building_room, :credits)
   end
 
 end

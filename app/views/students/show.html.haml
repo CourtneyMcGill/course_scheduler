@@ -27,10 +27,6 @@
       %tr
         %td=c.course_name
         %td=c.crn
-<<<<<<< HEAD
-
-=======
->>>>>>> 833818549cf777fc612aeb6866cdfb5bef95541b
         %td=button_to "Remove", "/students/#{@student.id}/courses/#{c.id}", :method=>:delete, :class=>:destroy
 
   %table.requirements_table
@@ -45,13 +41,7 @@
 
   %p= link_to("Edit Student details", edit_student_path)
   %p= link_to("Add Student to courses", student_courses_path(@student))
-<<<<<<< HEAD
-
   %p= link_to("Add Student to requirements",student_requirements_path(@student))
-
-=======
-  %p= link_to("Add Student to requirements",student_requirements_path(@student))
->>>>>>> 833818549cf777fc612aeb6866cdfb5bef95541b
   %br
   %p.btn.btn-default= link_to("Edit Student details", edit_student_path)
   %br
