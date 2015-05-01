@@ -1,0 +1,6 @@
+class CreatePlansStudentsTable < ActiveRecord::Migration
+  def change
+    create_table :plans_students_tables do |t|
+    end
+  end
+end

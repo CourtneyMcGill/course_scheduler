@@ -1,0 +1,62 @@
+#main
+  %h3= @student.first+" "+@student.last
+
+  %table.students_table
+    %thead
+      %tr.students_header
+        %th Student ID
+        %th Year
+        %th Major
+    %tbody
+      %tr
+        %td= @student.sid
+        %td= @student.year
+        %td= @student.major
+
+  %h3 Your plans:
+  %br
+  %table.courses_table
+    %tr.courses_header
+      %th= "CRN"
+      %th= "Course Name"
+      %th= "Instructor"
+      %th= "Days"
+      %th= "Begin"
+      %th= "End"
+      %th
+    -@plans.each do |p|
+      %tr
+        %td= p.crn
+        %td= link_to "#{p.course_name}", course_path(p)
+        %td= p.instructor
+        %td= p.days
+        %td= p.starts
+        %td= p.ends
+        %td= button_to "Remove from planner", "/planner/students/#{@student.id}/plans/#{p.id}/", :method=>:delete, :class=>:destroy
+
+
+
+  %h3 Choose a course from below:
+  %br
+  %table.courses_table
+    %tr.courses_header
+      %th= "CRN"
+      %th= "Course Name"
+      %th= "Instructor"
+      %th= "Days"
+      %th= "Begin"
+      %th= "End"
+      %th
+    -@courses.each do |c|
+      %tr
+        %td= c.crn
+        %td= link_to "#{c.course_name}", course_path(c)
+        %td= c.instructor
+        %td= c.days
+        %td= c.starts
+        %td= c.ends
+        %td= button_to("Add to plans", "/planner/students/#{@student.id}/plans/", :params=>{:course_id=> c.id}, :method=>:post, :class=>:create)
+
+
+  %p= link_to("Back to students list", planner_students_path)
+
