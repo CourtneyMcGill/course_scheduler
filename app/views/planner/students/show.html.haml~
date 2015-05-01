@@ -32,7 +32,7 @@
         %td= p.days
         %td= p.starts
         %td= p.ends
-        %td= button_to "Remove from planner", "/planner/students/#{@student.id}/plans/#{p.id}/, :method=>, :class=>:destroy
+        %td= button_to "Remove from planner", "/planner/students/#{@student.id}/plans/#{p.id}/", :method=>:delete, :class=>:destroy
 
 
 

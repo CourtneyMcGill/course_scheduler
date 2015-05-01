@@ -58,5 +58,5 @@
         %td= button_to("Add to plans", "/planner/students/#{@student.id}/plans/", :params=>{:course_id=> c.id}, :method=>:post, :class=>:create)
 
 
-  %p= link_to("Back to students list", planner_students_path)
+%p.btn.btn-default= link_to("Back to students list", planner_students_path)
 

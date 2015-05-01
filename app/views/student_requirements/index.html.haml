@@ -10,6 +10,6 @@
       %tr
         %td= button_to "Add #{@student.first}", action: "create", requirement_id: r.id, method: :post
         %td= link_to "#{r.name}", requirement_path(r)
-       
-  %td= link_to "Done adding student to requirements", student_path(@student)
+  %br     
+  %p.btn.btn-default= link_to "Done adding student to requirements", student_path(@student)
 
