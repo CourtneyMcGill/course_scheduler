@@ -5,8 +5,10 @@ class CreateStudents < ActiveRecord::Migration
       t.string :last
       t.string :sid
       t.integer :year
+		t.string :major
       t.integer :courses_taken
       t.integer :courses_progress
+      t.integer :plans_id
     end
   end
 end

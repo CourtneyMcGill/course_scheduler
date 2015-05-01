@@ -1,0 +1,4 @@
+class DropPlansStudents < ActiveRecord::Migration
+  def change
+  end
+end
