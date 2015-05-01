@@ -3,15 +3,16 @@ class StudentsController < ApplicationController
        def index
 		if params[:sort]
 			query = params[:sort]
-		else
+		    else
 			query = 'last'
-		end  
-                if params[:students_search] != nil
-                        searchfield = params[:students_search]
-                        @students = searchfield ? Student.search(searchfield) : Student.sorted_by(query)
+		    end  
+
+                if params[:student_search_by_ID_number] != nil
+                    searchfield = params[:student_search_by_ID_number]
+                    @students = searchfield ? Student.search(searchfield) : Student.sorted_by(query)
 
                 else
-                        @students = Student.sorted_by(query)
+                    @students = Student.sorted_by(query)
                 end
 	end
 
