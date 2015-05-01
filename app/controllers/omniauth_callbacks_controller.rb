@@ -15,13 +15,13 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def logout
-    @request.env["devise.mapping"] = Devise.mappings[:user]
+    #@request.env["devise.mapping"] = Devise.mappings[:user]
     @user = User.from_omniauth(request.env["omniauth.auth"])
 
     #destroy any created session info (blow up 'user_id' and 'devise.user_attributes')
     
-    @user.remove_all
-    devise.user_attributes.remove_all
+    @user.destroy
+    #devise.user_attributes.remove_all
   end
 
 end
