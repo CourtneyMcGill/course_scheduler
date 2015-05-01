@@ -1,0 +1,15 @@
+#main
+
+  %h3 Add #{@student.first} to requirements
+  %p=flash[:notice]
+  %table.requirements_table
+    %tr.requirements_header
+      %th
+      %th= "Requirement"
+    -@requirements.each do |r|
+      %tr
+        %td= button_to "Add #{@student.first}", action: "create", requirement_id: r.id, method: :post
+        %td= link_to "#{r.name}", requirement_path(r)
+       
+  %td= link_to "Done adding student to requirements", student_path(@student)
+
