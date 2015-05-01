@@ -2,6 +2,7 @@
   %h3 Administrator options
 
   %br
+  %p= link_to "Plan my schedule", planner_students_path
 
   %p= link_to "Students", students_path
   %p= link_to "Courses", courses_path
@@ -10,3 +11,4 @@
   #footer
     %h1.btn.btn-default= link_to "Sign in", user_omniauth_callback_path(:github)
     %h2.btn.btn-default= link_to "Sign out", destroy_user_session_path
+
