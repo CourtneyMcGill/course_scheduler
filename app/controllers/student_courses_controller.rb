@@ -15,6 +15,6 @@ class StudentCoursesController < ApplicationController
     @course=Course.find(params[:id])
     @student.courses.delete(@course)
     flash[:notice]="#{@student.first} removed from #{@course.course_name}"
-    redirect_to student_path
+    redirect_to (:back)
   end
 end

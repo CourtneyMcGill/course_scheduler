@@ -28,6 +28,8 @@
       %tr
         %td= s.last + ", " + s.first
         %td= s.sid
+        %td=button_to "Remove", "/students/#{s.id}/courses/#{@course.id}", :method=>:delete, :class=>:destroy
+
   
   %br
   %p.btn.btn-default= link_to "Edit the existing course", edit_course_path
