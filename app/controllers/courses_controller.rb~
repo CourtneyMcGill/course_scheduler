@@ -1,6 +1,7 @@
 class CoursesController < ApplicationController
 
   def index
+<<<<<<< HEAD
         if params[:sort] != nil
                 sort = params[:sort]
         else
@@ -10,6 +11,9 @@ class CoursesController < ApplicationController
         if searchfield != nil
                 @courses = searchfield ? Course.search(searchfield) : Course.sorted_by("name")
         elsif params[:filter] != nil
+=======
+        if params[:filter] != nil
+>>>>>>> bc7e2b3429c2c42329e599db2bd3293f487a2280
             @courses = Course.filter_by(params[:filter])
         elsif params[:sort] != nil
             @courses = Course.sorted_by(params[:sort])
@@ -58,7 +62,11 @@ class CoursesController < ApplicationController
   end
   private
   def safe_params
+<<<<<<< HEAD
         params.require(:course).permit(:dept, :level, :crn, :course_name, :title, :instructor, :days, :starts, :ends, :building_room, :credits)
+=======
+        params.require(:course).permit(:dept, :level, :crn, :course_name, :title, :instructor, :days, :starts, :ends, :building_room, :credits, :coreq, :crosslist, :restrictions, :prereq, :notes)
+>>>>>>> bc7e2b3429c2c42329e599db2bd3293f487a2280
   end
 
 end

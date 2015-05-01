@@ -58,3 +58,11 @@ body #title{
   font-style: italic;
 }
 
+input.login{
+  color: #5A0000;
+}
+
+.log_but{
+  color: #5A0000;
+}
+

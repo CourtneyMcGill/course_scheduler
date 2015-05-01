@@ -3,6 +3,7 @@
 
   %br
 
+<<<<<<< HEAD
   %p.btn.btn-default= link_to "Students", students_path
   %br
   %br
@@ -10,6 +11,11 @@
   %br
   %br
   %p.btn.btn-default= link_to "Requirements", requirements_path
+=======
+  %p= link_to "Students", students_path
+  %p= link_to "Courses", courses_path
+  %p= link_to "Requirements", requirements_path
+>>>>>>> bc7e2b3429c2c42329e599db2bd3293f487a2280
 
   #footer
     %h1.btn.btn-default= link_to "Sign in", user_omniauth_callback_path(:github)

@@ -2,8 +2,16 @@
 
   .searchbox
     =form_tag students_path, method: :get do
-      =label_tag "student_search_by_id_number"
-      =text_field_tag "student_search_by_id_number", nil, maxlengh: 20
+<<<<<<< HEAD
+      =label_tag "student_search_by_ID_number"
+      =text_field_tag "student_search_by_ID_number", nil, maxlengh: 20
+=======
+
+      =label_tag "student_search_by_ID_number"
+      =text_field_tag "student_search_by_ID_number", nil, maxlengh: 20
+
+
+>>>>>>> bc7e2b3429c2c42329e599db2bd3293f487a2280
       %button.btn.btn-default{:type => "submit"} Find Student
 
   %h3 Student Listings
@@ -24,7 +32,9 @@
         %td{:class => "year"}= s.year
         %td{:class => "major"}= s.major
 
-%p.btn.btn-default= link_to("Create new student", new_student_path)
+  %p.btn.btn-default= link_to("Create new student", new_student_path)
+  %p.btn.btn-default= link_to("Clear search", students_path)
+
 %br
 %p.btn.btn-default= link_to("Back to administrator options", root_path)
 

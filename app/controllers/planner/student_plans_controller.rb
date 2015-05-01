@@ -6,7 +6,7 @@ class Planner::StudentPlansController < ApplicationController
     @plan.save()
     @student.plans<< @plan
     flash[:notice]= "Added your plan!"
-    redirect_to planner_students_path
+    redirect_to "/planner/students/#{params[:student_id]}"
   end
   def index
     @student=Student.find(params[:student_id])

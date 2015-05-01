@@ -6,16 +6,24 @@
 
   <div class="field">
     <%= f.label :password, "New password" %><br />
+<<<<<<< HEAD
     <%= f.password_field :password, autofocus: true, autocomplete: "off", :class => "login"%>
+=======
+    <%= f.password_field :password, autofocus: true, autocomplete: "off", :class => "login" %>
+>>>>>>> bc7e2b3429c2c42329e599db2bd3293f487a2280
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation, "Confirm new password" %><br />
+<<<<<<< HEAD
     <%= f.password_field :password_confirmation, autocomplete: "off", :class => "login"%>
+=======
+    <%= f.password_field :password_confirmation, autocomplete: "off" , :class => "login"%>
+>>>>>>> bc7e2b3429c2c42329e599db2bd3293f487a2280
   </div>
 
   <div class="actions">
-    <%= f.submit "Change my password" %>
+    <%= f.submit "Change my password", :class => "log_but" %>
   </div>
 <% end %>
 

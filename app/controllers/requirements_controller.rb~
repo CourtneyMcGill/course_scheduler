@@ -2,8 +2,12 @@ class RequirementsController < ApplicationController
 
   def index
     searchfield = params[:requirements_search]
+<<<<<<< HEAD
     if searchfield != None
         @requirements = searchfield ? Requirement.search(searchfield)
+=======
+    @requirements = searchfield ? Requirement.search(searchfield) : Requirement.sorted_by("name")
+>>>>>>> bc7e2b3429c2c42329e599db2bd3293f487a2280
   end
 
 
