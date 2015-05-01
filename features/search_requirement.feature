@@ -5,11 +5,11 @@ Feature: Search for Requirement by name
 
   Background: there are several requirements
   Given these requirements:
-      | name         |  course     |
-      | History      |  10287      |
-      | Biology      |  10001      |            
-      | Geology      |  10128      | 
-      | French       |  12345      |
+      | name         |
+      | History      |
+      | Biology      |         
+      | Geology      |
+      | French       |
 
 
   Scenario: search by Requirement name
