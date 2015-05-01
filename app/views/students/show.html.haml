@@ -5,17 +5,11 @@
     %thead
       %tr.students_header
         %th Student ID
-        %th    
         %th Year
-        %th    
-        %th Major
     %tbody
       %tr
         %td= @student.sid
-        %td= ""
         %td= @student.year
-        %td= ""
-        %td= @student.major
 
   %table.courses_table
     %thead
@@ -32,25 +26,18 @@
   %table.requirements_table
     %thead
       %tr.requirements_header
-        %th Requirement
+        %th Requirements
     %tbody
     -@student.requirements.each do |r|
       %tr
         %td=r.name
         %td=button_to "Remove", "/students/#{@student.id}/requirements/#{r.id}", :method=>:delete, :class=>:destroy
 
-<<<<<<< HEAD
   %p.btn.btn-default= link_to("Edit Student details", edit_student_path)
   %p.btn.btn-default= link_to("Add Student to courses", student_courses_path(@student))
-
   %p.btn.btn-default= link_to("Add Student to requirements",student_requirements_path(@student))
 
-=======
-  %p= link_to("Edit Student details", edit_student_path)
-  %p= link_to("Add Student to courses", student_courses_path(@student))
-  %p= link_to("Add Student to requirements",student_requirements_path(@student))
->>>>>>> 98d02a0a5191720f7ee7cfef50b68259823334e6
-  %br
+
   %br
   %td= button_to "delete student", @student, :method => :delete, :class=>:destroy
 

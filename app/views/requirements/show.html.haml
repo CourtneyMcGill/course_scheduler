@@ -14,7 +14,7 @@
           %td=button_to "Remove", "/requirements/#{@requirement.id}/courses/#{c.id}", :method=>:delete, :class=>:destroy
   %p
   %p.btn.btn-default= link_to "Edit Major", edit_requirement_path
-  %p= link_to("Add courses to requirement", requirement_courses_path(@requirement))
+  %p.btn.btn-default= link_to("Add courses to requirement", requirement_courses_path(@requirement))
 
   %br
   %p= button_to "delete", @student, :method => :delete, :class=>:destroy

@@ -6,7 +6,7 @@ class CoursesController < ApplicationController
         else
                 sort = "name"
         end
-        searchfield = params[:crn_search]
+        searchfield = params[:major_search]
         if searchfield != nil
                 @courses = searchfield ? Course.search(searchfield) : Course.sorted_by("name")
         elsif params[:filter] != nil

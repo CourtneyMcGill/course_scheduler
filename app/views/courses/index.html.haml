@@ -8,20 +8,13 @@
       =text_field_tag "crn_search", nil, maxlengh: 7
       %button.btn.btn-default{:type => "submit"} Find Course
   %br
-  %h4 Filter courses
   .filterbox
-    =form_tag courses_path, method: :get do
-      =label_tag "before"
-      .row
-        .col-xs-2
-          %input.form-control{:placeholder => "1020", :type => "integer"}
-      =label_tag "after"
-      .row
-        .col-xs-2
-          %input.form-control{:placeholder => "1210", :type => "integer"}
-      %br
+    =form_tag courses_path, method: 'get' do
+      = label_tag :Before
+      = number_field_tag 'filter[before]', nil, min: 0
+      = label_tag :After
+      = number_field_tag 'filter[after]', nil, min: 0
       %button.btn.btn-default{:type => "submit"} Filter Courses
-
       
 
 
@@ -51,6 +44,7 @@
         %td= c.credits
   %br
   %p.btn.btn-default= link_to "Create a new course", new_course_path
+  %p.btn.btn-default= link_to "Clear search/filter", courses_path
 %br
 %br
 %p.btn.btn-default= link_to("Back to administrator options", root_path)

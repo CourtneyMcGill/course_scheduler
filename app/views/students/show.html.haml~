@@ -4,11 +4,11 @@
   %table.students_table
     %thead
       %tr.students_header
-        %th Student ID   
+        %th Student ID
         %th    
-        %th Year    
+        %th Year
         %th    
-        %th Major   
+        %th Major
     %tbody
       %tr
         %td= @student.sid
@@ -44,6 +44,9 @@
 
   %p.btn.btn-default= link_to("Add Student to requirements",student_requirements_path(@student))
 
+  %p= link_to("Edit Student details", edit_student_path)
+  %p= link_to("Add Student to courses", student_courses_path(@student))
+  %p= link_to("Add Student to requirements",student_requirements_path(@student))
   %br
   %br
   %td= button_to "delete student", @student, :method => :delete, :class=>:destroy

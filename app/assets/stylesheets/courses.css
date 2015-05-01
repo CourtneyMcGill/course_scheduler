@@ -43,4 +43,10 @@ body #title{
   font-style: normal;
   font-style: italic;
 }
+input.login{
+  color: #5A0000;
+}
 
+.log_but{
+  color: #5A0000;
+}
