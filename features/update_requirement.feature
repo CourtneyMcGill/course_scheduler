@@ -5,11 +5,11 @@ Feature: Update existing requirement
 
   Background: there are several requirements
   Given these requirements:
-      | name         |  course     |
-      | History      |  10287      |
-      | Biology      |  10001      |            
-      | Geology      |  10128      | 
-      | French       |  12345      |
+      | name         |
+      | History      |
+      | Biology      |        
+      | Geology      |
+      | French       |
 
   Scenario: Edit a requirement
     Given I am on the requirements page
@@ -20,5 +20,3 @@ Feature: Update existing requirement
     And I should see "French successfully updated"
     And I press "Back to requirement list"
     Then I should be on the requirements page
-    And I should see "10288"
-    And I should not see "12345"

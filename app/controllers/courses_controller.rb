@@ -1,11 +1,6 @@
 class CoursesController < ApplicationController
 
   def index
-        if params[:sort] != nil
-                sort = params[:sort]
-        else
-                sort = "name"
-        end
         searchfield = params[:crn_search]
         if searchfield != nil
                 @courses = searchfield ? Course.search(searchfield) : Course.sorted_by("name")
@@ -14,7 +9,7 @@ class CoursesController < ApplicationController
         elsif params[:sort] != nil
             @courses = Course.sorted_by(params[:sort])
         else
-            @courses = Course.sorted_by(params[:sort])
+            @courses = Course.sorted_by("name")
         end
     end
 

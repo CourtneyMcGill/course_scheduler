@@ -17,7 +17,7 @@ Feature: Create new student
       | Last    | Harden       |
       | Sid     | 888888888    |
       | Major   | COSC         |
-    And I press "Create Student"
+    And I press "Submit New Student"
     Then I should be on the students page
     And I should see "Student James successfully created"
     And I should see "James"
