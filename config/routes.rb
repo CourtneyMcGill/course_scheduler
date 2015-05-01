@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 	resources :courses, :controller=> 'student_courses', :only=>[:create,:destroy,:index]
         resources :requirements, :controller=> 'student_requirements', :only=>[:create,:destroy,:index]
     end
-    resources :requirements
+    resources :requirements do
+        resources :courses, :controller=> 'requirement_courses', :only=>[:create,:destroy,:index]
+    end
 
 
 	namespace :planner do

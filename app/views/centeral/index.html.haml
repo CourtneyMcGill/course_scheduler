@@ -2,6 +2,7 @@
   %h3 Administrator options
 
   %br
+<<<<<<< HEAD
 
   %p= link_to "Students", students_path
   %p= link_to "Courses", courses_path
@@ -10,3 +11,11 @@
   #footer
     %h1.btn.btn-default= link_to "Sign in", user_omniauth_authorize_path(:github)
     %h2.btn.btn-default= link_to "Sign out", destroy_user_session_path
+=======
+  
+  %p.btn.btn-default= link_to "Students", students_path
+  %p.btn.btn-default= link_to "Courses", courses_path
+  %p.btn.btn-default= link_to "Requirements", requirements_path
+  %p.btn.btn-default= link_to "Sign in with github", user_omniauth_authorize_path(:github)
+  %p.btn.btn-default= link_to "Sign out of github", destroy_user_session_path
+>>>>>>> 999e58684017ecaf8a3d64a3d9664afbc514b1c0

@@ -15,6 +15,6 @@ class StudentRequirementsController < ApplicationController
     @requirement=Requirement.find(params[:id])
     @student.requirements.delete(@requirement)
     flash[:notice]="#{@student.first} removed from #{@requirement.name}"
-    redirect_to student_path
+    redirect_to (:back)
   end
 end
