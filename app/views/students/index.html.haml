@@ -2,13 +2,11 @@
 
   .searchbox
     =form_tag students_path, method: :get do
-<<<<<<< HEAD
+
       =label_tag "student_search_by_ID_number"
       =text_field_tag "student_search_by_ID_number", nil, maxlengh: 20
-=======
-      =label_tag "student_search_(By_ID_number)"
-      =text_field_tag "student_search_(By_ID_number)", nil, maxlengh: 20
->>>>>>> 98d02a0a5191720f7ee7cfef50b68259823334e6
+
+
       %button.btn.btn-default{:type => "submit"} Find Student
 
   %h3 Student Listings
