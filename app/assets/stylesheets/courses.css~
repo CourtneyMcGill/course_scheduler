@@ -34,7 +34,7 @@ body .courses_table {
   top: 10px;
   width: 100%;
   background-color: #FFFFF0;
-  color: #FFD3B8;
+  color: #000033;
   border: 5px solid #000033;
   border-radius: 5px;
   text-align: left;

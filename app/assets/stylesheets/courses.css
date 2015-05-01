@@ -29,20 +29,6 @@ body h3 {
   text-align: center; 
 }
 
-body .courses_table {
-  position: relative;
-  top: 10px;
-  width: 100%;
-  background-color: #FFFFF0;
-  color: #000033;
-  border: 5px solid #000033;
-  border-radius: 5px;
-  text-align: left;
-  font-family: Georgia, serif;
-  font-size: 15pt;
-  font-weight: 200;
-  font-style: normal; 
-}
 
 body th {
   font-weight: bold; 

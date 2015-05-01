@@ -17,12 +17,12 @@ Student.create!(first: "Tom", last: "Wheeler", sid: "192837465", year: 2016)
 
 Requirement.delete_all
 
-Requirement.create!(name: "Computer Science", course: 10091)
-Requirement.create!(name: "Sociology", course: 10387)
-Requirement.create!(name: "Geology", course: 10120)
-Requirement.create!(name: "Women's Studies", course: 10550)
-Requirement.create!(name: "Biology", course: 10001)
-Requirement.create!(name: "Hisory", course: 10287)
+Requirement.create!(name: "Computer Science")
+Requirement.create!(name: "Sociology")
+Requirement.create!(name: "Geology")
+Requirement.create!(name: "Women's Studies")
+Requirement.create!(name: "Biology")
+Requirement.create!(name: "Hisory")
 
 Course.delete_all
 

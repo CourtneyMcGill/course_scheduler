@@ -7,10 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Student.delete_all
-Student.create!(first: "Peter", last: "McGrath", sid: "000878761", class: 2015)
-Student.create!(first: "Dan", last: "Miller", sid: "123456789", class: 2015)
-Student.create!(first: "Courtney", last: "McGill", sid: "789123654", class: 2016)
-Student.create!(first: "Tom", last: "Wheeler", sid: "192837465", class: 2016)
+Student.create!(first: "Peter", last: "McGrath", sid: "000878761", year: 2015)
+Student.create!(first: "Dan", last: "Miller", sid: "123456789", year: 2015)
+Student.create!(first: "Courtney", last: "McGill", sid: "789123654", year: 2016)
+Student.create!(first: "Tom", last: "Wheeler", sid: "192837465", year: 2016)
 
 
 
