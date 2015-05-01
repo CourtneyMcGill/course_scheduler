@@ -1,6 +1,7 @@
 class Student < ActiveRecord::Base
   has_and_belongs_to_many :courses
   has_and_belongs_to_many :requirements
+  has_and_belongs_to_many :plans
 
   def self.sorted_by(field)
 	if self.column_names.include?(field)

@@ -23,7 +23,11 @@ Rails.application.routes.draw do
 
 	namespace :planner do
 		resources :students
-	end
+
+      resources :students do
+      resources :plans, :controller=> 'student_plans', :only=>[:create,:destroy,:index]
+      end
+   end
 
     #devise_for :users do
     #  get "/users/sign_out" => 'sessions#destroy'
