@@ -17,6 +17,7 @@ gem 'haml-rails'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'pundit'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
