@@ -22,12 +22,18 @@ Rails.application.routes.draw do
 	resources :students
     end
 
-    devise_for :users, :controllers => { omniauth_callbacks: "omniauth_callbacks" }	
-    get "/auth/:provider/callback" => 'sessions#create'
-    get "/users/sign_out" => "omniauth_callbacks#logout"
+    #devise_for :users, :controllers => { omniauth_callbacks: "omniauth_callbacks", users: "users" }	
+    #get "/auth/:provider/callback" => 'sessions#create'
+    #get "/users/sign_out" => "omniauth_callbacks#logout"
 
     #devise_for :users do
     #  get "/users/sign_out" => 'sessions#destroy'
     #end
     #get "/users/sign_out" => 'sessions#destroy'
+
+    devise_for :users, :controllers => { omniauth_callbacks: "omniauth_callbacks" }
+    devise_scope :user do
+	get "/auth/:provider/callback" => 'sessions#create'
+        get "/users/sign_out" => 'omniauth_callbacks#logout'
+    end
 end
