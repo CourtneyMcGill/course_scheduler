@@ -18,13 +18,10 @@ Student.create!(first: "Tom", last: "Wheeler", sid: "192837465", year: 2016)
 Requirement.delete_all
 
 Requirement.create!(name: "Computer Science")
-<<<<<<< HEAD
 Requirement.create!(name: "Sociology")
 Requirement.create!(name: "Geology")
 Requirement.create!(name: "Women's Studies")
-=======
 Requirement.create!(name: "Political Science")
->>>>>>> 98d02a0a5191720f7ee7cfef50b68259823334e6
 Requirement.create!(name: "Biology")
 Requirement.create!(name: "Hisory")
 

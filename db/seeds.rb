@@ -27,6 +27,6 @@ Requirement.create!(name: "Hisory")
 
 Course.delete_all
 
-Course.create!(crn: 10111, course_name: "COSC_480", title: "Cloud Computing", instructor: "Sommers", days: "MWF", starts: 120, ends: 235, building_room: "McGreggory 305", credits: 1.0)
-Course.create!(crn: 10112, course_name: "POSC_352", title: "Introduction to IR", instructor: "Rutherford", days: "MWF", starts: 920, ends: 1010, building_room: "Persson 101", credits: 1.0)
-Course.create!(crn: 10114, course_name: "MATH_101", title: "Statistics", instructor: "Strand", days: "MWF", starts: 1020, ends: 1110, building_room: "McGreggory 102", credits: 1.0)
+Course.create!(crn: 10111, course_name: "COSC_480", title: "Cloud Computing", instructor: "Sommers", days: "TR", starts: 955, ends: 1110, building_room: "McGreggory 305", credits: 1.0)
+Course.create!(crn: 10112, course_name: "POSC_352", title: "Introduction to IR", instructor: "Rutherford", days: "MWF", starts: 1020, ends: 1110, building_room: "Persson 101", credits: 1.0)
+Course.create!(crn: 10114, course_name: "MATH_101", title: "Statistics", instructor: "Strand", days: "MWF", starts: 1120, ends: 1210, building_room: "McGreggory 102", credits: 1.0)
