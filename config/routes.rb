@@ -1,11 +1,4 @@
 Rails.application.routes.draw do
-  #devise_for :admins
-
-  #devise_scope :user do
-  #  get "signup", to: "devise/registrations#new"
-  #  get "login", to: "devise/sessions#new"
-  #  get "logout", to: "devise/sessions#destroy"
-  #end
 
     root 'centeral#index'
     	resources :courses
@@ -14,12 +7,12 @@ Rails.application.routes.draw do
     resources :courses
     resources :students do
 	resources :courses, :controller=> 'student_courses', :only=>[:create,:destroy,:index]
+        resources :requirements, :controller=> 'student_requirements', :only=>[:create,:destroy,:index]
     end
-    resources :requirements
+    resources :requirements do
+        resources :courses, :controller=> 'requirement_courses', :only=>[:create,:destroy,:index]
+    end
 
-    devise_for :users, :controllers => { omniauth_callbacks: "omniauth_callbacks" }	
-    get "/auth/:provider/callback" => 'sessions#create'
-    get "/users/sign_out" => "omniauth_callbacks#logout"
 
 	namespace :planner do
 		resources :students
@@ -29,8 +22,10 @@ Rails.application.routes.draw do
       end
    end
 
-    #devise_for :users do
-    #  get "/users/sign_out" => 'sessions#destroy'
-    #end
-    #get "/users/sign_out" => 'sessions#destroy'
+
+    devise_for :users, :controllers => { omniauth_callbacks: "omniauth_callbacks" }
+    devise_scope :user do
+	get "/auth/:provider/callback" => 'devise/sessions#create'
+        get "/users/sign_out" => 'devise/sessions#destroy'
+    end
 end

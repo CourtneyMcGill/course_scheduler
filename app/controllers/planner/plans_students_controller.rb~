@@ -1,0 +1,30 @@
+class Planner::PlansStudentController < ApplicationController
+  def create
+		plan = PlansStudent.new(params[:student_id], params[:course_id])
+		if s.save
+			flash[:notice] = "Plan successfully created"
+			redirect_to planner_student_path(params[:student_id])
+		else
+			flash[:warning] = "Plan couldn't be created"
+			redirect_to planner_student_path(params[:student_id])
+		end
+  end
+
+  def index
+
+  end
+
+  def destroy
+
+  end
+
+	# caution: anything below the private call will be classified as private
+	private
+		def safe_params
+			# we require a product to be in params
+			# allow name, description, and price to be mass-assigned		
+			params.require(:student).permit(:first, :last, :sid, :year, :major)
+		end
+
+end
+

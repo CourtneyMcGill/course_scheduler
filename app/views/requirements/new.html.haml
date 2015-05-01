@@ -3,8 +3,6 @@
   = form_for @requirement do |field|
     %p=field.label :name
     %p=field.text_field :name
-    %p=field.label :course
-    %p=field.number_field :course
     %button.btn.btn-default{:type => "submit"} Submit New Major
 %p.btn.btn-default= link_to "Cancel", requirements_path
 

@@ -1,0 +1,19 @@
+#main
+
+  %h3 Add courses to #{@requirement.name}
+  %p=flash[:notice]
+  %table.courses_table
+    %tr.courses_header
+      %th
+      %th= link_to "CRN", courses_path(sort: 'crn')
+      %th= link_to "Course Name", courses_path(sort: 'course_name')
+      %th= link_to "Instructor", courses_path(sort: 'instructor')
+    -@courses.each do |c|
+      %tr
+        %td= button_to "Add to #{@requirement.name}", action: "create", course_id: c.id, method: :post
+        %td= c.crn
+        %td= link_to "#{c.course_name}", course_path(c)
+        %td= c.instructor
+       
+  %td= link_to "Done adding courses to requirement", requirement_path(@requirement)
+
