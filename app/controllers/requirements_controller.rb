@@ -32,13 +32,8 @@ class RequirementsController < ApplicationController
   def update
     @requirement = Requirement.find(params[:id])
     @requirement.update(create_update_params)
-    if @requirement.save
-        flash[:notice] = "#{@requirement.name} successfully updated"
-        redirect_to requirement_path(@requirement)
-    else
-        flash[:warning] = "The requirement was NOT updated!"
-        redirect_to edit_requirement_path(@requirement)
-    end
+    flash[:notice] = "#{@requirement.name} successfully updated"
+    redirect_to requirement_path(@requirement)
   end
 
   def destroy

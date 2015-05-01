@@ -47,28 +47,43 @@ RSpec.describe RequirementsController, type: :controller do
     end
   end
 
+  describe "GET #new" do
+    it "routes correctly" do
+      expect(Requirement).to receive(:new)
+      get :new
+      expect(response.status).to eq(200)
+    end
+
+    it "renders the new template" do
+      expect(Requirement).to receive(:new)
+      get :new
+      expect(response).to render_template(:new)
+    end
+  end
+
+
 
   describe "create new course" do
     it "should show failure flash message and redirect to new on failure" do
       r=Requirement.new
-      Requirement.should_receive(:new).and_return(r)
-      r.should_receive(:save).and_return(nil)
-      post :create, {:requirement=>{"name"=>"Comp Sci","course"=>"10091"}}
-      response.should redirect_to(new_requirement_path)
+      expect(Requirement).to receive(:new).and_return(r)
+      expect(r).to receive(:save).and_return(nil)
+      post :create, {:requirement=>{"name"=>"Comp Sci"}}
+      expect(response).to redirect_to(new_requirement_path)
     end
 
     it "should show success flash message and redirect to index on success" do
-      r=Requirement.new
-      Requirement.should_receive(:new).and_return(r)
-      r.should_receive(:save).and_return(true)
-      post :create, {:requirement=>{"name"=>"Comp Sci","course"=>"10091"}}
-      response.should redirect_to(requirements_path)
+      r=Requirement.create!
+      expect(Requirement).to receive(:new).and_return(r)
+      expect(r).to receive(:save).and_return(true)
+      post :create, {:requirement=>{"name"=>"Comp Sci"}}
+      expect(response).to redirect_to(requirement_courses_path(r))
     end
   end
 
-  describe "update course" do
+  describe "update requirement" do
     it "should show success flash message and show on success" do
-      r=Requirement.new
+      r=Requirement.create!
       expect(Requirement).to receive(:find).with("1"){r}
       expect(r).to receive(:update){r}
       put :update, {id:1,:requirement=>{"name"=>"Math"}}
@@ -76,10 +91,7 @@ RSpec.describe RequirementsController, type: :controller do
     end
   end
 
-  describe "sort course" do
-    it "should 
-
-  describe "delete course" do
+  describe "delete requirement" do
     it "should delete and redirect" do
       r=Requirement.new
       expect(Requirement).to receive(:find).with("1"){r}
