@@ -8,5 +8,5 @@
   %p= link_to "Requirements", requirements_path
 
   #footer
-    %h1.btn.btn-default= link_to "Sign in", user_omniauth_authorize_path(:github)
+    %h1.btn.btn-default= link_to "Sign in", user_omniauth_callback_path(:github)
     %h2.btn.btn-default= link_to "Sign out", destroy_user_session_path
