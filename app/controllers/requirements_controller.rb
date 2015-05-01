@@ -18,7 +18,7 @@ class RequirementsController < ApplicationController
     @requirement = Requirement.new(create_update_params)
     if @requirement.save
         flash[:notice] = "New requiremenent #{@requirement.name} created successfully"
-        redirect_to requirements_path
+        redirect_to requirement_courses_path(@requirement)
     else
         flash[:warning] = "Your new requirement was not uploaded"
         redirect_to new_requirement_path
@@ -50,6 +50,6 @@ class RequirementsController < ApplicationController
 
 private
   def create_update_params
-        params.require(:requirement).permit(:name, :course)
+        params.require(:requirement).permit(:name)
   end
 end
