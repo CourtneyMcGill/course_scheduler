@@ -1,37 +1,33 @@
 #main
 
+
+
   .searchbox
     =form_tag courses_path, method: :get do
       =label_tag "crn_search"
       =text_field_tag "crn_search", nil, maxlengh: 7
-      =submit_tag "Find courses"
-
-  %br
+      %button.btn.btn-default{:type => "submit"} Find Course
   %br
   %h4 Filter courses
   .filterbox
     =form_tag courses_path, method: :get do
-      %br
-      =label_tag "instructor"
-      =text_field_tag "instructor"
-      %br
-      =label_tag "days"
-      =text_field_tag "days"
-      %br
-      =label_tag "after"
-      =text_field_tag "after"
-      %br
       =label_tag "before"
-      =text_field_tag "before"
+      .row
+        .col-xs-2
+          %input.form-control{:placeholder => "1020", :type => "integer"}
+      =label_tag "after"
+      .row
+        .col-xs-2
+          %input.form-control{:placeholder => "1210", :type => "integer"}
       %br
-      =submit_tag "Filter courses"
+      %button.btn.btn-default{:type => "submit"} Filter Courses
 
       
 
 
   %h3 Course Listings
 
-  %table.courses_table
+  %table.table.table-hover.courses_table
     %tr.courses_header
       %th= link_to "CRN", courses_path(sort: 'crn')
       %th= link_to "Course Name", courses_path(sort: 'course_name')
@@ -63,6 +59,8 @@
         %td= c.restrictions
         %td= c.prereq
         %td= c.notes
-  %td= link_to "Create a new course", new_course_path
   %br
-  %p= link_to("Back to administrator options", root_path)
+  %p.btn.btn-default= link_to "Create a new course", new_course_path
+%br
+%br
+%p.btn.btn-default= link_to("Back to administrator options", root_path)

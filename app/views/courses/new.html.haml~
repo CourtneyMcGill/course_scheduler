@@ -1,0 +1,49 @@
+#main
+  %h3= "Create a new course"
+
+  =form_for Course.new do |f|
+    %p=f.label :crn
+    %p=f.number_field :crn, :in => 10000..19999
+
+    %p=f.label :course_name
+    %p=f.text_field :course_name
+
+    %p=f.label :title
+    %p=f.text_field :title
+
+    %p=f.label :instructor
+    %p=f.text_field :instructor
+
+    %p=f.label :days
+    %p=f.text_field :days
+
+    %p=f.label :starts
+    %p=f.number_field :starts, :in => 100..1259
+
+    %p=f.label :ends
+    %p=f.number_field :ends, :in => 100..1259
+
+    %p=f.label :building_room
+    %p=f.text_field :building_room
+
+    %p=f.label :credits
+    %p=f.number_field :credits, :in => 0.0..1.0
+
+    %p=f.label :coreq
+    %p=f.text_field :coreq
+
+    %p=f.label :crosslist
+    %p=f.text_field :crosslist
+
+    %p=f.label :restrictions
+    %p=f.text_field :restrictions
+
+    %p=f.label :prereq
+    %p=f.text_field :prereq
+
+    %p=f.label :notes
+    %p=f.text_field :notes
+
+    %p=f.submit
+
+  %p.btn.btn-default= link_to "Cancel new course", courses_path

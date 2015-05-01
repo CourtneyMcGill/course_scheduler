@@ -1,0 +1,19 @@
+#main
+  .searchbox
+    =form_tag requirements_path, method: :get do
+      =label_tag "majors_search"
+      =text_field_tag "majors_search", nil, maxlengh: 20
+      %button.btn.btn-default{:type => "submit"} Find Course
+  %h3 All Majors
+  %table.table.table-hover.requirements_table
+    %tr.requirements_header
+      %th Name
+    -@requirements.each do |r|
+      %tr
+        %td= link_to "#{r.name}", requirement_path(r)
+  %br
+  %p.btn.btn-default= link_to "Create a new major", new_requirement_path
+%br
+%br
+%p.btn.btn-default= link_to("Back to administrator options", root_path)
+%br

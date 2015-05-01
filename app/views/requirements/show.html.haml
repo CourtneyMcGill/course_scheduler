@@ -11,8 +11,8 @@
       -@requirement.courses.each do |c|
         %tr
           %td= c.course_name
-  %tr
-  %td= link_to "Edit requirement", edit_requirement_path
+  %p
+  %p.btn.btn-default= link_to "Edit Major", edit_requirement_path
   %br
-  %td= button_to "delete", @student, :method => :delete, :class=>:destroy
-%p= link_to "Back to requirement list", requirements_path
+  %p= button_to "delete", @student, :method => :delete, :class=>:destroy
+%p.btn.btn-default= link_to "Back to Majors list", requirements_path
