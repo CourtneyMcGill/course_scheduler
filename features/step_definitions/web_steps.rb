@@ -30,6 +30,13 @@ Given /^these students:$/i do |table|
   end
 end
 
+Given(/^these Courses:$/) do |table|
+  table.hashes.each do |fhash|
+    Course.create!(fhash)
+  end
+end
+
+
 Given /^(?:|I )am on (.+)$/ do |page_name|
   if page_name == "the create new requirement page"
     page_name = "the new requirement page"
