@@ -381,7 +381,7 @@
         null
       ]
     },
-    "timestamp": 1430523974
+    "timestamp": 1430524852
   },
   "Cucumber Features": {
     "coverage": {
@@ -535,9 +535,61 @@
         1,
         null,
         1,
+        3,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/home/csvm/course_scheduler/app/controllers/requirements_controller.rb": [
+        1,
+        null,
+        1,
+        3,
+        3,
+        null,
+        null,
+        null,
+        1,
         0,
         null,
         null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
         1,
         0,
         null,
@@ -596,7 +648,7 @@
         null,
         null,
         1,
-        1,
+        2,
         null,
         null,
         null,
@@ -641,6 +693,6 @@
         null
       ]
     },
-    "timestamp": 1430523114
+    "timestamp": 1430524844
   }
 }

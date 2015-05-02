@@ -29,10 +29,6 @@ body h3 {
   text-align: center; 
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> bc7e2b3429c2c42329e599db2bd3293f487a2280
 body th {
   font-weight: bold; 
 }
@@ -50,17 +46,7 @@ input.login{
   color: #5A0000;
 }
 
-<<<<<<< HEAD
-.log_but{
-  color: #5A0000;
-}
-=======
-input.login{
-  color: #5A0000;
-}
-
 .log_but{
   color: #5A0000;
 }
 
->>>>>>> bc7e2b3429c2c42329e599db2bd3293f487a2280
